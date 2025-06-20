@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Engineering Director Role</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #ffffff;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      border-left: 6px solid #9b111e;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #9b111e;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .question {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .back-button {
+      margin-top: 30px;
+      background-color: #9b111e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Engineering Director – Emergency Management Role</h1>
+
+  <h2>Activation Criteria</h2>
+  <p>This role is activated as part of the <strong>Full Emergency Management Team (EMT)</strong> mobilization, as described in ERP Section 2.5.2. The Engineering Director provides direct technical and operational support during any aviation-related emergency involving aircraft status, maintenance, or engineering considerations.</p>
+
+  <h2>Core Responsibilities</h2>
+  <p><strong>ERP Section 3.6.4 outlines the following duties:</strong></p>
+  <ul>
+    <li>Act as the primary technical authority on all engineering matters during an emergency.</li>
+    <li>Coordinate with the CAMO, Maintenance Manager, and Safety Director to retrieve, secure, and protect technical records.</li>
+    <li>Assist in the preservation of aircraft wreckage or key components in compliance with GCAA and ERP protocols.</li>
+    <li>Support the investigation team by providing aircraft maintenance status, open MEL items, and technical records upon request.</li>
+    <li>Ensure engineering resources are allocated to support recovery or investigation efforts, including site visits or forensic documentation.</li>
+  </ul>
+
+  <h2>Checklist Reference</h2>
+  <p><strong>Appendix C.8 – Engineering Director Checklist</strong> must be activated and followed. This includes:</p>
+  <ul>
+    <li>Immediate coordination with OCC and CAMO upon activation</li>
+    <li>Retrieval and digital backup of technical logs, work packages, and AD/SB compliance records</li>
+    <li>Securing of maintenance data (FDR, CVR if applicable) and handing over to Safety Director or GCAA as needed</li>
+  </ul>
+
+  <h2>Response Phases</h2>
+  <ul>
+    <li><strong>Phase 1 (0–60 min):</strong> Confirm technical readiness of aircraft, review last maintenance action, support Safety/OCC with any tech data required.</li>
+    <li><strong>Phase 2 (1–4 hrs):</strong> Join strategy meetings with EMT, assist with technical narrative and incident background, retrieve maintenance releases or deferred defects.</li>
+    <li><strong>Phase 3 (4+ hrs):</strong> Draft and review technical sections of the GCAA preliminary report, coordinate with OEM if engineering input is required for fault isolation or failure analysis.</li>
+  </ul>
+
+  <h2>Restrictions & Compliance</h2>
+  <ul>
+    <li>Do not disclose technical findings outside the EMT or GCAA unless explicitly approved by the Accountable Manager.</li>
+    <li>Ensure all digital and physical records are secured and archived to SMS-Pro for audit trail integrity.</li>
+    <li>Preserve aircraft systems and parts involved in the incident until officially released by the investigative body.</li>
+  </ul>
+
+  <h2>Knowledge Check</h2>
+
+  <div class="question">
+    <p><strong>Q1:</strong> What ERP section defines the role of the Engineering Director?</p>
+    <button onclick="checkAnswer(this, false)">a. Section 3.6.2</button><br>
+    <button onclick="checkAnswer(this, false)">b. Section 3.6.6</button><br>
+    <button onclick="checkAnswer(this, true)">c. Section 3.6.4</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q2:</strong> When is the Engineering Director role activated?</p>
+    <button onclick="checkAnswer(this, false)">a. For minor maintenance issues</button><br>
+    <button onclick="checkAnswer(this, false)">b. Only when GCAA calls</button><br>
+    <button onclick="checkAnswer(this, true)">c. During Full EMT mobilisation as per ERP 2.5.2</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q3:</strong> What is the correct checklist for the Engineering Director?</p>
+    <button onclick="checkAnswer(this, false)">a. Appendix C.10</button><br>
+    <button onclick="checkAnswer(this, false)">b. Appendix C.12</button><br>
+    <button onclick="checkAnswer(this, true)">c. Appendix C.8</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q4:</strong> What should be done with technical records during a response?</p>
+    <button onclick="checkAnswer(this, false)">a. Email them to legal</button><br>
+    <button onclick="checkAnswer(this, true)">b. Digitally back them up and secure them per ERP and GCAA protocols</button><br>
+    <button onclick="checkAnswer(this, false)">c. Hand them to media for transparency</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q5:</strong> Who must approve the external release of engineering data?</p>
+    <button onclick="checkAnswer(this, false)">a. Maintenance Manager</button><br>
+    <button onclick="checkAnswer(this, true)">b. Accountable Manager</button><br>
+    <button onclick="checkAnswer(this, false)">c. OCC Supervisor</button>
+    <div class="feedback"></div>
+  </div>
+
+  <button class="back-button" onclick="window.location.href='SelectYourRole.html'">← Back to Role Menu</button>
+</div>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    const feedback = button.parentElement.querySelector('.feedback');
+    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
+    feedback.style.color = isCorrect ? "green" : "red";
+  }
+</script>
+
+</body>
+</html>
+

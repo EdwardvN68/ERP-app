@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Operations Director Role</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      border-left: 6px solid #9b111e;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #9b111e;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .question {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .back-button {
+      margin-top: 30px;
+      background-color: #9b111e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Operations Director – Emergency Response Role</h1>
+
+  <h2>Activation</h2>
+  <p>Activated during <strong>Medium and High-level emergencies</strong> and forms part of the Emergency Management Team (EMT). Main function: oversee flight operations coordination and manage operational disruptions.</p>
+  <p>Refer to ERP Section 3.6.3 and Appendix C.7 – Operations Director Checklist.</p>
+
+  <h2>Core Responsibilities</h2>
+  <ul>
+    <li>Advise EMT on all flight operations issues</li>
+    <li>Ensure aircraft operational data is available</li>
+    <li>Ensure flight crew records are secured by the Director of Quality</li>
+    <li>Arrange aerial charts/photos of affected airport</li>
+    <li>Coordinate relief flight crews as needed</li>
+    <li>Compile and provide flight documentation to EMT and Authorities:
+      <ul>
+        <li>Passenger manifest</li>
+        <li>Fuel planning and receipts</li>
+        <li>Weight and balance plans</li>
+        <li>Pre-flight planning documents</li>
+        <li>Weather reports</li>
+        <li>Flight and duty time records</li>
+        <li>Copy of crew training files</li>
+        <li>Logbook</li>
+        <li>Medical certificates</li>
+        <li>Licenses</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>ERP References</h2>
+  <ul>
+    <li>Section 3.6.3 – Operations Director Emergency Responsibilities</li>
+    <li>Appendix C.7 – Operations Director Checklist</li>
+    <li>Form B.6 – Incident Log</li>
+    <li>ERP 2.6 – Communication Channels</li>
+  </ul>
+
+  <h2>Phase-Based Duties</h2>
+  <ul>
+    <li><strong>Phase 1 (0–60 min):</strong> Coordinate with OCC, suspend flights if needed, notify ground ops, update DOO and AM, account for crew</li>
+    <li><strong>Phase 2 (1–4 hrs):</strong> Liaise with airport, approve alternate airports, supervise stranded passenger recovery</li>
+    <li><strong>Phase 3 (4+ hrs):</strong> Manage long-term recovery, submit ops impact report, support post-event debriefs</li>
+  </ul>
+
+  <h2>Cautions</h2>
+  <ul>
+    <li>Do not approve flights without full risk analysis</li>
+    <li>Verify aircraft status with OCC and Maintenance</li>
+    <li>Ensure GCAA is informed of route/ops changes</li>
+    <li>Document all operational directives in the log</li>
+  </ul>
+
+  <h2>Knowledge Check (Interactive)</h2>
+
+  <div class="question">
+    <p><strong>Q1:</strong> When is the Operations Director activated?</p>
+    <button onclick="checkAnswer(this, true)">During Medium and High-level emergencies</button><br>
+    <button onclick="checkAnswer(this, false)">Only for ground emergencies</button><br>
+    <button onclick="checkAnswer(this, false)">After the incident ends</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q2:</strong> What is the focus of the Operations Director during emergencies?</p>
+    <button onclick="checkAnswer(this, true)">Coordinating flight operations and managing disruptions</button><br>
+    <button onclick="checkAnswer(this, false)">Preparing HR briefings</button><br>
+    <button onclick="checkAnswer(this, false)">Approving insurance reports</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q3:</strong> Where is the role’s ERP checklist found?</p>
+    <button onclick="checkAnswer(this, true)">Appendix C.7</button><br>
+    <button onclick="checkAnswer(this, false)">Appendix B.3</button><br>
+    <button onclick="checkAnswer(this, false)">Section 2.5.3</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q4:</strong> What must be done before continuing flight operations during a crisis?</p>
+    <button onclick="checkAnswer(this, true)">Perform risk analysis and coordinate with OCC</button><br>
+    <button onclick="checkAnswer(this, false)">Obtain pilot approval only</button><br>
+    <button onclick="checkAnswer(this, false)">Inform the PR department</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q5:</strong> What log must be kept updated throughout the event?</p>
+    <button onclick="checkAnswer(this, true)">Incident Log (Form B.6)</button><br>
+    <button onclick="checkAnswer(this, false)">HR Tracking Sheet</button><br>
+    <button onclick="checkAnswer(this, false)">Maintenance Shift Report</button>
+    <div class="feedback"></div>
+  </div>
+
+  <button class="back-button" onclick="window.location.href='SelectYourRole.html'">← Back to Role Menu</button>
+</div>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    const feedback = button.parentElement.querySelector('.feedback');
+    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
+    feedback.style.color = isCorrect ? "green" : "red";
+  }
+</script>
+
+</body>
+</html>

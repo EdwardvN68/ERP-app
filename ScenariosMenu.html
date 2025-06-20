@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scenario Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #9b111e;
+      margin-bottom: 30px;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+    }
+
+    .button-grid button {
+      padding: 14px;
+      font-size: 16px;
+      background-color: white;
+      border: 2px solid #9b111e;
+      color: #9b111e;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .button-grid button:hover {
+      background-color: #9b111e;
+      color: white;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #9b111e;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="assets/logo.png" class="logo" alt="ADA Logo" />
+  <h1>Select a Scenario</h1>
+
+  <div class="button-grid">
+    <button onclick="window.location.href='AircraftAccident.html'">Aircraft Accident</button>
+    <button onclick="window.location.href='AircraftMissing.html'">Aircraft Missing</button>
+    <button onclick="window.location.href='Hijack.html'">Hijack</button>
+    <button onclick="window.location.href='InflightFire.html'">Inflight Fire</button>
+    <button onclick="window.location.href='MedicalEmergency.html'">Medical Emergency</button>
+    <button onclick="window.location.href='BombThreat.html'">Bomb Threat</button>
+  </div>
+
+  <a href="SelectYourRole.html" class="back-button">Back</a>
+
+</body>
+</html>
+
+
+
+

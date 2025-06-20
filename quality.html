@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quality Director Role</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #ffffff;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      border-left: 6px solid #9b111e;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #9b111e;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .question {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .back-button {
+      margin-top: 30px;
+      background-color: #9b111e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Quality Director – Emergency Management Role</h1>
+
+  <h2>Activation Criteria</h2>
+  <p>This role is activated as part of the <strong>Full Emergency Management Team (EMT)</strong> in accordance with ERP Section 2.5.2. The Quality Director ensures regulatory compliance and audit readiness throughout the emergency response cycle.</p>
+
+  <h2>Core Responsibilities</h2>
+  <p><strong>ERP Section 3.6.5 outlines the following duties:</strong></p>
+  <ul>
+    <li>Act as the primary authority on compliance and quality assurance during the incident response.</li>
+    <li>Ensure ERP checklists, forms, and timelines are followed in accordance with GCAA and internal audit standards.</li>
+    <li>Initiate internal QA reporting structures to track deviations, delays, or process failures in real time.</li>
+    <li>Support the Accountable Manager and Safety Director in documenting actions taken for post-event audit.</li>
+    <li>Facilitate post-response internal reviews and track effectiveness of corrective actions.</li>
+  </ul>
+
+  <h2>Checklist Reference</h2>
+  <p><strong>Appendix C.9 – Quality Director Checklist</strong> must be followed, including:</p>
+  <ul>
+    <li>Confirm EMT procedural adherence</li>
+    <li>Document all timeline deviations or policy gaps</li>
+    <li>Initiate QA review of ERP implementation against SMS procedures</li>
+  </ul>
+
+  <h2>Response Phases</h2>
+  <ul>
+    <li><strong>Phase 1 (0–60 min):</strong> Monitor EMT activation, verify checklist compliance, support OCC and Safety Director in process control.</li>
+    <li><strong>Phase 2 (1–4 hrs):</strong> Begin parallel audit of ERP implementation, track document control integrity, ensure traceability of logs.</li>
+    <li><strong>Phase 3 (4+ hrs):</strong> Prepare GCAA-compliant audit trail, assist in evidence preservation protocols, coordinate internal quality statement to CEO and AM.</li>
+  </ul>
+
+  <h2>Restrictions & Compliance</h2>
+  <ul>
+    <li>All QA reports must be confidential and routed through the EMT chain of command.</li>
+    <li>Quality assurance inputs must not override emergency actions unless safety or legality is compromised.</li>
+    <li>Ensure all ERP forms, logs, and checklists are archived to SMS-Pro with traceability for audit.</li>
+  </ul>
+
+  <h2>Knowledge Check</h2>
+
+  <div class="question">
+    <p><strong>Q1:</strong> What ERP section defines the Quality Director's role?</p>
+    <button onclick="checkAnswer(this, false)">a. Section 3.6.3</button><br>
+    <button onclick="checkAnswer(this, true)">b. Section 3.6.5</button><br>
+    <button onclick="checkAnswer(this, false)">c. Section 3.6.7</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q2:</strong> What is the correct checklist for the Quality Director?</p>
+    <button onclick="checkAnswer(this, false)">a. Appendix C.7</button><br>
+    <button onclick="checkAnswer(this, true)">b. Appendix C.9</button><br>
+    <button onclick="checkAnswer(this, false)">c. Appendix C.11</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q3:</strong> When is the Quality Director role activated?</p>
+    <button onclick="checkAnswer(this, false)">a. Only during mock drills</button><br>
+    <button onclick="checkAnswer(this, false)">b. If an audit is scheduled</button><br>
+    <button onclick="checkAnswer(this, true)">c. During Full EMT mobilisation as per ERP 2.5.2</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q4:</strong> What should the Quality Director do if they identify a procedural deviation?</p>
+    <button onclick="checkAnswer(this, false)">a. File a complaint with HR</button><br>
+    <button onclick="checkAnswer(this, true)">b. Document and escalate through the EMT structure</button><br>
+    <button onclick="checkAnswer(this, false)">c. Cancel the ERP checklist</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q5:</strong> What must the Quality Director be prepared to do if no designated person is available during the initial response?</p>
+    <button onclick="checkAnswer(this, false)">a. Defer all decisions to the Communications Officer</button><br>
+    <button onclick="checkAnswer(this, true)">b. Execute the Administrator’s checklist until someone more suitable arrives</button><br>
+    <button onclick="checkAnswer(this, false)">c. Initiate disciplinary action against unresponsive EMT members</button>
+    <div class="feedback"></div>
+  </div>
+
+  <button class="back-button" onclick="window.location.href='SelectYourRole.html'">← Back to Role Menu</button>
+</div>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    const feedback = button.parentElement.querySelector('.feedback');
+    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
+    feedback.style.color = isCorrect ? "green" : "red";
+  }
+</script>
+
+</body>
+</html>

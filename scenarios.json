@@ -1,0 +1,113 @@
+{
+  "Hijack": {
+    "title": "Aircraft Hijack (Bell 412)",
+    "meta": {
+      "Aircraft": "Bell 412",
+      "Operator": "Abu Dhabi Aviation (ADA)",
+      "Flight": "Offshore crew transfer from Zayed International Airport (AUH) to an ADNOC platform",
+      "Occupants": "2 crew, 5 passengers",
+      "Emergency Type": "HIGH \u2013 Full EMT Activation",
+      "Initial Alert Time": "05:10 UTC"
+    },
+    "timeline": [
+      {
+        "time": "05:10 UTC",
+        "title": "Transponder Code 7500 Triggered",
+        "role": "OCC Duty Coordinator",
+        "description": "The Bell 412 transmits squawk code 7500, indicating unlawful interference. OCC immediately flags the incident as a potential hijack.",
+        "actions": [
+          "Begin incident log",
+          "Alert Duty Operations Officer (DOO)",
+          "Notify ATC and initiate ADA security protocol"
+        ],
+        "checklist": "Appendix B.3",
+        "form": "B.6",
+        "ref": "Section 3.1, 3.3"
+      }
+    ]
+  },
+  "AircraftMissing": {
+    "title": "Aircraft Missing \u2013 Bell 412 Offshore",
+    "meta": {
+      "Aircraft": "Bell 412",
+      "Operator": "Abu Dhabi Aviation",
+      "Flight": "AUH to Offshore Rig",
+      "Occupants": "2 crew, 6 passengers",
+      "Emergency Type": "HIGH \u2013 Full EMT Activation",
+      "Initial Alert Time": "03:45 UTC"
+    },
+    "timeline": [
+      {
+        "time": "03:45",
+        "title": "Initial Contact Loss",
+        "role": "OCC Duty Coordinator",
+        "description": "Bell 412 is no longer responding on VHF/HF/ACARS.",
+        "actions": [
+          "Open incident log",
+          "Notify DOO",
+          "Attempt multiple forms of contact"
+        ],
+        "checklist": "Appendix B.3",
+        "form": "B.6",
+        "ref": "ERP 3.3.2, 3.3.4"
+      }
+    ]
+  },
+  "AircraftAccident": {
+    "title": "Aircraft Accident \u2013 Bell 412 Offshore Crash",
+    "meta": {
+      "Aircraft": "Bell 412 Helicopter",
+      "Operator": "Abu Dhabi Aviation",
+      "Base": "Zayed International Airport (AUH)",
+      "Passengers": "6 pax + 2 crew",
+      "Type": "Offshore transfer",
+      "Emergency Type": "HIGH \u2013 Full EMT Activation"
+    },
+    "timeline": [
+      {
+        "time": "03:45",
+        "title": "Loss of Contact",
+        "role": "OCC Duty Coordinator",
+        "description": "Communication is lost with Bell 412 offshore flight. Initial attempts to reach the crew via VHF, HF, and ACARS fail.",
+        "actions": [
+          "Attempt immediate contact via VHF, HF, and ACARS (ERP 2.6.5, 2.6.6)",
+          "Open Incident Log using Form B.6 and begin time-stamped entries",
+          "Notify the Duty Director of Operations (DOO) per ERP 2.2",
+          "Begin recording in digital event log (if available)"
+        ],
+        "checklist": "Appendix B.3 \u2013 Operations Duty Coordinator",
+        "form": "B.6 \u2013 Incident Log",
+        "ref": "ERP Sections: 2.6.5, 2.6.6, 2.2"
+      },
+      {
+        "time": "03:48",
+        "title": "ELT Detected",
+        "role": "OCC Manager",
+        "description": "Emergency Locator Transmitter (ELT) signal detected. Coordinates confirmed and authenticity validated.",
+        "actions": [
+          "Confirm coordinates and signal authenticity with ATC and COSPAS-SARSAT if available (ERP 2.6.6, 2.6.7)",
+          "Initiate Aircraft Accident Notification using Form B.5",
+          "Notify DOO and Safety Director"
+        ],
+        "checklist": "",
+        "form": "B.5 \u2013 Aircraft Accident Notification",
+        "ref": "ERP Sections: 2.3, 2.6.6, 3.6.2"
+      },
+      {
+        "time": "03:50",
+        "title": "Emergency Escalation to HIGH",
+        "role": "Duty Director of Operations (DOO) \u2013 EMT Chair",
+        "description": "Based on the confirmed ELT signal and communication loss, the DOO classifies the situation as a HIGH emergency.",
+        "actions": [
+          "Declare HIGH emergency per ERP 2.5.1",
+          "Activate EMT based on Quick Response roles (ERP 2.5.2)",
+          "Brief Accountable Manager and Safety Director",
+          "Coordinate with OCC to maintain operational oversight"
+        ],
+        "checklist": "Appendix C.4 \u2013 EMT Chair",
+        "form": "",
+        "ref": "ERP Sections: 2.5.1\u20132.5.2, 3.6.3"
+      }
+    ]
+  }
+}

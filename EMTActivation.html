@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EMT Activation Thresholds</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      border-left: 6px solid #9b111e;
+      background: #fff;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #9b111e;
+      font-size: 1.8em;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      margin-top: 30px;
+    }
+
+    .level-low h2 {
+      color: #005cbf;
+    }
+
+    .level-medium h2 {
+      color: #f57c00;
+    }
+
+    .level-high h2 {
+      color: #d32f2f;
+    }
+
+    .incident {
+      margin-bottom: 20px;
+    }
+
+    .incident p {
+      margin: 4px 0;
+    }
+
+    .back-button {
+      margin-top: 40px;
+      background-color: #9b111e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .back-button:hover {
+      background-color: #b91c1c;
+    }
+
+    .legend {
+      margin-top: 40px;
+      font-style: italic;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>EMT Activation Thresholds</h1>
+
+    <div class="level-low">
+      <h2>LOW</h2>
+      <div class="incident">
+        <p><strong>Routine disruption</strong></p>
+        <p><em>Inform and Alert:</em> Routine Management Procedures</p>
+        <p><em>Mobilise:</em> Managed by OCC</p>
+      </div>
+    </div>
+
+    <div class="level-medium">
+      <h2>MEDIUM</h2>
+      <div class="incident">
+        <p><strong>Aircraft air or ground incident – NO potential life-changing injuries or fatalities</strong></p>
+        <p><em>Inform and Alert:</em> DOO</p>
+        <p><em>Mobilise:</em> Quick Response EMT</p>
+      </div>
+
+      <div class="incident">
+        <p><strong>Missing ADA staff – affecting aircraft operations</strong></p>
+        <p><em>Inform and Alert:</em> DOO</p>
+        <p><em>Mobilise:</em> Quick Response EMT</p>
+      </div>
+
+      <div class="incident">
+        <p><strong>Public health issues affecting staff and/or PAX – sufficient scale to affect aircraft operations</strong></p>
+        <p><em>Inform and Alert:</em> DOO</p>
+        <p><em>Mobilise:</em> Quick Response EMT</p>
+      </div>
+
+      <div class="incident">
+        <p><strong>Request to conduct SAR operation</strong></p>
+        <p><em>Inform and Alert:</em> DOO</p>
+        <p><em>Mobilise:</em> Quick Response EMT</p>
+      </div>
+
+      <div class="incident">
+        <p><strong>Security alert (physical or cyber threat) – NOT specific to ADA aircraft, personnel or facilities</strong></p>
+        <p><em>Inform and Alert:</em> DOO</p>
+        <p><em>Mobilise:</em> Quick Response EMT</p>
+      </div>
+
+      <div class="incident">
+        <p><strong>Severe weather forecast, impact within 12 hours – capable of damaging aircraft or preventing flying</strong></p>
+        <p><em>Inform and Alert:</em> DOO</p>
+        <p><em>Mobilise:</em> Quick Response EMT</p>
+      </div>
+
+      <div class="incident">
+        <p><strong>Hazardous materials spill – beyond immediate clean-up capabilities</strong></p>
+        <p><em>Inform and Alert:</em> DOO</p>
+        <p><em>Mobilise:</em> Quick Response EMT</p>
+      </div>
+
+      <div class="incident">
+        <p><strong>Operating airport/landing spot emergency/disruption – potential no flights for over 12 hours</strong></p>
+        <p><em>Inform and Alert:</em> DOO</p>
+        <p><em>Mobilise:</em> Quick Response EMT</p>
+      </div>
+
+      <div class="incident">
+        <p><strong>Damage to aircraft, equipment or facilities affecting operations and exceeding</strong></p>
+        <p><em>Inform and Alert:</em> DOO</p>
+        <p><em>Mobilise:</em> Quick Response EMT</p>
+      </div>
+
+      <div class="incident">
+        <p><strong>Media/social media story – ADA not specifically named but potentially financially damaging</strong></p>
+        <p><em>Inform and Alert:</em> DOO</p>
+        <p><em>Mobilise:</em> Quick Response ERT</p>
+      </div>
+    </div>
+
+    <div class="level-high">
+      <h2>HIGH</h2>
+      <div class="incident">
+        <p><strong>Aircraft air or ground incident – potential life-changing injuries and fatalities</strong></p>
+        <p><em>Inform and Alert:</em> DOO and AM</p>
+        <p><em>Mobilise:</em> Full EMT</p>
+      </div>
+
+      <div class="incident">
+        <p><strong>Fire or explosion at operating facility – threat to life and injury</strong></p>
+        <p><em>Inform and Alert:</em> DOO and AM</p>
+        <p><em>Mobilise:</em> Full EMT</p>
+      </div>
+
+      <div class="incident">
+        <p><strong>Specific security threat – ADA named as target of physical or cyber-attack (to ADA staff, equipment, or facilities)</strong></p>
+        <p><em>Inform and Alert:</em> DOO and AM</p>
+        <p><em>Mobilise:</em> Full EMT</p>
+      </div>
+    </div>
+
+    <div class="legend">
+      <p><strong>AM</strong> – Accountable Manager</p>
+      <p><strong>DOO</strong> – Duty Director of Operations</p>
+      <p><br>⚠️ This document is considered uncontrolled if copied or printed.</p>
+    </div>
+
+    <button class="back-button" onclick="window.location.href='Main Menu.html'">&#8592; Back to Main Menu</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Commercial Director Role</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      border-left: 6px solid #9b111e;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #9b111e;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .question {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .back-button {
+      margin-top: 30px;
+      background-color: #9b111e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Commercial Director – Emergency Response Role</h1>
+
+  <h2>Activation</h2>
+  <p>Activated during <strong>Full EMT mobilization</strong>, or when commercial implications of the emergency require immediate client/stakeholder engagement. The CD provides guidance on contract exposure, client notifications, and insurance-related decisions.</p>
+  <p>Refer to ERP Sections 2.5.2, 3.6.7, and Appendix C.10.</p>
+
+  <h2>Core Responsibilities</h2>
+  <ul>
+    <li>Act as commercial liaison for client-facing matters during the emergency.</li>
+    <li>Support Accountable Manager in assessing contractual exposure and obligations.</li>
+    <li>Coordinate with ADA’s legal team and insurers regarding client correspondence.</li>
+    <li>Ensure commercial communication aligns with approved media releases.</li>
+    <li>Assist with cost tracking, client relationship stability, and future claims positioning.</li>
+  </ul>
+
+  <h2>ERP References</h2>
+  <ul>
+    <li>Section 2.5.2 – EMT Activation Criteria</li>
+    <li>Section 3.6.7 – Commercial Director</li>
+    <li>Appendix C.10 – CD Checklist</li>
+    <li>Appendix B.5 – Aircraft Accident Notification Form (if applicable)</li>
+  </ul>
+
+  <h2>Phase-Based Duties</h2>
+  <ul>
+    <li><strong>Phase 1 (0–60 min):</strong> Notify commercial clients via pre-approved language. Join EMT briefings to receive situational updates. Begin reviewing contractual exposure and commitments.</li>
+    <li><strong>Phase 2 (1–4 hrs):</strong> Coordinate with insurers, legal team, and Safety Director to draft stakeholder updates. Assist communications team in preparing FAQ for external parties.</li>
+    <li><strong>Phase 3 (4+ hrs):</strong> Track costs for commercial audit trail. Support claim submissions, contract renegotiation discussions, and reputation risk management.</li>
+  </ul>
+
+  <h2>Cautions</h2>
+  <ul>
+    <li>Do not issue commercial statements without EMT Chair and Communications Officer clearance.</li>
+    <li>Ensure all data shared with clients or insurers is verified by the Safety Director.</li>
+    <li>Coordinate legal liability discussions exclusively through ADA Legal and the AM.</li>
+    <li>All external emails must use ADA crisis communication templates.</li>
+  </ul>
+
+  <h2>Knowledge Check (Interactive)</h2>
+
+  <div class="question">
+    <p><strong>Q1:</strong> When is the Commercial Director activated?</p>
+    <button onclick="checkAnswer(this, true)">a. During Full EMT or when client-facing action is needed</button><br>
+    <button onclick="checkAnswer(this, false)">b. Only when insurance contact is unavailable</button><br>
+    <button onclick="checkAnswer(this, false)">c. When the CEO requests only</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q2:</strong> What is a core task in Phase 1?</p>
+    <button onclick="checkAnswer(this, false)">a. Submit accident investigation report</button><br>
+    <button onclick="checkAnswer(this, false)">b. Dispatch field response crew</button><br>
+    <button onclick="checkAnswer(this, true)">c. Review contractual exposure and prepare client updates</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q3:</strong> What checklist supports the Commercial Director?</p>
+    <button onclick="checkAnswer(this, false)">a. Appendix C.3</button><br>
+    <button onclick="checkAnswer(this, true)">b. Appendix C.10</button><br>
+    <button onclick="checkAnswer(this, false)">c. Appendix D.2</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q4:</strong> What must be coordinated with the legal team?</p>
+    <button onclick="checkAnswer(this, false)">a. Staff reassignment orders</button><br>
+    <button onclick="checkAnswer(this, false)">b. Maintenance hold reports</button><br>
+    <button onclick="checkAnswer(this, true)">c. Liability disclosures and contract renegotiation</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q5:</strong> Which statement is correct about external communication?</p>
+    <button onclick="checkAnswer(this, true)">a. Must use ADA-approved crisis communication templates</button><br>
+    <button onclick="checkAnswer(this, false)">b. May be issued directly to media by CD</button><br>
+    <button onclick="checkAnswer(this, false)">c. May quote unverified operational status</button>
+    <div class="feedback"></div>
+  </div>
+
+  <p><strong>Final Note:</strong> As Commercial Director, your role is to protect ADA's external credibility and internal legal resilience. Your calm and coordinated engagement with clients is critical to emergency containment and future trust.</p>
+
+  <button class="back-button" onclick="window.location.href='SelectYourRole.html'">← Back to Role Menu</button>
+</div>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    const feedback = button.parentElement.querySelector('.feedback');
+    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
+    feedback.style.color = isCorrect ? "green" : "red";
+  }
+</script>
+
+</body>
+</html>

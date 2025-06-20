@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Human Resources Role</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      border-left: 6px solid #9b111e;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #9b111e;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .question {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .back-button {
+      margin-top: 30px;
+      background-color: #9b111e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Human Resources – Emergency Response Role</h1>
+
+  <h2>Activation</h2>
+  <p>Activated during Quick Response or Full EMT activation, particularly where <strong>ADA personnel, contractors, or families</strong> are affected. The HR Manager manages all welfare, notification, and support processes.</p>
+  <p>Refer to ERP Sections 2.5.2, 3.6.6, and Appendix C.15.</p>
+
+  <h2>Core Responsibilities</h2>
+  <ul>
+    <li>Serve as <strong>welfare lead</strong> for affected ADA staff, contractors, and passengers.</li>
+    <li>Coordinate with Family Assistance Coordinator (FAC) to manage NOK notification.</li>
+    <li>Ensure psychological and logistical support for staff and their families.</li>
+    <li>Coordinate shift rotations for responders to manage fatigue and mental wellbeing.</li>
+    <li>Maintain updated emergency contact details and verify crew/passenger manifest status.</li>
+    <li>Liaise with GoCrisis for joint staff and family support services.</li>
+  </ul>
+
+  <h2>ERP References</h2>
+  <ul>
+    <li>Section 2.5.2 – EMT On-Call Roles</li>
+    <li>Section 3.6.6 – HR Manager Role</li>
+    <li>Appendix C.15 – HR Checklist</li>
+    <li>Appendix D – Family Assistance Team Guidelines</li>
+  </ul>
+
+  <h2>Phase-Based Duties</h2>
+  <ul>
+    <li><strong>Phase 1 (0–60 min):</strong> Deploy to EMC, confirm employee status, begin NOK validation, liaise with EMT Chair.</li>
+    <li><strong>Phase 2 (1–4 hrs):</strong> Coordinate NOK notification, staff reassignment, support team fatigue management, activate FAC.</li>
+    <li><strong>Phase 3 (4+ hrs):</strong> Oversee long-term welfare tracking, assist post-event debriefs, update HR records, support incident recovery audit.</li>
+  </ul>
+
+  <h2>Cautions</h2>
+  <ul>
+    <li>Do not release NOK information unless confirmed by EMT Chair or Safety Director.</li>
+    <li>Coordinate all public-facing communication with the Communications Officer.</li>
+    <li>Be sensitive to cultural protocols and emotional states when notifying families.</li>
+    <li>Track all personnel reassignment and welfare logs for audit purposes.</li>
+    <li>Document all staff interactions via Incident Log (Appendix B.6).</li>
+  </ul>
+
+  <h2>Knowledge Check (Interactive)</h2>
+
+  <div class="question">
+    <p><strong>Q1:</strong> When is the HR Manager activated in an emergency?</p>
+    <button onclick="checkAnswer(this, true)">a. During Quick or Full EMT mobilization involving ADA staff</button><br>
+    <button onclick="checkAnswer(this, false)">b. Only during HR-specific emergencies</button><br>
+    <button onclick="checkAnswer(this, false)">c. Only after Family Assistance is complete</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q2:</strong> What section defines the HR Manager's EMT role?</p>
+    <button onclick="checkAnswer(this, true)">a. Section 3.6.6</button><br>
+    <button onclick="checkAnswer(this, false)">b. Section 2.6.5</button><br>
+    <button onclick="checkAnswer(this, false)">c. Appendix D.1</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q3:</strong> What checklist supports HR emergency response?</p>
+    <button onclick="checkAnswer(this, false)">a. Appendix C.10</button><br>
+    <button onclick="checkAnswer(this, false)">b. Appendix C.5</button><br>
+    <button onclick="checkAnswer(this, true)">c. Appendix C.15</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q4:</strong> What is a key Phase 1 action for the HR Manager?</p>
+    <button onclick="checkAnswer(this, true)">a. Confirm staff manifest and NOK details</button><br>
+    <button onclick="checkAnswer(this, false)">b. Issue press statement to the media</button><br>
+    <button onclick="checkAnswer(this, false)">c. Dispatch recovery crew to site</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q5:</strong> What must the HR Manager never do without authorization?</p>
+    <button onclick="checkAnswer(this, false)">a. Notify airport ground teams</button><br>
+    <button onclick="checkAnswer(this, true)">b. Disclose NOK information externally</button><br>
+    <button onclick="checkAnswer(this, false)">c. Attend EMC briefings</button>
+    <div class="feedback"></div>
+  </div>
+
+  <p><strong>Final Note:</strong> Your actions as Human Resources Manager shape the experience of ADA employees and their families during crisis events. Lead with empathy, precision, and accountability at every phase of the emergency.</p>
+
+  <button class="back-button" onclick="window.location.href='SelectYourRole.html'">← Back to Role Menu</button>
+</div>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    const feedback = button.parentElement.querySelector('.feedback');
+    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
+    feedback.style.color = isCorrect ? "green" : "red";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accountable Manager Role</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      border-left: 6px solid #9b111e;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #9b111e;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .question {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .back-button {
+      margin-top: 30px;
+      background-color: #9b111e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Accountable Manager – Emergency Response Role</h1>
+
+  <h2>Activation</h2>
+  <p>Activated during <strong>High-level emergencies</strong> or when the Emergency Management Team (EMT) is fully mobilized. The AM acts as Chairman of the EMT and holds overall authority for directing the emergency response.</p>
+  <p>Refer to ERP Sections 2.5.1, 2.5.2, 3.3.2, 3.6.1 and Appendix C.5.</p>
+
+  <h2>Core Responsibilities</h2>
+  <ul>
+    <li>Overall authority for directing the emergency response and leading the EMT.</li>
+    <li>Ensure continuity of company operations not impacted by the emergency.</li>
+    <li>Initiate and chair conference calls with airport and authority representatives.</li>
+    <li>Determine need to activate the Emergency Management Centre (EMC).</li>
+    <li>Authorize activation of the Crisis Management Service Provider (GoCrisis).</li>
+    <li>Monitor developments and provide regular updates to top management.</li>
+  </ul>
+
+  <h2>ERP References</h2>
+  <ul>
+    <li>Section 2.5.1 – EMT Activation Thresholds</li>
+    <li>Section 2.5.2 – EMT On-Call Roles</li>
+    <li>Section 3.3.2 – Full EMT Organisation Chart</li>
+    <li>Section 3.6.1 – Accountable Manager (Emergency Management Chairman)</li>
+    <li>Appendix C.5 – Accountable Manager Checklist</li>
+  </ul>
+
+  <h2>Phase-Based Duties</h2>
+  <ul>
+    <li><strong>Phase 1 (0–60 min):</strong> Verify incident, determine response level, authorize EMT activation, launch GoCrisis, brief senior management.</li>
+    <li><strong>Phase 2 (1–4 hrs):</strong> Chair EMT meetings, oversee info collection, coordinate with internal and external parties, ensure situational awareness.</li>
+    <li><strong>Phase 3 (4+ hrs):</strong> Direct transition to recovery, lead debriefings, approve final reports and archiving.</li>
+  </ul>
+
+  <h2>Cautions</h2>
+  <ul>
+    <li>Do not delay EMT activation in high-severity emergencies.</li>
+    <li>Base decisions only on confirmed information — avoid assumptions.</li>
+    <li>All records must be securely retained.</li>
+    <li>Ensure EMT members are not overworked — manage fatigue risk.</li>
+    <li>Delegate administration, but maintain strategic oversight throughout.</li>
+  </ul>
+
+  <h2>Knowledge Check (Interactive)</h2>
+
+  <div class="question">
+    <p><strong>Q1:</strong> When is the Accountable Manager activated?</p>
+    <button onclick="checkAnswer(this, false)">a.Only when requested by the GCAA</button><br>
+    <button onclick="checkAnswer(this, true)">b.During high-level emergencies when full EMT activation is needed</button><br>
+    <button onclick="checkAnswer(this, false)">c.After all other directors are unavailable</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q2:</strong> What section outlines the Accountable Manager’s chairmanship of the EMT?</p>
+    <button onclick="checkAnswer(this, true)">a.Section 3.6.1</button><br>
+    <button onclick="checkAnswer(this, false)">b.Section 2.4</button><br>
+    <button onclick="checkAnswer(this, false)">c.Appendix D.2</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q3:</strong> Which checklist is specific to the Accountable Manager?</p>
+    <button onclick="checkAnswer(this, true)">a.Appendix C.5</button><br>
+    <button onclick="checkAnswer(this, false)">b.Appendix C.3</button><br>
+    <button onclick="checkAnswer(this, false)">c.Appendix C.6</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q4:</strong> What is one of the first actions in Phase 1?</p>
+    <button onclick="checkAnswer(this, false)">a.Initiate press release</button><br>
+    <button onclick="checkAnswer(this, true)">b.Verify emergency and authorize full EMT activation</button><br>
+    <button onclick="checkAnswer(this, false)">c.Secure crew records</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q5:</strong> What must the AM monitor continuously?</p>
+    <button onclick="checkAnswer(this, false)">a.HR leave schedules</button><br>
+    <button onclick="checkAnswer(this, false)">b.Maintenance release logs</button><br>
+    <button onclick="checkAnswer(this, true)">c.EMC operations and updates to top management</button><br>
+    <div class="feedback"></div>
+  </div>
+
+  <p><strong>Final Note:</strong> Your role as Accountable Manager is critical to the success of Abu Dhabi Aviation’s emergency preparedness and response. Strong leadership, clear decisions, and effective delegation ensure protection of life, operations, and reputation.</p>
+
+  <button class="back-button" onclick="window.location.href='SelectYourRole.html'">← Back to Role Menu</button>
+</div>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    const feedback = button.parentElement.querySelector('.feedback');
+    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
+    feedback.style.color = isCorrect ? "green" : "red";
+  }
+</script>
+
+</body>
+</html>
+

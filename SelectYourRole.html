@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Your Role</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .main-container {
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .button-grid-10 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    button {
+      padding: 14px;
+      font-size: 16px;
+      background-color: white;
+      border: 2px solid #9b111e;
+      color: #9b111e;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: white;
+      color: #9b111e;
+    }
+
+    .back-button {
+      grid-column: span 2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+    <img src="assets/logo.png" class="logo" alt="ADA Logo" />
+    <h1 class="title">Select Your Role</h1>
+  </div>
+
+  <div class="button-grid-10">
+    <button onclick="window.location.href='accountable.html'">Accountable Manager</button>
+    <button onclick="window.location.href='safetydirector.html'">Safety Director</button>
+    <button onclick="window.location.href='dutydoo.html'">Duty Director of Operations (DOO)</button>
+    <button onclick="window.location.href='opsdirector.html'">Operations Director</button>
+    <button onclick="window.location.href='hr.html'">Human Resources</button>
+    <button onclick="window.location.href='commercial.html'">Commercial Director</button>
+    <button onclick="window.location.href='engineering.html'">Engineering Director</button>
+    <button onclick="window.location.href='quality.html'">Quality Director</button>
+    <button onclick="window.location.href='additionalroles'">Additional ERP Roles</button>
+    <button class="back-button" onclick="window.location.href='Main Menu.html'">Back</button>
+  </div>
+
+  <script>
+    function navigate(target) {
+      alert("This would load: " + target);
+      // Replace alert with actual navigation when target pages are available:
+      // window.location.href = `${target}.html`;
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
