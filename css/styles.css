@@ -1,0 +1,144 @@
+/* General layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #333;
+}
+
+/* Shared logo centered at top */
+.logo {
+  width: 200px;
+  max-width: 60vw;
+  height: auto;
+  margin-top: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Shared title below logo */
+.title {
+  text-align: center;
+  font-size: 1.8em;
+  color: #333333;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Landing screen clickable logo */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.02);
+}
+
+/* Main Menu: side-by-side buttons */
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.button-row button {
+  font-size: 1em;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  border: 2px solid #9b111e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+  color: #9b111e;
+}
+
+.button-row button:hover {
+  background-color: #9b111e;
+  color: #ffffff;
+}
+
+.button-row button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* 5-row, 2-column grid for Role Selection Menu */
+.button-grid-10 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.button-grid-10 button {
+  font-size: 1em;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2px solid #9b111e;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  color: #9b111e;
+}
+
+.button-grid-10 button:hover {
+  background-color: #9b111e;
+  color: #ffffff;
+}
+
+.button-grid-10 button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Half-width back button in bottom-right */
+.button-grid-10 .back-button {
+  grid-column: 2 / 3;
+  justify-self: end;
+  width: 50%;
+}
+
+/* EMT Activation Thresholds button */
+.emergency-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.small-button {
+  font-size: 0.9em;
+  padding: 8px 20px;
+  background-color: #ffffff;
+  color: #9b111e;
+  border: 2px solid #9b111e;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  min-width: 200px;
+  max-width: 240px;
+}
+
+.small-button:hover {
+  background-color: #9b111e;
+  color: #ffffff;
+}
+
+
