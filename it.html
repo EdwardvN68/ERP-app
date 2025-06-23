@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Head of IT Role</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      border-left: 6px solid #9b111e;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #9b111e;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .question {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .back-button {
+      margin-top: 30px;
+      background-color: #9b111e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Head of IT – Emergency Response Role</h1>
+
+  <h2>Activation</h2>
+  <p>The Head of IT is activated during any Medium or High-level emergency requiring data protection, secure communications, or IT infrastructure support. This includes support for the EMT, remote access provisioning, data safeguarding, and forensic readiness.</p>
+  <p>Refer to ERP Section 3.6.12 – Head of IT.</p>
+
+  <h2>Core Responsibilities</h2>
+  <ul>
+    <li>Ensure the continued functioning and security of all IT systems supporting the EMT and response operations.</li>
+    <li>Immediately quarantine data and devices related to the affected aircraft, crew, or operations. This includes computers, tablets, radios, mobile phones, and personal drives.</li>
+    <li>Assist in securing and isolating access to the flight crew’s email accounts, company login credentials, and system audit trails.</li>
+    <li>Coordinate with the Director of Quality and Legal Advisor for data retrieval, evidence preservation, and forensic imaging.</li>
+    <li>Restrict access to sensitive data systems to only essential personnel.</li>
+    <li>Provide the EMT with secure communication channels including encrypted email, access-controlled file sharing, and backup voice systems.</li>
+    <li>Restore or reroute critical IT services if existing systems become compromised.</li>
+  </ul>
+
+  <h2>ERP References</h2>
+  <ul>
+    <li>Section 3.6.12 – Head of IT</li>
+  </ul>
+
+  <h2>Phase-Based Duties</h2>
+  <ul>
+    <li><strong>Phase 1 (0–60 min):</strong> Receive confirmation of activation from EMT Chair or Accountable Manager. Quarantine all relevant IT systems and personal devices associated with the flight. Disable non-essential access to sensitive systems and notify IT Security. Provide EMT access to secure communication platforms.</li>
+    <li><strong>Phase 2 (1–4 hrs):</strong> Initiate forensic backup of affected systems in coordination with Quality and Legal. Monitor all internal systems for attempted unauthorized access. Maintain communication system continuity for EMT use.</li>
+    <li><strong>Phase 3 (4+ hrs):</strong> Provide IT support to Emergency Call Centre and Family Assistance Team if activated. Document all security actions taken for post-event audit. Begin restoration of services or workarounds as recovery phase begins.</li>
+  </ul>
+
+  <h2>Cautions</h2>
+  <ul>
+    <li>Do not permit any deletion or modification of potentially relevant data.</li>
+    <li>Do not delay system lockdowns—quarantine takes priority over convenience.</li>
+    <li>Avoid assumptions about system security—verify and log every action.</li>
+    <li>Do not use unsecured platforms for EMT communications during an active event.</li>
+  </ul>
+
+  <h2>Knowledge Check (Interactive)</h2>
+
+  <div class="question">
+    <p><strong>Q1:</strong> What is the Head of IT’s first action during an emergency?</p>
+    <button onclick="checkAnswer(this, true)">a. Quarantine systems and devices related to the flight</button><br>
+    <button onclick="checkAnswer(this, false)">b. Notify the police</button><br>
+    <button onclick="checkAnswer(this, false)">c. Shut down the data centre</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q2:</strong> Which teams must IT coordinate with for evidence preservation?</p>
+    <button onclick="checkAnswer(this, true)">a. Director of Quality and Legal Advisor</button><br>
+    <button onclick="checkAnswer(this, false)">b. PR and Commercial</button><br>
+    <button onclick="checkAnswer(this, false)">c. Airport Security</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q3:</strong> What should be done with crew login accounts?</p>
+    <button onclick="checkAnswer(this, true)">a. Restrict access and preserve logs</button><br>
+    <button onclick="checkAnswer(this, false)">b. Delete all credentials</button><br>
+    <button onclick="checkAnswer(this, false)">c. Forward to next-of-kin</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q4:</strong> What IT services must remain operational during an emergency?</p>
+    <button onclick="checkAnswer(this, true)">a. Secure communications for EMT</button><br>
+    <button onclick="checkAnswer(this, false)">b. Internet browsing for general staff</button><br>
+    <button onclick="checkAnswer(this, false)">c. Streaming services</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q5:</strong> When should IT begin restoring services?</p>
+    <button onclick="checkAnswer(this, false)">a. Immediately after the incident</button><br>
+    <button onclick="checkAnswer(this, false)">b. Only after board approval</button><br>
+    <button onclick="checkAnswer(this, true)">c. During the recovery phase unless earlier rerouting is essential</button>
+    <div class="feedback"></div>
+  </div>
+
+  <p><strong>Final Note:</strong> The Head of IT protects not just data, but the integrity of ADA’s emergency response. Your actions ensure secure decision-making and regulatory compliance. In the digital age, every click is traceable—and in a crisis, that’s a good thing.</p>
+
+  <button class="back-button" onclick="window.location.href='selectyourrole-adderproles.html'">← Back to Additional Roles</button>
+</div>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    const feedback = button.parentElement.querySelector('.feedback');
+    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
+    feedback.style.color = isCorrect ? "green" : "red";
+  }
+</script>
+
+</body>
+</html>

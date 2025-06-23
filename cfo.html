@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chief Financial Officer Role</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      border-left: 6px solid #9b111e;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #9b111e;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .question {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .back-button {
+      margin-top: 30px;
+      background-color: #9b111e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Chief Financial Officer – Emergency Response Role</h1>
+
+  <h2>Activation</h2>
+  <p>The Chief Financial Officer (CFO) is activated during Medium and High-level emergencies that may result in significant financial, insurance, or compensatory exposure. Activation is triggered by the EMT Chairperson or Accountable Manager as part of the core Emergency Management Team (EMT) response.</p>
+  <p>Refer to ERP Section 3.6.11 – Chief Financial Officer.</p>
+
+  <h2>Core Responsibilities</h2>
+  <ul>
+    <li>Act as the EMT’s focal point for all financial and insurance matters arising from the emergency.</li>
+    <li>Establish and manage the budget for emergency-related costs, including travel, accommodation, family assistance, and external contractors (e.g., Go Crisis).</li>
+    <li>Provide immediate financial authority for time-sensitive expenditures in support of the EMT.</li>
+    <li>Coordinate closely with the Legal Advisor and Insurance Broker to ensure compliance with coverage terms and notify underwriters as required.</li>
+    <li>Arrange emergency cash disbursement procedures and credit authorizations.</li>
+    <li>Monitor and report on the overall cost impact of the emergency to the EMT Chairperson and Accountable Manager.</li>
+    <li>Liaise with ADA’s finance and procurement departments to expedite required goods and services.</li>
+  </ul>
+
+  <h2>ERP References</h2>
+  <ul>
+    <li>Section 3.6.11 – Chief Financial Officer</li>
+  </ul>
+
+  <h2>Phase-Based Duties</h2>
+  <ul>
+    <li><strong>Phase 1 (0–60 min):</strong> Confirm EMT activation status and readiness. Notify insurance broker (if applicable). Activate rapid expense approval protocol. Coordinate with Go Crisis or emergency vendors if deployed.</li>
+    <li><strong>Phase 2 (1–4 hrs):</strong> Establish tracking for all emergency expenses. Issue financial delegation instructions to EMT support roles. Secure travel and accommodation funding for NOK and response teams.</li>
+    <li><strong>Phase 3 (4+ hrs):</strong> Compile financial impact assessments. Support post-event reporting for Board and regulators. Maintain financial transparency records for audit.</li>
+  </ul>
+
+  <h2>Cautions</h2>
+  <ul>
+    <li>Do not delay financial approvals for response-critical tasks (e.g., aircraft dispatch, family assistance).</li>
+    <li>Avoid exceeding coverage limits—coordinate with legal and insurers first.</li>
+    <li>Do not delegate expenditure authority without written or logged approval.</li>
+    <li>Ensure documentation of all costs for post-incident reconciliation.</li>
+  </ul>
+
+  <h2>Knowledge Check (Interactive)</h2>
+
+  <div class="question">
+    <p><strong>Q1:</strong> What is the CFO’s primary role during an emergency?</p>
+    <button onclick="checkAnswer(this, true)">a. Financial oversight and rapid response approvals</button><br>
+    <button onclick="checkAnswer(this, false)">b. HR coordination</button><br>
+    <button onclick="checkAnswer(this, false)">c. Aircrew dispatch</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q2:</strong> Who must the CFO liaise with regarding insurance notifications?</p>
+    <button onclick="checkAnswer(this, true)">a. Legal Advisor and Insurance Broker</button><br>
+    <button onclick="checkAnswer(this, false)">b. Airport Authorities</button><br>
+    <button onclick="checkAnswer(this, false)">c. OCC Manager</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q3:</strong> When should the CFO issue emergency credit authority?</p>
+    <button onclick="checkAnswer(this, true)">a. Within the first hour of confirmed activation</button><br>
+    <button onclick="checkAnswer(this, false)">b. After EMT stands down</button><br>
+    <button onclick="checkAnswer(this, false)">c. Only when requested by ground ops</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q4:</strong> What is the CFO required to report to the EMT Chairperson?</p>
+    <button onclick="checkAnswer(this, true)">a. Cost impact of the emergency</button><br>
+    <button onclick="checkAnswer(this, false)">b. Safety investigation outcomes</button><br>
+    <button onclick="checkAnswer(this, false)">c. Passenger manifests</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q5:</strong> What departments must the CFO work with to secure urgent goods and services?</p>
+    <button onclick="checkAnswer(this, true)">a. Finance and Procurement</button><br>
+    <button onclick="checkAnswer(this, false)">b. Safety and Compliance</button><br>
+    <button onclick="checkAnswer(this, false)">c. PR and Legal</button>
+    <div class="feedback"></div>
+  </div>
+
+  <p><strong>Final Note:</strong> The CFO ensures that no delay in finance disrupts ADA’s emergency response. Every hour matters. The CFO’s authority enables EMT actions to proceed with speed, accountability, and full financial traceability.</p>
+
+  <button class="back-button" onclick="window.location.href='selectyourrole-adderproles.html'">← Back to Additional Roles</button>
+</div>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    const feedback = button.parentElement.querySelector('.feedback');
+    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
+    feedback.style.color = isCorrect ? "green" : "red";
+  }
+</script>
+
+</body>
+</html>

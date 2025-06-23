@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accountable Manager Role</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      border-left: 6px solid #9b111e;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #9b111e;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .question {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .back-button {
+      margin-top: 30px;
+      background-color: #9b111e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1>OCC Manager – Emergency Response Role</h1>
+
+  <h2>Activation</h2>
+  <p>Activated during any emergency response event requiring EMT coordination involving air crew, aircraft dispatch, or OCC support operations. Activation may be initiated by the Accountable Manager, Director of Operations, or Duty Director of Operations (DOO), as part of the EMT mobilization protocol.</p>
+  <p>Refer to ERP Section 3.6.9.</p>
+
+  <h2>Core Responsibilities</h2>
+  <ul>
+    <li>Advising the EMT on all air crew issues.</li>
+    <li>Liaising regarding services that may be required as well as monitor contract performance with emergency response provider (if applicable).</li>
+    <li>When required, arranging an aircraft to deploy to the emergency/incident site.</li>
+    <li>When required, arranging for air crew to operate any aircraft to the emergency/incident site.</li>
+    <li>As required, appoint a deputy to administer the day-to-day functions of Operations Control and cover and restoring schedule integrity.</li>
+    <li>Providing an accurate list of air crew and position on the aircraft to the EMT.</li>
+    <li>Confirming actual details of cargo and escorts on board.</li>
+  </ul>
+
+  <h2>ERP References</h2>
+  <ul>
+    <li>Section 3.6.9 – OCC Manager</li>
+    <li>Checklist: No checklist exists for this role in Appendix C.</li>
+    <li>Note: Coordination with OCC Duty Coordinator (Checklist: Appendix B.3) may be expected but is not declared in 3.6.9.</li>
+  </ul>
+
+  <h2>Phase-Based Duties</h2>
+  <ul>
+    <li><strong>Phase 1 (0–60 min):</strong> Confirm crewing issues, air crew availability, and aircraft readiness. Coordinate air movement logistics.</li>
+    <li><strong>Phase 2 (1–4 hrs):</strong> Provide updated aircraft and air crew lists, confirm cargo details, and coordinate Operations Control handover if needed.</li>
+    <li><strong>Phase 3 (4+ hrs):</strong> Re-establish schedule integrity and shift administration to deputy as required. Monitor air crew needs through EMT.</li>
+  </ul>
+
+  <h2>Cautions</h2>
+  <ul>
+    <li>Ensure only verified air crew and aircraft details are released to the EMT.</li>
+    <li>Coordinate with OCC Duty Coordinator to avoid duplication of communication or role overlap.</li>
+    <li>Provide continuous updates to EMT if air movements are delayed or revised.</li>
+    <li>Maintain operational oversight until schedule control is fully delegated.</li>
+  </ul>
+
+  <h2>Knowledge Check (Interactive)</h2>
+
+  <div class="question">
+    <p><strong>Q1:</strong> Who is the OCC Manager expected to advise during an emergency?</p>
+    <button onclick="checkAnswer(this, true)">a. EMT</button><br>
+    <button onclick="checkAnswer(this, false)">b. Legal Advisor</button><br>
+    <button onclick="checkAnswer(this, false)">c. Press Officer</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q2:</strong> What must be confirmed about onboard cargo?</p>
+    <button onclick="checkAnswer(this, false)">a. Last port of loading</button><br>
+    <button onclick="checkAnswer(this, false)">b. Estimated resale value</button><br>
+    <button onclick="checkAnswer(this, true)">c. Actual cargo and escort details</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q3:</strong> Who may initiate activation of the OCC Manager role?</p>
+    <button onclick="checkAnswer(this, false)">a. Family Support Team</button><br>
+    <button onclick="checkAnswer(this, true)">b. AM, DOO, or Duty Director of Ops</button><br>
+    <button onclick="checkAnswer(this, false)">c. GCAA Emergency Liaison</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q4:</strong> What is a required action in Phase 1?</p>
+    <button onclick="checkAnswer(this, true)">a. Confirm crew and aircraft availability</button><br>
+    <button onclick="checkAnswer(this, false)">b. Start evacuation procedures</button><br>
+    <button onclick="checkAnswer(this, false)">c. Draft press statement</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q5:</strong> Which checklist is specifically assigned to the OCC Manager in Appendix C?</p>
+    <button onclick="checkAnswer(this, false)">a. Appendix C.3</button><br>
+    <button onclick="checkAnswer(this, false)">b. Appendix C.8</button><br>
+    <button onclick="checkAnswer(this, true)">c. No checklist exists in Appendix C</button>
+    <div class="feedback"></div>
+  </div>
+
+  <p><strong>Final Note:</strong> The OCC Manager is a key operational role in managing air crew, aircraft movement, and schedule continuity during emergencies. Coordination, accuracy, and timely updates are vital for response effectiveness.</p>
+
+  <button class="back-button" onclick="window.location.href='selectyourrole-adderproles.html'">← Back to Additional Roles</button>
+</div>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    const feedback = button.parentElement.querySelector('.feedback');
+    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
+    feedback.style.color = isCorrect ? "green" : "red";
+  }
+</script>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Operations Control Centre Role</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      border-left: 6px solid #9b111e;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #9b111e;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .question {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .back-button {
+      margin-top: 30px;
+      background-color: #9b111e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Operations Control Centre – Emergency Response Role</h1>
+
+  <h2>Activation</h2>
+  <p>The Operations Control Centre (OCC) is active 24/7 and forms the first operational link in ADA’s emergency response chain. OCC personnel are activated for all emergency levels (Low, Medium, High), and are responsible for logging, notification, coordination, and communication tasks until command is transferred to the EMT.</p>
+  <p><strong>Trigger:</strong> Any aviation-related emergency, abnormal event, or third-party notification involving ADA aircraft, staff, or operations.</p>
+  <p>Refer to ERP Sections 2.5.1, 2.6, and 3.6.10, and Appendix B.2 and B.6.</p>
+
+  <h2>Core Responsibilities</h2>
+  <ul>
+    <li>Notify the Director of Operations of any incident and hand over responsibility to the EMT once instructed.</li>
+    <li>Maintain real-time documentation using Appendix B.6 – Incident Log Form.</li>
+    <li>Notify the Crisis Management Service Provider (Go Crisis) without delay.</li>
+    <li>Assign specific staff to support the EMT by handling emergency calls.</li>
+    <li>Provide the EMT with a dedicated family contact number.</li>
+    <li>Arrange for extra staffing as needed during extended operations.</li>
+    <li>Accurately match NOK details to each crew/passenger manifest.</li>
+    <li>Ensure no direct NOK contact until Police notification is confirmed.</li>
+    <li>Provide NOK contact details to Police only upon request.</li>
+    <li>Maintain a list of families/friends requesting updates and relay to EMT or FAST.</li>
+    <li>Instruct unaffected employees to contact their families to reduce concern.</li>
+  </ul>
+
+  <h2>ERP References</h2>
+  <ul>
+    <li>Section 3.6.10 – OCC Responsibilities</li>
+    <li>Section 2.5.1 – EMT Activation Thresholds</li>
+    <li>Section 2.6 – Initial OCC Response</li>
+    <li>Appendix B.2 – Operations Control Checklist</li>
+    <li>Appendix B.6 – Incident Log Form</li>
+  </ul>
+
+  <h2>Phase-Based Duties</h2>
+  <ul>
+    <li><strong>Phase 1 (0–60 min):</strong> Verify incident, notify DOO, open Incident Log (B.6), start notification cascade, assign family number, alert Go Crisis.</li>
+    <li><strong>Phase 2 (1–4 hrs):</strong> Provide updates to DOO and EMT, maintain log entries, coordinate with OCC Manager, confirm crew/NOK info, relay updates to EMT/FAST.</li>
+    <li><strong>Phase 3 (4+ hrs):</strong> Monitor operations, assist with EMT coordination, prepare log handover, archive records as per retention policy.</li>
+  </ul>
+
+  <h2>Cautions</h2>
+  <ul>
+    <li>Do not delay notification to the Director of Operations or DOO.</li>
+    <li>Never contact families directly unless Police notification is confirmed.</li>
+    <li>Use only authorized checklists and forms—Appendix B.2 and B.6.</li>
+    <li>Log all actions in real time.</li>
+    <li>Ensure continuity by assigning deputies during extended events.</li>
+    <li>Do not engage with the media — refer to Commercial Director or EMT spokesperson.</li>
+  </ul>
+
+  <h2>Knowledge Check (Interactive)</h2>
+
+  <div class="question">
+    <p><strong>Q1:</strong> What checklist must OCC staff use during an emergency?</p>
+    <button onclick="checkAnswer(this, true)">a. Appendix B.2 – Operations Control Checklist</button><br>
+    <button onclick="checkAnswer(this, false)">b. Appendix C.9</button><br>
+    <button onclick="checkAnswer(this, false)">c. Appendix B.3</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q2:</strong> When is it acceptable to contact next of kin directly?</p>
+    <button onclick="checkAnswer(this, true)">a. Only after formal Police notification</button><br>
+    <button onclick="checkAnswer(this, false)">b. As soon as the incident is confirmed</button><br>
+    <button onclick="checkAnswer(this, false)">c. When the EMT authorizes without Police confirmation</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q3:</strong> Who is responsible for instructing OCC to transfer command to the EMT?</p>
+    <button onclick="checkAnswer(this, true)">a. Director of Operations</button><br>
+    <button onclick="checkAnswer(this, false)">b. OCC Manager</button><br>
+    <button onclick="checkAnswer(this, false)">c. Safety Director</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q4:</strong> What form must be opened and maintained from the first minute of the emergency?</p>
+    <button onclick="checkAnswer(this, true)">a. Appendix B.6 – Incident Log Form</button><br>
+    <button onclick="checkAnswer(this, false)">b. Form SMS-013</button><br>
+    <button onclick="checkAnswer(this, false)">c. Appendix C.3</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q5:</strong> What is the OCC’s role in staffing?</p>
+    <button onclick="checkAnswer(this, true)">a. Arrange for additional support staff if required</button><br>
+    <button onclick="checkAnswer(this, false)">b. Assign investigators</button><br>
+    <button onclick="checkAnswer(this, false)">c. Deploy Go Crisis teams</button>
+    <div class="feedback"></div>
+  </div>
+
+  <p><strong>Final Note:</strong> OCC staff are the foundation of ADA’s emergency response. Your timely actions, accurate documentation, and disciplined communication determine the quality and integrity of the entire response process. Precision matters. Follow your checklist. Log everything. And escalate without hesitation.</p>
+
+  <button class="back-button" onclick="window.location.href='selectyourrole-adderproles.html'">← Back to Additional Roles</button>
+</div>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    const feedback = button.parentElement.querySelector('.feedback');
+    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
+    feedback.style.color = isCorrect ? "green" : "red";
+  }
+</script>
+
+</body>
+</html>

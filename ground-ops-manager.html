@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ground Operations Manager Role</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      border-left: 6px solid #9b111e;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #9b111e;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .question {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .back-button {
+      margin-top: 30px;
+      background-color: #9b111e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Ground Operations Manager – Emergency Response Role</h1>
+
+  <h2>Activation</h2>
+  <p>Activated during emergencies involving flight disruption, airport access, or apron operations. Also activated upon full EMT mobilisation or at the direction of the AM, DOO, or OCC. This role is essential for securing access, coordination, and readiness of ground support services.</p>
+  <p>Refer to ERP Sections 2.5.1, 3.6.8 and Appendix C.11.</p>
+
+  <h2>Core Responsibilities</h2>
+  <ul>
+    <li>Provide detailed handling-related information to the Emergency Management Team (EMT) as requested.</li>
+    <li>Forward travel, accommodation, and logistics arrangements for next of kin, employees, and crew to relevant destination airports.</li>
+    <li>Identify skill and manpower needs for affected airports; release appropriately trained staff and inform the EMT of the resource and deployment plan.</li>
+    <li>Ensure cargo is preserved and secured until officially handed over to the designated investigation authority.</li>
+    <li>Obtain and document next of kin instructions regarding the handling of deceased persons and any personal effects recovered.</li>
+    <li>Quarantine and restrict access to escort and crew manifests.</li>
+    <li>Quarantine and secure cargo manifests; originals must be transported to the Emergency Management Centre (EMC) using secure methods.</li>
+    <li>Advise airport contractors on suitable actions to be taken in line with the emergency.</li>
+    <li>Notify the Family Support Team (FST) of any specific operational needs or sensitivities related to locations impacted by the emergency.</li>
+  </ul>
+
+  <h2>ERP References</h2>
+  <ul>
+    <li>Section 2.5.1 – EMT Activation Thresholds</li>
+    <li>Section 3.6.8 – Ground Operations Manager</li>
+    <li>Appendix C.11 – Ground Operations Manager Checklist</li>
+  </ul>
+
+  <h2>Phase-Based Duties</h2>
+  <ul>
+    <li><strong>Phase 1 (0–60 min):</strong> Confirm availability, validate access to airport/apron, and initiate coordination with airport duty manager.</li>
+    <li><strong>Phase 2 (1–4 hrs):</strong> Secure ground services for any return flights, including staging, reception, and staging support for PR or FAM.</li>
+    <li><strong>Phase 3 (4+ hrs):</strong> Support recovery logistics, document actions taken, and participate in post-event debriefs.</li>
+  </ul>
+
+  <h2>Cautions</h2>
+  <ul>
+    <li>Do not assume ground services are available — verify and confirm.</li>
+    <li>Do not engage airport media teams directly — route via PR.</li>
+    <li>Maintain accurate records of handovers, delays, and service gaps.</li>
+    <li>Ensure third-party personnel (Go Crisis, FAM) are escorted and cleared for apron-side access as needed.</li>
+  </ul>
+
+  <h2>Knowledge Check (Interactive)</h2>
+
+  <div class="question">
+    <p><strong>Q1:</strong> When is the Ground Operations Manager activated?</p>
+    <button onclick="checkAnswer(this, false)">a. Only during aircraft incidents overseas</button><br>
+    <button onclick="checkAnswer(this, true)">b. When full EMT is activated or ground support is needed</button><br>
+    <button onclick="checkAnswer(this, false)">c. Only when the CFO is unavailable</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q2:</strong> What section provides checklist responsibilities for this role?</p>
+    <button onclick="checkAnswer(this, false)">a. Appendix C.14</button><br>
+    <button onclick="checkAnswer(this, true)">b. Appendix C.11</button><br>
+    <button onclick="checkAnswer(this, false)">c. Appendix D.2</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q3:</strong> What should the manager verify within the first hour?</p>
+    <button onclick="checkAnswer(this, true)">a. Ground handling availability and airport status</button><br>
+    <button onclick="checkAnswer(this, false)">b. Crew duty logs</button><br>
+    <button onclick="checkAnswer(this, false)">c. HR holiday calendar</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q4:</strong> Who must be updated throughout the response?</p>
+    <button onclick="checkAnswer(this, false)">a. Legal Advisor and IT Manager</button><br>
+    <button onclick="checkAnswer(this, false)">b. Engineering Director</button><br>
+    <button onclick="checkAnswer(this, true)">c. Operations Director and OCC</button>
+    <div class="feedback"></div>
+  </div>
+
+  <div class="question">
+    <p><strong>Q5:</strong> What must be avoided without authorisation?</p>
+    <button onclick="checkAnswer(this, false)">a. Equipment checks</button><br>
+    <button onclick="checkAnswer(this, true)">b. Liaison with airport media teams</button><br>
+    <button onclick="checkAnswer(this, false)">c. Reviewing apron safety zones</button>
+    <div class="feedback"></div>
+  </div>
+
+  <p><strong>Final Note:</strong> The Ground Operations Manager plays a frontline role in physical response operations. Coordination, speed, and precision are essential to secure aircraft handling, crew and pax reception, and infrastructure support under pressure.</p>
+
+  <button class="back-button" onclick="window.location.href='selectyourrole-adderproles.html'">← Back to Additional Roles</button>
+</div>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    const feedback = button.parentElement.querySelector('.feedback');
+    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
+    feedback.style.color = isCorrect ? "green" : "red";
+  }
+</script>
+
+</body>
+</html>
+
