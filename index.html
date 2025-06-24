@@ -3,15 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ADA Emergency Response Plan</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>ADA ERP Launcher</title>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .icon-wrapper {
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .icon-wrapper img {
+      width: 192px;
+      height: 192px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .icon-wrapper img:hover {
+      transform: scale(1.05);
+    }
+
+    .icon-wrapper span {
+      margin-top: 12px;
+      display: block;
+      font-size: 1.1em;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-  <div class="logo-container" onclick="window.location.href='Main%20Menu.html'">
-    <img src="assets/logo.png" alt="ADA Logo" class="logo" />
-    <h1 class="title">Emergency Response Plan</h1>
+
+  <div class="icon-wrapper" onclick="window.location.href='Main Menu.html'">
+    <img src="assets/icon-512.png" alt="ERP Menu Icon" />
   </div>
 
-  <script src="js/app.js"></script>
 </body>
 </html>
+
+
+
