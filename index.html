@@ -3,49 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ADA ERP Launcher</title>
+  <title>A6-ERP Launcher</title>
+
+  <!-- Favicon and Web App Meta -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/icon-192.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#800000" />
+  
+  <!-- Style -->
   <style>
     body {
-      background-color: #f8f8f8;
+      background-color: #ffffff;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
       margin: 0;
       font-family: Arial, sans-serif;
     }
 
-    .icon-wrapper {
-      cursor: pointer;
+    .icon-container {
       text-align: center;
     }
 
-    .icon-wrapper img {
-      width: 192px;
-      height: 192px;
-      border-radius: 20px;
+    .icon-container img {
+      width: 180px;
+      height: 180px;
+      border-radius: 32px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
       transition: transform 0.2s ease;
     }
 
-    .icon-wrapper img:hover {
+    .icon-container img:hover {
       transform: scale(1.05);
     }
 
-    .icon-wrapper span {
+    .label {
       margin-top: 12px;
-      display: block;
-      font-size: 1.1em;
+      font-size: 1.2em;
       color: #333;
     }
   </style>
 </head>
+
 <body>
-
-  <div class="icon-wrapper" onclick="window.location.href='Main Menu.html'">
-    <img src="assets/icon-512.png" alt="ERP Menu Icon" />
+  <div class="icon-container">
+    <a href="Main Menu.html">
+      <img src="assets/icon-512.png" alt="ERP Menu Icon" />
+    </a>
+    <div class="label">A6-ERP System</div>
   </div>
-
 </body>
 </html>
 
