@@ -3,186 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EMT Activation Thresholds</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>EMT Activation Matrix</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
-      color: #333;
-      padding: 20px;
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      margin: 20px;
     }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      border-left: 6px solid #9b111e;
-      background: #fff;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
     h1 {
-      color: #9b111e;
-      font-size: 1.8em;
-      text-align: center;
-      margin-bottom: 30px;
+      color: #a00000;
     }
-
-    h2 {
-      font-size: 1.4em;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 10px;
+      text-align: left;
+    }
+    .low-header {
+      background-color: #92d050;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.1em;
+    }
+    .medium-header {
+      background-color: #ffc000;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.1em;
+    }
+    .high-header {
+      background-color: #ff0000;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.1em;
+    }
+    .button-container {
       margin-top: 30px;
     }
-
-    .level-low h2 {
-      color: #005cbf;
-    }
-
-    .level-medium h2 {
-      color: #f57c00;
-    }
-
-    .level-high h2 {
-      color: #d32f2f;
-    }
-
-    .incident {
-      margin-bottom: 20px;
-    }
-
-    .incident p {
-      margin: 4px 0;
-    }
-
     .back-button {
-      margin-top: 40px;
-      background-color: #9b111e;
+      background-color: #8b000f;
       color: white;
-      padding: 12px 24px;
+      padding: 10px 20px;
       border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      border-radius: 5px;
     }
-
-    .back-button:hover {
-      background-color: #b91c1c;
-    }
-
     .legend {
-      margin-top: 40px;
-      font-style: italic;
-      font-size: 0.9em;
-      color: #666;
+      margin-top: 30px;
+      font-size: 0.95em;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>EMT Activation Thresholds</h1>
 
-    <div class="level-low">
-      <h2>LOW</h2>
-      <div class="incident">
-        <p><strong>Routine disruption</strong></p>
-        <p><em>Inform and Alert:</em> Routine Management Procedures</p>
-        <p><em>Mobilise:</em> Managed by OCC</p>
-      </div>
-    </div>
+<h1>EMT Activation Matrix</h1>
 
-    <div class="level-medium">
-      <h2>MEDIUM</h2>
-      <div class="incident">
-        <p><strong>Aircraft air or ground incident – NO potential life-changing injuries or fatalities</strong></p>
-        <p><em>Inform and Alert:</em> DOO</p>
-        <p><em>Mobilise:</em> Quick Response EMT</p>
-      </div>
+<table>
+  <tr>
+    <th>Incident Type</th>
+    <th>Inform and Alert</th>
+    <th>Mobilise</th>
+  </tr>
 
-      <div class="incident">
-        <p><strong>Missing ADA staff – affecting aircraft operations</strong></p>
-        <p><em>Inform and Alert:</em> DOO</p>
-        <p><em>Mobilise:</em> Quick Response EMT</p>
-      </div>
+  <tr>
+    <td class="low-header" colspan="3">LOW</td>
+  </tr>
+  <tr>
+    <td>Routine disruption</td>
+    <td>Routine Management Procedures</td>
+    <td>Managed by OCC</td>
+  </tr>
 
-      <div class="incident">
-        <p><strong>Public health issues affecting staff and/or PAX – sufficient scale to affect aircraft operations</strong></p>
-        <p><em>Inform and Alert:</em> DOO</p>
-        <p><em>Mobilise:</em> Quick Response EMT</p>
-      </div>
+  <tr>
+    <td class="medium-header" colspan="3">MEDIUM</td>
+  </tr>
+  <tr>
+    <td>Aircraft air or ground incident – NO potential life changing injuries or fatalities</td>
+    <td>DOO</td>
+    <td>Quick Response EMT</td>
+  </tr>
+  <tr>
+    <td>Missing ADA staff – affecting aircraft operations</td>
+    <td>DOO</td>
+    <td>Quick Response EMT</td>
+  </tr>
+  <tr>
+    <td>Public health issues affecting staff and/or PAX – sufficient scale to affect aircraft operations</td>
+    <td>DOO</td>
+    <td>Quick Response EMT</td>
+  </tr>
+  <tr>
+    <td>Request to conduct SAR operation</td>
+    <td>DOO</td>
+    <td>Quick Response EMT</td>
+  </tr>
+  <tr>
+    <td>Security alert (physical or cyber threat) – NOT specific to ADA aircraft, personnel or facilities</td>
+    <td>DOO</td>
+    <td>Quick Response EMT</td>
+  </tr>
+  <tr>
+    <td>Severe weather forecast, within 12 hours – capable of damaging aircraft or preventing flying</td>
+    <td>DOO</td>
+    <td>Quick Response EMT</td>
+  </tr>
+  <tr>
+    <td>Hazardous materials spill – beyond immediate clean-up capabilities</td>
+    <td>DOO</td>
+    <td>Quick Response EMT</td>
+  </tr>
+  <tr>
+    <td>Operating airport/landing spot emergency/disruption with potential no flights for over 12 hours</td>
+    <td>DOO</td>
+    <td>Quick Response EMT</td>
+  </tr>
+  <tr>
+    <td>Damage to aircraft, equipment or facilities affecting operations and exceeding limits</td>
+    <td>DOO</td>
+    <td>Quick Response EMT</td>
+  </tr>
+  <tr>
+    <td>Media/social media story, ADA not specifically named, potentially financially damaging</td>
+    <td>DOO</td>
+    <td>Quick Response ERT</td>
+  </tr>
 
-      <div class="incident">
-        <p><strong>Request to conduct SAR operation</strong></p>
-        <p><em>Inform and Alert:</em> DOO</p>
-        <p><em>Mobilise:</em> Quick Response EMT</p>
-      </div>
+  <tr>
+    <td class="high-header" colspan="3">HIGH</td>
+  </tr>
+  <tr>
+    <td>Aircraft air or ground incident – potential life changing injuries and fatalities</td>
+    <td>DOO and AM</td>
+    <td>Full EMT</td>
+  </tr>
+  <tr>
+    <td>Fire or explosion at operating facility – threat to life and/or injury</td>
+    <td>DOO and AM</td>
+    <td>Full EMT</td>
+  </tr>
+  <tr>
+    <td>Specific security threat – ADA named as target of physical or cyber-attack to ADA staff, equipment or facilities</td>
+    <td>DOO and AM</td>
+    <td>Full EMT</td>
+  </tr>
+</table>
 
-      <div class="incident">
-        <p><strong>Security alert (physical or cyber threat) – NOT specific to ADA aircraft, personnel or facilities</strong></p>
-        <p><em>Inform and Alert:</em> DOO</p>
-        <p><em>Mobilise:</em> Quick Response EMT</p>
-      </div>
+<div class="legend">
+  <p><strong>•&nbsp;&nbsp;Accountable Manager (AM)<br>•&nbsp;&nbsp;Duty Director Of Operations (DOO)</strong></p>
+  <p><em>Note: This document is considered uncontrolled if copied or printed – always refer to official approved documentation</em></p>
+</div>
 
-      <div class="incident">
-        <p><strong>Severe weather forecast, impact within 12 hours – capable of damaging aircraft or preventing flying</strong></p>
-        <p><em>Inform and Alert:</em> DOO</p>
-        <p><em>Mobilise:</em> Quick Response EMT</p>
-      </div>
+<div class="button-container">
+  <a href="Main Menu.html" class="back-button">Back to Menu</a>
+</div>
 
-      <div class="incident">
-        <p><strong>Hazardous materials spill – beyond immediate clean-up capabilities</strong></p>
-        <p><em>Inform and Alert:</em> DOO</p>
-        <p><em>Mobilise:</em> Quick Response EMT</p>
-      </div>
-
-      <div class="incident">
-        <p><strong>Operating airport/landing spot emergency/disruption – potential no flights for over 12 hours</strong></p>
-        <p><em>Inform and Alert:</em> DOO</p>
-        <p><em>Mobilise:</em> Quick Response EMT</p>
-      </div>
-
-      <div class="incident">
-        <p><strong>Damage to aircraft, equipment or facilities affecting operations and exceeding</strong></p>
-        <p><em>Inform and Alert:</em> DOO</p>
-        <p><em>Mobilise:</em> Quick Response EMT</p>
-      </div>
-
-      <div class="incident">
-        <p><strong>Media/social media story – ADA not specifically named but potentially financially damaging</strong></p>
-        <p><em>Inform and Alert:</em> DOO</p>
-        <p><em>Mobilise:</em> Quick Response ERT</p>
-      </div>
-    </div>
-
-    <div class="level-high">
-      <h2>HIGH</h2>
-      <div class="incident">
-        <p><strong>Aircraft air or ground incident – potential life-changing injuries and fatalities</strong></p>
-        <p><em>Inform and Alert:</em> DOO and AM</p>
-        <p><em>Mobilise:</em> Full EMT</p>
-      </div>
-
-      <div class="incident">
-        <p><strong>Fire or explosion at operating facility – threat to life and injury</strong></p>
-        <p><em>Inform and Alert:</em> DOO and AM</p>
-        <p><em>Mobilise:</em> Full EMT</p>
-      </div>
-
-      <div class="incident">
-        <p><strong>Specific security threat – ADA named as target of physical or cyber-attack (to ADA staff, equipment, or facilities)</strong></p>
-        <p><em>Inform and Alert:</em> DOO and AM</p>
-        <p><em>Mobilise:</em> Full EMT</p>
-      </div>
-    </div>
-
-    <div class="legend">
-      <p><strong>AM</strong> – Accountable Manager</p>
-      <p><strong>DOO</strong> – Duty Director of Operations</p>
-      <p><br>⚠️ This document is considered uncontrolled if copied or printed.</p>
-    </div>
-
-    <button class="back-button" onclick="window.location.href='Main Menu.html'">&#8592; Back to Main Menu</button>
-  </div>
 </body>
 </html>
+
