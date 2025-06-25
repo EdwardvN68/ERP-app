@@ -146,16 +146,42 @@
     <div class="feedback"></div>
   </div>
 
-  <button class="back-button" onclick="window.location.href='SelectYourRole.html'">← Back to Role Menu</button>
+  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole.html'">← Back to Role Menu</button>
 </div>
 
 <script>
+  const totalQuestions = document.querySelectorAll('.question').length;
+  const answered = new Array(totalQuestions).fill(false);
+  const correct = new Array(totalQuestions).fill(false);
+
   function checkAnswer(button, isCorrect) {
-    const feedback = button.parentElement.querySelector('.feedback');
+    const questionElement = button.parentElement;
+    const questionIndex = Array.from(document.querySelectorAll('.question')).indexOf(questionElement);
+    const feedback = questionElement.querySelector('.feedback');
+
+    if (!answered[questionIndex]) {
+      answered[questionIndex] = true;
+    }
+
+    correct[questionIndex] = isCorrect;
     feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
     feedback.style.color = isCorrect ? "green" : "red";
+
+    checkAllCorrect();
+  }
+
+  function checkAllCorrect() {
+    const allAnswered = answered.every(Boolean);
+    const allCorrect = correct.every(Boolean);
+
+    if (allAnswered && allCorrect) {
+      document.getElementById("backButton").style.display = "inline-block";
+    }
   }
 </script>
 
 </body>
 </html>
+
+
+

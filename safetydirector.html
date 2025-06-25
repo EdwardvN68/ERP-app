@@ -132,19 +132,47 @@
     <button onclick="checkAnswer(this, false)">c.Form A.4</button>
     <div class="feedback"></div>
   </div>
+  
+  <p><strong>Final Note:</strong> As Safety Director, your leadership is critical to the integrity and success of Abu Dhabi Aviation’s emergency response. By ensuring compliance, supporting the EMT, and liaising with regulators, you uphold both safety and accountability during high-pressure situations.</p>
 
-  <button class="back-button" onclick="window.location.href='SelectYourRole.html'">← Back to Role Menu</button>
+  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole.html'">← Back to Role Menu</button>
 </div>
 
 <script>
+  const totalQuestions = document.querySelectorAll('.question').length;
+  const answered = new Array(totalQuestions).fill(false);
+  const correct = new Array(totalQuestions).fill(false);
+
   function checkAnswer(button, isCorrect) {
-    const feedback = button.parentElement.querySelector('.feedback');
+    const questionElement = button.parentElement;
+    const questionIndex = Array.from(document.querySelectorAll('.question')).indexOf(questionElement);
+    const feedback = questionElement.querySelector('.feedback');
+
+    if (!answered[questionIndex]) {
+      answered[questionIndex] = true;
+    }
+
+    correct[questionIndex] = isCorrect;
     feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
     feedback.style.color = isCorrect ? "green" : "red";
+
+    checkAllCorrect();
+  }
+
+  function checkAllCorrect() {
+    const allAnswered = answered.every(Boolean);
+    const allCorrect = correct.every(Boolean);
+
+    if (allAnswered && allCorrect) {
+      document.getElementById("backButton").style.display = "inline-block";
+    }
   }
 </script>
 
 </body>
 </html>
+
+
+
 
 

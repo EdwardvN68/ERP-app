@@ -137,17 +137,41 @@
 
   <p><strong>Final Note:</strong> The Ground Operations Manager plays a frontline role in physical response operations. Coordination, speed, and precision are essential to secure aircraft handling, crew and pax reception, and infrastructure support under pressure.</p>
 
-  <button class="back-button" onclick="window.location.href='selectyourrole-adderproles.html'">← Back to Additional Roles</button>
+  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole-adderproles.html'">← Back to Role Menu</button>
 </div>
 
 <script>
+  const totalQuestions = document.querySelectorAll('.question').length;
+  const answered = new Array(totalQuestions).fill(false);
+  const correct = new Array(totalQuestions).fill(false);
+
   function checkAnswer(button, isCorrect) {
-    const feedback = button.parentElement.querySelector('.feedback');
+    const questionElement = button.parentElement;
+    const questionIndex = Array.from(document.querySelectorAll('.question')).indexOf(questionElement);
+    const feedback = questionElement.querySelector('.feedback');
+
+    if (!answered[questionIndex]) {
+      answered[questionIndex] = true;
+    }
+
+    correct[questionIndex] = isCorrect;
     feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
     feedback.style.color = isCorrect ? "green" : "red";
+
+    checkAllCorrect();
+  }
+
+  function checkAllCorrect() {
+    const allAnswered = answered.every(Boolean);
+    const allCorrect = correct.every(Boolean);
+
+    if (allAnswered && allCorrect) {
+      document.getElementById("backButton").style.display = "inline-block";
+    }
   }
 </script>
 
 </body>
 </html>
+
 
