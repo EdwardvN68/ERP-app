@@ -9,7 +9,7 @@ Project Structure
 
 - `Main Menu.html` – Central menu for navigating the ERP training modules
 - `ScenariosMenu.html` – Launches interactive emergency scenarios
-- `SelectYourRole.html` – Lists role-specific training modules
+- `selectyourrole.html` – Lists role-specific training modules
 - `/Forms` – ERP-related forms used during response (e.g., B.5, B.6)
 - `/assets` – Icons and images for UI
 - `/css/styles.css` – Styling for the app
