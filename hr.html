@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Human Resources Role</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="SCORM_API_wrapper.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -47,6 +48,23 @@
     .back-button:hover {
       background-color: #b91c1c;
     }
+
+    .checklist-button {
+      margin-top: 14px;
+      background-color: #9b111e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .checklist-button:hover { background-color: #b91c1c; }
+    .uncontrolled-note {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #555;
+    }
   </style>
 </head>
 <body>
@@ -56,7 +74,7 @@
 
   <h2>Activation</h2>
   <p>Activated during Quick Response or Full EMT activation, particularly where <strong>ADA personnel, contractors, or families</strong> are affected. The HR Manager manages all welfare, notification, and support processes.</p>
-  <p>Refer to ERP Sections 2.5.2, 3.6.6, and Appendix C.15.</p>
+  <p>Refer to ERP Sections 2.5.2, 3.6.7, and Appendix C.16.</p>
 
   <h2>Core Responsibilities</h2>
   <ul>
@@ -71,10 +89,18 @@
   <h2>ERP References</h2>
   <ul>
     <li>Section 2.5.2 – EMT On-Call Roles</li>
-    <li>Section 3.6.6 – HR Manager Role</li>
-    <li>Appendix C.15 – HR Checklist</li>
+    <li>Section 3.6.7 – HR Manager Role</li>
+    <li>Appendix C.16 – HR Checklist</li>
     <li>Appendix D – Family Assistance Team Guidelines</li>
   </ul>
+  <button class="checklist-button" onclick="openChecklistPdf()">
+    Open Appendix C.16 – Human Resources Manager Checklist (PDF)
+  </button>
+
+  <div class="uncontrolled-note">
+    READ ONLY! ** Printed/Downloaded copies are considered UNCONTROLLED - Verify current issue before use **
+  </div>
+
 
   <h2>Phase-Based Duties</h2>
   <ul>
@@ -104,7 +130,7 @@
 
   <div class="question">
     <p><strong>Q2:</strong> What section defines the HR Manager's EMT role?</p>
-    <button onclick="checkAnswer(this, true)">a. Section 3.6.6</button><br>
+    <button onclick="checkAnswer(this, true)">a. Section 3.6.7</button><br>
     <button onclick="checkAnswer(this, false)">b. Section 2.6.5</button><br>
     <button onclick="checkAnswer(this, false)">c. Appendix D.1</button>
     <div class="feedback"></div>
@@ -114,7 +140,7 @@
     <p><strong>Q3:</strong> What checklist supports HR emergency response?</p>
     <button onclick="checkAnswer(this, false)">a. Appendix C.10</button><br>
     <button onclick="checkAnswer(this, false)">b. Appendix C.5</button><br>
-    <button onclick="checkAnswer(this, true)">c. Appendix C.15</button>
+    <button onclick="checkAnswer(this, true)">c. Appendix C.16</button>
     <div class="feedback"></div>
   </div>
 
@@ -140,6 +166,11 @@
 </div>
 
 <script>
+  function openChecklistPdf() {
+    const checklistPath = "Forms/C.16. Human Resources Manager Checklist.pdf";
+    window.open(checklistPath, "_blank", "noopener");
+  }
+
   const totalQuestions = document.querySelectorAll('.question').length;
   const answered = new Array(totalQuestions).fill(false);
   const correct = new Array(totalQuestions).fill(false);
@@ -160,12 +191,22 @@
     checkAllCorrect();
   }
 
+  function markComplete() {
+    if (typeof doLMSSetValue === 'function') {
+      doLMSSetValue("cmi.core.lesson_status", "completed");
+      doLMSCommit("");
+    } else {
+      console.warn("SCORM API not available – training completion not tracked.");
+    }
+  }
+
   function checkAllCorrect() {
     const allAnswered = answered.every(Boolean);
     const allCorrect = correct.every(Boolean);
 
     if (allAnswered && allCorrect) {
       document.getElementById("backButton").style.display = "inline-block";
+      markComplete();
     }
   }
 </script>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ground Operations Manager Role</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="SCORM_API_wrapper.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -47,6 +48,31 @@
     .back-button:hover {
       background-color: #b91c1c;
     }
+
+    .checklist-button {
+      margin: 10px 0 12px 0;
+      background-color: #9b111e;
+      color: #fff;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 900px;
+    }
+    .checklist-button:hover { background-color: #b91c1c; }
+    .uncontrolled-note {
+      margin: 0 0 20px 0;
+      padding: 10px 12px;
+      background: #fff5f5;
+      border: 1px solid #f3caca;
+      color: #9b111e;
+      font-size: 13px;
+      font-weight: bold;
+      text-align: center;
+    }
+
   </style>
 </head>
 <body>
@@ -56,7 +82,7 @@
 
   <h2>Activation</h2>
   <p>Activated during emergencies involving flight disruption, airport access, or apron operations. Also activated upon full EMT mobilisation or at the direction of the AM, DOO, or OCC. This role is essential for securing access, coordination, and readiness of ground support services.</p>
-  <p>Refer to ERP Sections 2.5.1, 3.6.8 and Appendix C.11.</p>
+  <p>Refer to ERP Sections 2.5.1, 3.6.10 and Appendix C.12.</p>
 
   <h2>Core Responsibilities</h2>
   <ul>
@@ -74,9 +100,19 @@
   <h2>ERP References</h2>
   <ul>
     <li>Section 2.5.1 – EMT Activation Thresholds</li>
-    <li>Section 3.6.8 – Ground Operations Manager</li>
-    <li>Appendix C.11 – Ground Operations Manager Checklist</li>
+    <li>Section 3.6.10 – Ground Operations Manager</li>
+    <li>Appendix C.12 – Ground Operations Manager Checklist</li>
   </ul>
+
+  <!-- ✅ Checklist selection block -->
+  <button class="checklist-button" onclick="openChecklistPdf()">
+    Open Appendix C.12 – Ground Operations Manager Checklist (PDF)
+  </button>
+
+  <div class="uncontrolled-note">
+    READ ONLY! ** Printed/Downloaded copies are considered UNCONTROLLED - Verify current issue before use **
+  </div>
+
 
   <h2>Phase-Based Duties</h2>
   <ul>
@@ -105,8 +141,8 @@
 
   <div class="question">
     <p><strong>Q2:</strong> What section provides checklist responsibilities for this role?</p>
-    <button onclick="checkAnswer(this, false)">a. Appendix C.14</button><br>
-    <button onclick="checkAnswer(this, true)">b. Appendix C.11</button><br>
+    <button onclick="checkAnswer(this, false)">a. Appendix C.11</button><br>
+    <button onclick="checkAnswer(this, true)">b. Appendix C.12</button><br>
     <button onclick="checkAnswer(this, false)">c. Appendix D.2</button>
     <div class="feedback"></div>
   </div>
@@ -141,6 +177,12 @@
 </div>
 
 <script>
+  const CHECKLIST_PDF = "Forms/C.12. Ground Operations Manager Checklist.pdf";
+
+  function openChecklistPdf() {
+    window.open(CHECKLIST_PDF, "_blank", "noopener");
+  }
+
   const totalQuestions = document.querySelectorAll('.question').length;
   const answered = new Array(totalQuestions).fill(false);
   const correct = new Array(totalQuestions).fill(false);
@@ -161,12 +203,22 @@
     checkAllCorrect();
   }
 
+  function markComplete() {
+    if (typeof doLMSSetValue === 'function') {
+      doLMSSetValue("cmi.core.lesson_status", "completed");
+      doLMSCommit("");
+    } else {
+      console.warn("SCORM API not available – training completion not tracked.");
+    }
+  }
+
   function checkAllCorrect() {
     const allAnswered = answered.every(Boolean);
     const allCorrect = correct.every(Boolean);
 
     if (allAnswered && allCorrect) {
       document.getElementById("backButton").style.display = "inline-block";
+      markComplete();
     }
   }
 </script>

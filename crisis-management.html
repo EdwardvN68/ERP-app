@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Crisis Management Service Provider Role</title>
+  <title>Crisis Management Service Provider (Go Crisis)</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="SCORM_API_wrapper.js"></script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -24,16 +26,6 @@
     ul {
       margin-left: 20px;
     }
-    .question {
-      margin-top: 20px;
-      padding: 10px;
-      background: #f7f7f7;
-      border: 1px solid #ddd;
-    }
-    .feedback {
-      font-weight: bold;
-      margin-top: 5px;
-    }
     .back-button {
       margin-top: 30px;
       background-color: #9b111e;
@@ -43,131 +35,65 @@
       border-radius: 5px;
       font-size: 16px;
       cursor: pointer;
+      width: 100%;
+      font-weight: bold;
     }
     .back-button:hover {
       background-color: #b91c1c;
     }
   </style>
 </head>
+
 <body>
-
 <div class="container">
-  <h1>Crisis Management Service Provider – Emergency Response Role</h1>
 
-  <h2>Activation</h2>
-  <p>Activated during <strong>high-level emergencies</strong> or when external crisis response support is required. Go Crisis is formally activated by the <strong>Accountable Manager</strong> or <strong>Safety Director</strong> to provide communications, family assistance, and logistical services in accordance with their agreement.</p>
-  <p>Refer to ERP Sections 1.15.2, 2.5.2, 3.6.15 and Appendix A.1.</p>
+  <h1>Crisis Management Service Provider (Go Crisis)</h1>
 
-  <h2>Core Responsibilities</h2>
+  <h2>Role Context (Training Overview)</h2>
+  <p>
+    Go Crisis is an external crisis management service provider that may be engaged to support Abu Dhabi Aviation
+    during significant emergencies. The provider supports the Emergency Management Team (EMT) by providing
+    specialist crisis management capability within the scope agreed between ADA and the service provider.
+  </p>
+
+  <h2>Activation (ERP-Aligned Awareness)</h2>
+  <p>
+    Activation and use of Go Crisis is controlled through EMT leadership and must be aligned to the Emergency Response Plan (ERP).
+    This page is training-focused and provides role awareness only.
+  </p>
+
+  <h2>Core Responsibilities (Explained for Training)</h2>
   <ul>
-    <li>Provide crisis communication support, including media coordination and drafting of public statements.</li>
-    <li>Support family assistance operations, including communications and welfare services for affected persons.</li>
-    <li>Deploy trained representatives to assist at ADA headquarters or at designated support locations.</li>
-    <li>Assist in post-event recovery, including psychological first aid and record-keeping support.</li>
-    <li>Operate strictly under EMT direction and maintain full compliance with GCAA and ADA procedures.</li>
+    <li>Provide specialist crisis management support as directed by EMT leadership.</li>
+    <li>Support crisis communication and coordination activities within agreed scope.</li>
+    <li>Support welfare and assistance functions where requested and appropriate.</li>
+    <li>Operate only within the contractual scope and under EMT direction.</li>
+    <li>Support post-event recovery activities as required.</li>
   </ul>
 
   <h2>ERP References</h2>
   <ul>
-    <li>Section 1.15.2 – Crisis Management Service Provider Services</li>
-    <li>Section 2.5.2 – EMT On-Call Roles</li>
-    <li>Section 3.6.15 – Crisis Management Service Provider (Go Crisis)</li>
+    <li>Section 3.6.17 – Crisis Management Service Provider (Go Crisis)</li>
     <li>Appendix A.1 – Crisis Management Service Provider Agreement</li>
-  </ul>
-
-  <h2>Phase-Based Duties</h2>
-  <ul>
-    <li><strong>Phase 1 (0–60 min):</strong> Confirm activation, establish contact with EMT, prepare response personnel and services.</li>
-    <li><strong>Phase 2 (1–4 hrs):</strong> Deploy to ADA premises, assist in communications, support family liaison, provide crisis logistics.</li>
-    <li><strong>Phase 3 (4+ hrs):</strong> Maintain active support roles, facilitate recovery, support debriefing, submit reports.</li>
   </ul>
 
   <h2>Cautions</h2>
   <ul>
-    <li>Go Crisis must only act upon formal activation from ADA management.</li>
-    <li>Must not issue any external communication without EMT coordination.</li>
-    <li>Actions must strictly follow the scope defined in the Crisis Response Agreement.</li>
-    <li>Support functions must be coordinated with EMT leads (e.g., Family Assistance, Media, Legal).</li>
-    <li>All support activity must be logged and documented for audit trail.</li>
+    <li>Do not act or communicate externally outside EMT direction and agreed scope.</li>
+    <li>Do not rely on unverified information.</li>
+    <li>Ensure activities remain traceable and appropriate for post-event review.</li>
   </ul>
 
-  <h2>Knowledge Check (Interactive)</h2>
+  <p><strong>Final Note:</strong>
+    Go Crisis provides specialist crisis support capability; however, ADA retains overall control of emergency response through the EMT.
+  </p>
 
-  <div class="question">
-    <p><strong>Q1:</strong> Who authorizes activation of Go Crisis?</p>
-    <button onclick="checkAnswer(this, false)">a. HR Manager</button><br>
-    <button onclick="checkAnswer(this, true)">b. Accountable Manager or Safety Director</button><br>
-    <button onclick="checkAnswer(this, false)">c. Any EMT Member</button>
-    <div class="feedback"></div>
-  </div>
+  <!-- Visible immediately (no MCQ gating for this role) -->
+  <button class="back-button" onclick="window.location.href='selectyourrole-adderproles.html'">
+    ← Back to Role Menu
+  </button>
 
-  <div class="question">
-    <p><strong>Q2:</strong> Which ERP section defines this role?</p>
-    <button onclick="checkAnswer(this, true)">a. Section 3.6.15</button><br>
-    <button onclick="checkAnswer(this, false)">b. Appendix C.5</button><br>
-    <button onclick="checkAnswer(this, false)">c. Section 4.2</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question">
-    <p><strong>Q3:</strong> Where is the Crisis Response Agreement documented?</p>
-    <button onclick="checkAnswer(this, false)">a. Appendix C.16</button><br>
-    <button onclick="checkAnswer(this, true)">b. Appendix A.1</button><br>
-    <button onclick="checkAnswer(this, false)">c. Section 2.3.3</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question">
-    <p><strong>Q4:</strong> Which of the following is NOT a permitted action by Go Crisis?</p>
-    <button onclick="checkAnswer(this, true)">a. Issuing public statements independently</button><br>
-    <button onclick="checkAnswer(this, false)">b. Supporting family communications</button><br>
-    <button onclick="checkAnswer(this, false)">c. Deploying representatives to ADA HQ</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question">
-    <p><strong>Q5:</strong> What is a critical responsibility of Go Crisis post-incident?</p>
-    <button onclick="checkAnswer(this, false)">a. Approving ERP changes</button><br>
-    <button onclick="checkAnswer(this, false)">b. Piloting ADA aircraft</button><br>
-    <button onclick="checkAnswer(this, true)">c. Supporting post-incident reporting and recovery</button>
-    <div class="feedback"></div>
-  </div>
-
-  <p><strong>Final Note:</strong> The Crisis Management Service Provider strengthens ADA’s ability to manage high-impact incidents through professional support services. Their timely coordination, clear communication, and family-focused approach help protect ADA’s people, reputation, and recovery efforts.</p>
-
-  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole-adderproles.html'">← Back to Role Menu</button>
 </div>
-
-<script>
-  const totalQuestions = document.querySelectorAll('.question').length;
-  const answered = new Array(totalQuestions).fill(false);
-  const correct = new Array(totalQuestions).fill(false);
-
-  function checkAnswer(button, isCorrect) {
-    const questionElement = button.parentElement;
-    const questionIndex = Array.from(document.querySelectorAll('.question')).indexOf(questionElement);
-    const feedback = questionElement.querySelector('.feedback');
-
-    if (!answered[questionIndex]) {
-      answered[questionIndex] = true;
-    }
-
-    correct[questionIndex] = isCorrect;
-    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
-    feedback.style.color = isCorrect ? "green" : "red";
-
-    checkAllCorrect();
-  }
-
-  function checkAllCorrect() {
-    const allAnswered = answered.every(Boolean);
-    const allCorrect = correct.every(Boolean);
-
-    if (allAnswered && allCorrect) {
-      document.getElementById("backButton").style.display = "inline-block";
-    }
-  }
-</script>
-
 </body>
 </html>
+

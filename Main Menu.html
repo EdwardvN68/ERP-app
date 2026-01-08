@@ -2,38 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Main Menu</title>
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
+  <title>Emergency Response Training</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: white;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
 
-  <div class="main-container">
-    <img src="assets/logo.png" class="logo" alt="ADA Logo" />
-    <h1 class="title">Emergency Response Training</h1>
+    .logo {
+      margin-top: 40px;
+    }
+
+    .logo img {
+      width: 200px;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-top: 30px;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .button-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .menu-button {
+      padding: 14px 28px;
+      font-size: 16px;
+      border: 2px solid #b10000;
+      background-color: white;
+      color: #b10000;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 2px 2px 4px #aaa;
+      transition: 0.2s ease;
+    }
+
+    .menu-button:hover {
+      background-color: #b10000;
+      color: white;
+    }
+
+    .wide-button {
+      width: 260px;
+    }
+
+    .narrow-button {
+      width: 200px;
+      padding: 8px 28px;
+    }
+
+    /* === TODO #2 + TODO #3: Reference-only + Uncontrolled copy warning === */
+    .footer {
+      margin-top: 40px;
+      font-weight: bold;
+      color: #b10000;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  </style>
+
+  <script src="SCORM_API_wrapper.js"></script>
+</head>
+
+<body onload="doLMSInitialize()" onunload="doLMSFinish()">
+
+  <div class="logo">
+    <img src="assets/logo.png" alt="ADA Logo" />
   </div>
+
+  <h1>Emergency Response Training</h1>
 
   <div class="button-row">
-    <button onclick="window.location.href='SelectYourRole.html'">Select Your Role</button>
-    <button onclick="window.location.href='ScenariosMenu.html'">Emergency Scenarios</button>
+    <button class="menu-button wide-button" onclick="location.href='selectyourrole.html'">Select Your Role</button>
+    <button class="menu-button wide-button" onclick="location.href='ScenariosMenu.html'">Emergency Scenarios</button>
   </div>
 
-<div class="emergency-info" style="margin-bottom: 20px;">
-  <button class="small-button" onclick="window.location.href='EMTActivation.html'">
-    EMT Activation Thresholds
-  </button>
-</div>
+  <div class="button-column">
+    <button class="menu-button narrow-button" onclick="location.href='EMTActivation.html'">EMT Activation Thresholds</button>
+    <button class="menu-button narrow-button" onclick="location.href='forms-and-checklists.html'">Forms and Checklists</button>
+    <button class="menu-button narrow-button" onclick="doFinalExit()">Exit Training</button>
+  </div>
 
-<div class="emergency-info">
-  <button class="small-button" onclick="window.location.href='forms-and-checklists.html'">
-    Forms and Checklists
-  </button>
-</div>
+  <div class="footer">
+    Reference and Reminder Only<br>
+    Not a substitute for the ERP Manual<br>
+    Always verify the current approved issue<br>
+    UNCONTROLLED if copied or printed
+  </div>
+
+  <script>
+    function doFinalExit() {
+      if (typeof doLMSSetValue === 'function') {
+        doLMSSetValue("cmi.core.lesson_status", "completed");
+        doLMSCommit();
+        doLMSFinish();
+      }
+      setTimeout(function () {
+        window.close();
+      }, 500);
+    }
+  </script>
 
 </body>
 </html>
-
-
-
-
-

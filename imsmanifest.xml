@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="ADA-ERP" version="1.2"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 
+                      imscp_rootv1p1p2.xsd 
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 
+                      adlcp_rootv1p2.xsd">
+
+  <organizations default="org1">
+    <organization identifier="org1">
+      <title>ADA Emergency Response Training</title>
+      <item identifier="item1" identifierref="resource1">
+        <title>Main Menu</title>
+      </item>
+    </organization>
+  </organizations>
+
+  <resources>
+    <resource identifier="resource1" type="webcontent" adlcp:scormtype="sco" href="Main Menu.html">
+      <file href="Main Menu.html"/>
+      <file href="SCORM_API_wrapper.js"/>
+      <file href="css/styles.css"/>
+      <file href="accountable.html"/>
+      <file href="safetydirector.html"/>
+      <file href="opsdirector.html"/>
+      <file href="cfo.html"/>
+      <file href="dutydoo.html"/>
+      <file href="quality.html"/>
+      <file href="it.html"/>
+      <file href="legal.html"/>
+      <file href="engineering.html"/>
+      <file href="elo.html"/>
+      <file href="commercial.html"/>
+      <file href="occ-manager.html"/>
+      <file href="ground-ops-manager.html"/>
+      <file href="selectyourrole.html"/>
+      <file href="ScenariosMenu.html"/>
+      <file href="forms-and-checklists.html"/>
+      <file href="EMTactivation.html"/>
+      <!-- add more files here if needed -->
+    </resource>
+  </resources>
+</manifest>

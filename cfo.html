@@ -5,168 +5,147 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chief Financial Officer Role</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="SCORM_API_wrapper.js"></script>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
+    body { font-family: Arial, sans-serif; margin: 20px; }
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      border-left: 6px solid #9b111e;
-      background-color: #fff;
+      max-width: 900px; margin: auto; padding: 20px;
+      border-left: 6px solid #9b111e; background-color: #fff;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1, h2 {
-      color: #9b111e;
+    h1, h2 { color: #9b111e; }
+    ul { margin-left: 20px; }
+    .question { margin-top: 20px; padding: 10px; background: #f7f7f7; border: 1px solid #ddd; }
+    .feedback { font-weight: bold; margin-top: 5px; }
+    .back-button, .checklist-button {
+      margin-top: 20px; background-color: #9b111e; color: white;
+      padding: 12px 24px; border: none; border-radius: 5px;
+      font-size: 16px; cursor: pointer; width: 100%; font-weight: bold;
     }
-    ul {
-      margin-left: 20px;
-    }
-    .question {
-      margin-top: 20px;
-      padding: 10px;
-      background: #f7f7f7;
-      border: 1px solid #ddd;
-    }
-    .feedback {
-      font-weight: bold;
-      margin-top: 5px;
-    }
-    .back-button {
-      margin-top: 30px;
-      background-color: #9b111e;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .back-button:hover {
-      background-color: #b91c1c;
+    .back-button:hover, .checklist-button:hover { background-color: #b91c1c; }
+    .uncontrolled-note {
+      margin-top: 10px; padding: 12px; border: 1px solid #ddd;
+      background: #f7f7f7; font-style: italic; font-size: 14px;
     }
   </style>
 </head>
+
 <body>
-
 <div class="container">
-  <h1>Chief Financial Officer – Emergency Response Role</h1>
+  <h1>Chief Financial Officer (Emergency Management Team Member)</h1>
 
-  <h2>Activation</h2>
-  <p>The Chief Financial Officer (CFO) is activated during Medium and High-level emergencies that may result in significant financial, insurance, or compensatory exposure. Activation is triggered by the EMT Chairperson or Accountable Manager as part of the core Emergency Management Team (EMT) response.</p>
-  <p>Refer to ERP Section 3.6.11 – Chief Financial Officer.</p>
+  <h2>Role Context (Training Overview)</h2>
+  <p>
+    As Chief Financial Officer (CFO), you provide financial authority, oversight, and assurance to the Emergency Management Team (EMT).
+    Your role supports rapid response resourcing while maintaining traceability and accountability.
+  </p>
 
-  <h2>Core Responsibilities</h2>
+  <h2>Activation (ERP-Aligned Awareness)</h2>
+  <p>
+    The CFO is engaged during emergencies where there is potential financial, insurance, or compensatory exposure,
+    as directed by EMT leadership.
+  </p>
+  <p>Refer to ERP Section <strong>3.6.13 – Chief Financial Officer</strong>.</p>
+
+  <h2>Core Responsibilities (Explained for Training)</h2>
   <ul>
-    <li>Act as the EMT’s focal point for all financial and insurance matters arising from the emergency.</li>
-    <li>Establish and manage the budget for emergency-related costs, including travel, accommodation, family assistance, and external contractors (e.g., Go Crisis).</li>
-    <li>Provide immediate financial authority for time-sensitive expenditures in support of the EMT.</li>
-    <li>Coordinate closely with the Legal Advisor and Insurance Broker to ensure compliance with coverage terms and notify underwriters as required.</li>
-    <li>Arrange emergency cash disbursement procedures and credit authorizations.</li>
-    <li>Monitor and report on the overall cost impact of the emergency to the EMT Chairperson and Accountable Manager.</li>
-    <li>Liaise with ADA’s finance and procurement departments to expedite required goods and services.</li>
+    <li>Support EMT financial needs through appropriate budget, accounting, and purchasing provisions when required.</li>
+    <li>Support rapid procurement of necessary equipment as required by company departments during emergency response.</li>
   </ul>
 
   <h2>ERP References</h2>
   <ul>
-    <li>Section 3.6.11 – Chief Financial Officer</li>
+    <li>Section <strong>3.6.13</strong> – Chief Financial Officer</li>
+    <li>Appendix <strong>C.13</strong> – CFO Checklist</li>
   </ul>
 
-  <h2>Phase-Based Duties</h2>
+  <!-- CHECKLIST BLOCK (MASTER) -->
+  <button class="checklist-button" onclick="openChecklistPdf()">
+    Open Appendix C.13 – CFO Checklist (PDF)
+  </button>
+
+  <div class="uncontrolled-note">
+    READ ONLY! ** Printed/Downloaded copies are considered UNCONTROLLED – Verify current issue before use **
+  </div>
+
+  <h2>Role Behaviour Across an Emergency (Training Interpretation)</h2>
   <ul>
-    <li><strong>Phase 1 (0–60 min):</strong> Confirm EMT activation status and readiness. Notify insurance broker (if applicable). Activate rapid expense approval protocol. Coordinate with Go Crisis or emergency vendors if deployed.</li>
-    <li><strong>Phase 2 (1–4 hrs):</strong> Establish tracking for all emergency expenses. Issue financial delegation instructions to EMT support roles. Secure travel and accommodation funding for NOK and response teams.</li>
-    <li><strong>Phase 3 (4+ hrs):</strong> Compile financial impact assessments. Support post-event reporting for Board and regulators. Maintain financial transparency records for audit.</li>
+    <li><strong>Early phase:</strong> Ensure financial support pathways are ready and responsive.</li>
+    <li><strong>Sustained response:</strong> Maintain financial traceability and support urgent procurement needs.</li>
+    <li><strong>Stabilisation / recovery:</strong> Support reconciliation and documentation for review and audit readiness.</li>
   </ul>
 
   <h2>Cautions</h2>
   <ul>
-    <li>Do not delay financial approvals for response-critical tasks (e.g., aircraft dispatch, family assistance).</li>
-    <li>Avoid exceeding coverage limits—coordinate with legal and insurers first.</li>
-    <li>Do not delegate expenditure authority without written or logged approval.</li>
-    <li>Ensure documentation of all costs for post-incident reconciliation.</li>
+    <li>Maintain traceability for emergency expenditure and purchasing decisions.</li>
+    <li>Support rapid procurement when required, while ensuring appropriate oversight.</li>
   </ul>
 
   <h2>Knowledge Check (Interactive)</h2>
 
   <div class="question">
-    <p><strong>Q1:</strong> What is the CFO’s primary role during an emergency?</p>
-    <button onclick="checkAnswer(this, true)">a. Financial oversight and rapid response approvals</button><br>
-    <button onclick="checkAnswer(this, false)">b. HR coordination</button><br>
-    <button onclick="checkAnswer(this, false)">c. Aircrew dispatch</button>
+    <p><strong>Q1:</strong> Where is the CFO role described in the ERP?</p>
+    <button onclick="checkAnswer(this, true)">Section 3.6.13</button><br>
+    <button onclick="checkAnswer(this, false)">Section 3.6.11</button><br>
+    <button onclick="checkAnswer(this, false)">Section 3.6.3</button>
     <div class="feedback"></div>
   </div>
 
   <div class="question">
-    <p><strong>Q2:</strong> Who must the CFO liaise with regarding insurance notifications?</p>
-    <button onclick="checkAnswer(this, true)">a. Legal Advisor and Insurance Broker</button><br>
-    <button onclick="checkAnswer(this, false)">b. Airport Authorities</button><br>
-    <button onclick="checkAnswer(this, false)">c. OCC Manager</button>
+    <p><strong>Q2:</strong> Which appendix contains the CFO checklist?</p>
+    <button onclick="checkAnswer(this, true)">Appendix C.13</button><br>
+    <button onclick="checkAnswer(this, false)">Appendix C.8</button><br>
+    <button onclick="checkAnswer(this, false)">Appendix C.4</button>
     <div class="feedback"></div>
   </div>
 
   <div class="question">
-    <p><strong>Q3:</strong> When should the CFO issue emergency credit authority?</p>
-    <button onclick="checkAnswer(this, true)">a. Within the first hour of confirmed activation</button><br>
-    <button onclick="checkAnswer(this, false)">b. After EMT stands down</button><br>
-    <button onclick="checkAnswer(this, false)">c. Only when requested by ground ops</button>
+    <p><strong>Q3:</strong> One CFO responsibility during an emergency is to:</p>
+    <button onclick="checkAnswer(this, true)">Make special provisions for budget, accounting and purchasing if required</button><br>
+    <button onclick="checkAnswer(this, false)">Lead OCC staffing</button><br>
+    <button onclick="checkAnswer(this, false)">Issue media statements</button>
     <div class="feedback"></div>
   </div>
 
-  <div class="question">
-    <p><strong>Q4:</strong> What is the CFO required to report to the EMT Chairperson?</p>
-    <button onclick="checkAnswer(this, true)">a. Cost impact of the emergency</button><br>
-    <button onclick="checkAnswer(this, false)">b. Safety investigation outcomes</button><br>
-    <button onclick="checkAnswer(this, false)">c. Passenger manifests</button>
-    <div class="feedback"></div>
-  </div>
+  <p><strong>Final Note:</strong> As CFO, you enable urgent resourcing while preserving accountability and traceability.</p>
 
-  <div class="question">
-    <p><strong>Q5:</strong> What departments must the CFO work with to secure urgent goods and services?</p>
-    <button onclick="checkAnswer(this, true)">a. Finance and Procurement</button><br>
-    <button onclick="checkAnswer(this, false)">b. Safety and Compliance</button><br>
-    <button onclick="checkAnswer(this, false)">c. PR and Legal</button>
-    <div class="feedback"></div>
-  </div>
-
-  <p><strong>Final Note:</strong> The CFO ensures that no delay in finance disrupts ADA’s emergency response. Every hour matters. The CFO’s authority enables EMT actions to proceed with speed, accountability, and full financial traceability.</p>
-
-  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole-adderproles.html'">← Back to Role Menu</button>
+  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole.html'">
+    ← Back to Role Menu
+  </button>
 </div>
 
 <script>
+  // ✅ Must match the actual file name in /Forms exactly
+  const CHECKLIST_C13_PDF_PATH = "Forms/C.13. CFO Checklist.pdf";
+
+  function openChecklistPdf() {
+    window.open(CHECKLIST_C13_PDF_PATH, "_blank", "noopener");
+  }
+
   const totalQuestions = document.querySelectorAll('.question').length;
   const answered = new Array(totalQuestions).fill(false);
   const correct = new Array(totalQuestions).fill(false);
 
   function checkAnswer(button, isCorrect) {
-    const questionElement = button.parentElement;
-    const questionIndex = Array.from(document.querySelectorAll('.question')).indexOf(questionElement);
-    const feedback = questionElement.querySelector('.feedback');
+    const q = button.parentElement;
+    const index = Array.from(document.querySelectorAll('.question')).indexOf(q);
+    const feedback = q.querySelector('.feedback');
 
-    if (!answered[questionIndex]) {
-      answered[questionIndex] = true;
-    }
-
-    correct[questionIndex] = isCorrect;
+    answered[index] = true;
+    correct[index] = isCorrect;
     feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
     feedback.style.color = isCorrect ? "green" : "red";
 
-    checkAllCorrect();
-  }
-
-  function checkAllCorrect() {
-    const allAnswered = answered.every(Boolean);
-    const allCorrect = correct.every(Boolean);
-
-    if (allAnswered && allCorrect) {
+    if (answered.every(Boolean) && correct.every(Boolean)) {
       document.getElementById("backButton").style.display = "inline-block";
+      if (typeof doLMSSetValue === "function") {
+        doLMSSetValue("cmi.core.lesson_status", "completed");
+        doLMSCommit("");
+      }
     }
   }
 </script>
-
 </body>
 </html>
 

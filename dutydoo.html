@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Duty Director of Operations (DOO)</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="SCORM_API_wrapper.js"></script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -34,8 +36,9 @@
       font-weight: bold;
       margin-top: 5px;
     }
-    .back-button {
-      margin-top: 30px;
+    .back-button,
+    .checklist-button {
+      margin-top: 20px;
       background-color: #9b111e;
       color: white;
       padding: 12px 24px;
@@ -43,138 +46,150 @@
       border-radius: 5px;
       font-size: 16px;
       cursor: pointer;
+      width: 100%;
+      font-weight: bold;
     }
-    .back-button:hover {
+    .back-button:hover,
+    .checklist-button:hover {
       background-color: #b91c1c;
+    }
+    .uncontrolled-note {
+      margin-top: 10px;
+      padding: 12px;
+      border: 1px solid #ddd;
+      background: #f7f7f7;
+      font-style: italic;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
 
 <div class="container">
-  <h1>Duty Director of Operations (DOO) – Emergency Response Role</h1>
+  <h1>Duty Director of Operations (Emergency Management Team Member)</h1>
 
-  <h2>Activation</h2>
-  <p>The DOO is activated in <strong>all emergency levels</strong> and serves as the initial coordination link between operations and the EMT.</p>
-  <p>Refer to ERP Sections 2.5, 2.6, 3.3 and Appendix C.4 – EMT Checklist.</p>
+  <h2>Role Context (Training Overview)</h2>
+  <p>
+    As Duty Director of Operations (DOO), you are the primary operational focal point during the early stages of an emergency.
+    Your role bridges day-to-day flight operations, the Operations Control Centre (OCC), and the Emergency Management Team (EMT),
+    ensuring timely escalation and continuity of operational control.
+  </p>
 
-  <h2>Core Responsibilities</h2>
+  <h2>Activation (ERP-Aligned Awareness)</h2>
+  <p>
+    The DOO is engaged during <strong>all emergency levels</strong>. You play a key role in early classification,
+    coordination, and escalation decisions until the EMT is fully established.
+  </p>
+
+  <p>Refer to ERP Sections 2.5, 2.6, and 3.3.</p>
+
+  <h2>Core Responsibilities (Explained for Training)</h2>
   <ul>
-    <li>Act as senior ops authority during initial emergency stage</li>
-    <li>Coordinate initial response with OCC and Flight Ops</li>
-    <li>Classify the emergency (Minor, Medium, High)</li>
-    <li>Notify Accountable Manager and activate EMT if needed</li>
-    <li>Ensure Incident Log is opened and maintained</li>
-    <li>Coordinate with airport/regulator stakeholders</li>
-    <li>Prepare full handover if EMT activation occurs</li>
+    <li>Provide senior operational oversight during the initial phase of an emergency.</li>
+    <li>Coordinate with OCC and flight operations to establish situational awareness.</li>
+    <li>Support emergency classification and escalation decisions.</li>
+    <li>Ensure appropriate notifications are made to senior management and EMT members.</li>
+    <li>Maintain continuity of operational control until formally relieved.</li>
+    <li>Support information flow to the EMT once activated.</li>
   </ul>
 
   <h2>ERP References</h2>
   <ul>
     <li>Section 2.5.2 – On-Call EMT Roles</li>
     <li>Section 2.6 – Initial Emergency Communication</li>
-    <li>Section 3.3.3 – Emergency Management Organisation</li>
-    <li>Appendix C.4 – EMT Checklist</li>
-    <li>Form B.6 – Incident Log</li>
-    <li>Form B.5 – Aircraft Accident/Threat Notification</li>
+    <li>Section 3.3 – Emergency Management Organisation</li>
+    <li>Appendix C.7 – Operations Director Checklist</li>
   </ul>
 
-  <h2>Phase-Based Duties</h2>
+  <!-- CHECKLIST -->
+  <button class="checklist-button" onclick="openChecklistPdf()">
+    Open Appendix C.7 – Operations Director Checklist (PDF)
+  </button>
+
+  <div class="uncontrolled-note">
+    READ ONLY! ** Printed/Downloaded copies are considered UNCONTROLLED – Verify current issue before use **
+  </div>
+
+  <h2>Role Behaviour Across an Emergency (Training Interpretation)</h2>
   <ul>
-    <li><strong>Phase 1 (0–60 min):</strong> Receive alert, verify aircraft status, coordinate OCC, determine level, open Form B.6, submit B.5 if needed, notify Safety Director</li>
-    <li><strong>Phase 2 (1–4 hrs):</strong> Assist EMT transition, share ops details, monitor field activity, document all decisions</li>
-    <li><strong>Phase 3 (4+ hrs):</strong> Lead debrief, finalize logs, support investigation and recovery planning</li>
+    <li><strong>Early phase:</strong> Confirm operational facts, coordinate OCC actions, and support escalation.</li>
+    <li><strong>Sustained response:</strong> Maintain operational oversight and support EMT coordination.</li>
+    <li><strong>Stabilisation:</strong> Support handover, debriefing, and recovery planning.</li>
   </ul>
 
   <h2>Cautions</h2>
   <ul>
-    <li>Do NOT delay emergency classification or escalation</li>
-    <li>Always use checklist and forms—no undocumented actions</li>
-    <li>Maintain situational control until formally relieved</li>
-    <li>Remain contactable by phone/radio throughout on-call duty</li>
-    <li>Keep Safety and OCC updated continuously</li>
+    <li>Do not delay escalation when emergency thresholds are met.</li>
+    <li>Base decisions on verified operational information.</li>
+    <li>Maintain clear communication with OCC and EMT leadership.</li>
+    <li>Ensure continuity until formally relieved.</li>
   </ul>
 
   <h2>Knowledge Check (Interactive)</h2>
 
   <div class="question">
-    <p><strong>Q1:</strong> What is the primary function of the DOO in early response?</p>
-    <button onclick="checkAnswer(this, true)">Coordinate initial actions and classify the emergency</button><br>
-    <button onclick="checkAnswer(this, false)">Cancel flights immediately</button><br>
-    <button onclick="checkAnswer(this, false)">Prepare a press release</button>
+    <p><strong>Q1:</strong> What is the DOO’s primary role during the early phase?</p>
+    <button onclick="checkAnswer(this, true)">Coordinate operations and support emergency classification</button><br>
+    <button onclick="checkAnswer(this, false)">Manage media communications</button><br>
+    <button onclick="checkAnswer(this, false)">Conduct accident investigation</button>
     <div class="feedback"></div>
   </div>
 
   <div class="question">
-    <p><strong>Q2:</strong> What form must be opened in the first hour?</p>
-    <button onclick="checkAnswer(this, true)">Form B.6 – Incident Log</button><br>
-    <button onclick="checkAnswer(this, false)">Form SMS-013</button><br>
-    <button onclick="checkAnswer(this, false)">Form C.1</button>
+    <p><strong>Q2:</strong> Which checklist supports the DOO role?</p>
+    <button onclick="checkAnswer(this, true)">Appendix C.7 – Operations Director Checklist</button><br>
+    <button onclick="checkAnswer(this, false)">Appendix C.4 – EMT Checklist</button><br>
+    <button onclick="checkAnswer(this, false)">Appendix B.6 – Incident Log</button>
     <div class="feedback"></div>
   </div>
 
   <div class="question">
-    <p><strong>Q3:</strong> Which ERP section outlines DOO emergency authority?</p>
-    <button onclick="checkAnswer(this, true)">Section 2.6</button><br>
-    <button onclick="checkAnswer(this, false)">Section 3.1.2</button><br>
-    <button onclick="checkAnswer(this, false)">Appendix C.2</button>
+    <p><strong>Q3:</strong> When is the DOO engaged?</p>
+    <button onclick="checkAnswer(this, true)">During all emergency levels</button><br>
+    <button onclick="checkAnswer(this, false)">Only during high-level emergencies</button><br>
+    <button onclick="checkAnswer(this, false)">Only when the EMT is fully activated</button>
     <div class="feedback"></div>
   </div>
 
-  <div class="question">
-    <p><strong>Q4:</strong> When should the DOO notify the Accountable Manager?</p>
-    <button onclick="checkAnswer(this, true)">Upon determining that escalation to High-level response is required</button><br>
-    <button onclick="checkAnswer(this, false)">After 24 hours</button><br>
-    <button onclick="checkAnswer(this, false)">Only if the Safety Director advises</button>
-    <div class="feedback"></div>
-  </div>
+  <p><strong>Final Note:</strong> Your role as DOO ensures operational continuity and effective escalation,
+  forming a critical link between frontline operations and the Emergency Management Team.</p>
 
-  <div class="question">
-    <p><strong>Q5:</strong> What document lists DOO checklist actions?</p>
-    <button onclick="checkAnswer(this, true)">Appendix C.4 – EMT Checklist</button><br>
-    <button onclick="checkAnswer(this, false)">Appendix B.4</button><br>
-    <button onclick="checkAnswer(this, false)">Appendix D.1</button>
-    <div class="feedback"></div>
-  </div>
-  
-  <p><strong>Final Note:</strong> As Director of Operations, your oversight ensures safe, continuous flight operations even during disruption. Your coordination with OCC, EMT, and regulatory leadership ensures the integrity of ADA’s operational response and recovery efforts.</p>
-
-  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole.html'">← Back to Role Menu</button>
+  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole.html'">
+    ← Back to Role Menu
+  </button>
 </div>
 
 <script>
+  const CHECKLIST_C7_PDF_PATH = "Forms/C.7. Operations Director Checklist.pdf";
+
+  function openChecklistPdf() {
+    window.open(CHECKLIST_C7_PDF_PATH, "_blank", "noopener");
+  }
+
   const totalQuestions = document.querySelectorAll('.question').length;
   const answered = new Array(totalQuestions).fill(false);
   const correct = new Array(totalQuestions).fill(false);
 
   function checkAnswer(button, isCorrect) {
-    const questionElement = button.parentElement;
-    const questionIndex = Array.from(document.querySelectorAll('.question')).indexOf(questionElement);
-    const feedback = questionElement.querySelector('.feedback');
+    const q = button.parentElement;
+    const index = Array.from(document.querySelectorAll('.question')).indexOf(q);
+    const feedback = q.querySelector('.feedback');
 
-    if (!answered[questionIndex]) {
-      answered[questionIndex] = true;
-    }
-
-    correct[questionIndex] = isCorrect;
+    answered[index] = true;
+    correct[index] = isCorrect;
     feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
     feedback.style.color = isCorrect ? "green" : "red";
 
-    checkAllCorrect();
-  }
-
-  function checkAllCorrect() {
-    const allAnswered = answered.every(Boolean);
-    const allCorrect = correct.every(Boolean);
-
-    if (allAnswered && allCorrect) {
+    if (answered.every(Boolean) && correct.every(Boolean)) {
       document.getElementById("backButton").style.display = "inline-block";
+      if (typeof doLMSSetValue === "function") {
+        doLMSSetValue("cmi.core.lesson_status", "completed");
+        doLMSCommit("");
+      }
     }
   }
 </script>
 
 </body>
 </html>
-
-
-

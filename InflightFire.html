@@ -3,184 +3,425 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scenario: Inflight Fire – Dash 8 Q400</title>
+  <title>SIMULATION SCENARIO: INFLIGHT FIRE (Training)</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px auto;
-      padding: 20px;
-      max-width: 1000px;
-      line-height: 1.6;
-      background-color: #fff;
+      text-align: center;
+      background-color: white;
+      color: #222;
+      margin: 0;
+      padding: 0;
     }
-    h1, h2 {
-      color: #9b111e;
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 18px 28px 18px;
     }
-    .section {
-      margin-bottom: 30px;
+
+    .logo { margin-top: 40px; }
+    .logo img { width: 200px; height: auto; }
+
+    h1 {
+      font-size: 28px;
+      margin-top: 24px;
+      margin-bottom: 6px;
+      letter-spacing: 0.2px;
     }
-    .timestamp {
+
+    .subhead {
+      font-size: 14px;
+      color: #444;
+      margin: 0 0 18px 0;
+    }
+
+    /* Simulation banner */
+    .banner {
+      max-width: 980px;
+      margin: 0 auto 16px auto;
+      padding: 14px 16px;
+      border: 2px solid #b10000;
+      border-radius: 8px;
+      background: #fff5f5;
+      color: #7a0000;
       font-weight: bold;
+      line-height: 1.35;
+      text-align: left;
+    }
+
+    .banner small {
+      display: block;
+      margin-top: 6px;
+      font-weight: normal;
+      color: #7a0000;
+    }
+
+    /* Scenario summary card */
+    .card {
+      text-align: left;
+      margin-top: 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    .card h2 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      color: #222;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 16px;
       margin-top: 10px;
+      font-size: 14px;
+      color: #333;
     }
-    ul {
-      margin-top: 0;
+
+    .meta-item {
+      padding: 10px 12px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      background: #fafafa;
     }
+
+    .meta-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #222;
+      font-size: 13px;
+    }
+
+    /* Timeline sections */
+    details {
+      text-align: left;
+      margin-top: 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #b10000;
+      outline: none;
+      user-select: none;
+    }
+
+    .timeline {
+      margin: 12px 0 0 0;
+      padding: 0;
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .timeline li {
+      padding: 10px 12px;
+      border-left: 4px solid #b10000;
+      border-top: 1px solid #eee;
+      border-right: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      border-radius: 6px;
+      margin: 10px 0;
+      text-align: left;
+      background: #fff;
+      line-height: 1.35;
+      white-space: pre-wrap; /* preserves line breaks */
+    }
+
+    .t-time { font-weight: bold; margin-bottom: 6px; }
+
     .refs {
-      font-size: 0.95em;
+      margin-top: 8px;
+      font-size: 13px;
       color: #555;
     }
-    .quote {
-      margin: 10px 0;
-      padding: 10px;
-      background-color: #f4f4f4;
-      border-left: 5px solid #9b111e;
-      font-style: italic;
+
+    .pillrow {
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
     }
-    .back-button {
+
+    .pill {
       display: inline-block;
-      margin-top: 40px;
-      padding: 10px 20px;
-      background-color: #9b111e;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #e2e2e2;
+      background: #fafafa;
+      font-size: 12px;
+      color: #333;
+    }
+
+    /* Buttons (match your app style) */
+    .btnrow {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .menu-button {
+      padding: 14px 28px;
+      font-size: 16px;
+      border: 2px solid #b10000;
+      background-color: white;
+      color: #b10000;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 2px 2px 4px #aaa;
+      transition: 0.2s ease;
+      min-width: 240px;
+    }
+
+    .menu-button:hover {
+      background-color: #b10000;
       color: white;
-      text-decoration: none;
-      border-radius: 5px;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 26px;
       font-weight: bold;
+      color: #b10000;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .footer small {
+      display: block;
+      margin-top: 6px;
+      font-weight: normal;
+      color: #666;
+    }
+
+    @media (max-width: 740px) {
+      .meta-grid { grid-template-columns: 1fr; }
+      .menu-button {
+        width: 100%;
+        max-width: 420px;
+        min-width: 0;
+      }
     }
   </style>
 </head>
+
 <body>
+  <div class="wrap">
 
-<h1>SIMULATION SCENARIO: INFLIGHT FIRE</h1>
-<div class="section">
-  <p><strong>Title:</strong> Smoke in Cabin – ADA Dash 8 Q400 en route to Sir Bani Yas</p>
-  <p><strong>Date:</strong> Friday, 27 June 2025</p>
-  <p><strong>Flight:</strong> ADA232 – Zayed International Airport to Sir Bani Yas Island</p>
-  <p><strong>Aircraft Type:</strong> Dash 8 Q400</p>
-  <p><strong>Registration:</strong> A6-ADK</p>
-  <p><strong>Crew:</strong> 2 pilots, 1 cabin crew</p>
-  <p><strong>Passengers:</strong> 17</p>
-  <p><strong>Weather:</strong> Daylight VMC, calm winds</p>
-</div>
+    <div class="logo">
+      <img src="assets/logo.png" alt="ADA Logo" />
+    </div>
 
-<div class="section">
-  <div class="timestamp">08:20 – SMOKE DETECTED IN CABIN MID-FLIGHT</div>
-  <ul>
-    <li>Location: 20 NM northwest of Zayed International Airport, climbing through 7,000 feet</li>
-    <li>Cabin crew reports smoke coming from overhead panel near row 6</li>
-    <li>Captain declares PAN-PAN to ATC, then escalates to MAYDAY</li>
-    <li>Decision: Immediate return to AUH</li>
-    <li>Fire extinguishers deployed, no visible flames</li>
-  </ul>
-  <div class="refs">ERP Reference: ERP 2.6.3, 2.13.2, 2.13.3</div>
-</div>
+    <h1>SIMULATION SCENARIO: INFLIGHT FIRE</h1>
+    <div class="subhead">Training / awareness scenario (for learning context)</div>
 
-<div class="section">
-  <div class="timestamp">08:22 – OCC NOTIFIED</div>
-  <ul>
-    <li>ATC calls OCC Duty Coordinator: “ADA232 declared emergency – smoke in cabin”</li>
-    <li>OCC initiates Incident Log (Form B.6)</li>
-    <li>DOO and Safety Director informed immediately</li>
-    <li>Duty Operations Coordinator begins checklist (Appendix B.3)</li>
-  </ul>
-  <div class="refs">ERP Reference: ERP 2.3, 2.13.2, 2.13.4; Forms: B.6, B.5</div>
-</div>
+    <div class="banner">
+      TRAINING SIMULATION – NOT FOR OPERATIONAL USE
+      <small>
+        This page presents an exercise timeline and ERP references to support learning and awareness.
+        It does not provide operational instructions or decision-making guidance.
+      </small>
+    </div>
 
-<div class="section">
-  <div class="timestamp">08:24 – AIRPORT EMERGENCY SERVICES MOBILISED</div>
-  <ul>
-    <li>ATC activates full airport emergency response</li>
-    <li>AUH Fire & Rescue on standby on Runway 31L</li>
-    <li>Ambulances and Crash Response Teams deployed</li>
-    <li>OCC alerts EMT Chair for possible Quick Response activation</li>
-  </ul>
-  <div class="refs">ERP Reference: ERP 2.13.1, 2.8, 3.6.2</div>
-</div>
+    <div class="card">
+      <h2>Scenario Summary</h2>
+      <div class="meta-grid">
+        <div class="meta-item">
+          <strong>Scenario Title</strong>
+          Smoke in Cabin – ADA Dash 8 Q400 en route to Sir Bani Yas
+        </div>
+        <div class="meta-item">
+          <strong>Date</strong>
+          Friday, 27 June 2025
+        </div>
+        <div class="meta-item">
+          <strong>Flight</strong>
+          ADA232 — Zayed International Airport to Sir Bani Yas Island
+        </div>
+        <div class="meta-item">
+          <strong>Aircraft / Reg</strong>
+          Dash 8 Q400 — A6-ADK
+        </div>
+        <div class="meta-item">
+          <strong>Crew / Pax</strong>
+          2 pilots, 1 cabin crew / 17 passengers
+        </div>
+        <div class="meta-item">
+          <strong>Weather</strong>
+          Daylight VMC, calm winds
+        </div>
+      </div>
+    </div>
 
-<div class="section">
-  <div class="timestamp">08:31 – SAFE LANDING AT AUH</div>
-  <ul>
-    <li>Dash 8 lands safely with priority clearance</li>
-    <li>Immediate evacuation via main entry door</li>
-    <li>2 passengers report smoke inhalation; no serious injuries</li>
-    <li>Aircraft towed to isolated stand for inspection</li>
-  </ul>
-  <div class="refs">ERP Reference: ERP 2.13.4, 4.7</div>
-</div>
+    <details open>
+      <summary>Show / Hide Simulation Timeline</summary>
 
-<div class="section">
-  <div class="timestamp">08:45 – EMT QUICK RESPONSE MOBILISED</div>
-  <ul>
-    <li>Confirmed by DOO</li>
-    <li>Team Members:
-      <ul>
-        <li>DOO (Chair)</li>
-        <li>OCC Manager</li>
-        <li>Safety Director</li>
-        <li>HR Manager</li>
-        <li>EMC Manager</li>
-        <li>Communications Officer</li>
-        <li>Maintenance Rep</li>
-      </ul>
-    </li>
-  </ul>
-  <div class="refs">ERP Reference: ERP 3.3.1–3.3.3, 3.6.2, 3.6.4; Checklists: C.4, C.6, C.10</div>
-</div>
+      <ul class="timeline">
 
-<div class="section">
-  <div class="timestamp">09:00 – COMMUNICATIONS ACTIONED</div>
-  <ul>
-    <li>Internal staff bulletin sent: technical emergency, no fatalities</li>
-    <li>Holding statement issued:</li>
-  </ul>
-  <div class="quote">
-    “ADA flight ADA232 returned to AUH following the crew’s detection of smoke in the cabin. The flight landed safely and all passengers were evacuated as a precaution. Two passengers received precautionary medical checks.”
+        <li>
+  <div class="t-time">08:20 – SMOKE DETECTED IN CABIN MID-FLIGHT</div>
+• While climbing approximately 20 NM northwest of Zayed International Airport, smoke is reported by cabin crew from an overhead panel near row 6
+• The flight crew declare PAN-PAN to Air Traffic Control, escalating to MAYDAY as the seriousness of the situation becomes clear
+• A decision is made to return immediately to AUH as a precautionary emergency measure
+• Fire extinguishers are deployed within the cabin, with no visible flames observed
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 2.6.1.3</span>
+      <span class="pill">ERP 2.6.2.5</span>
+    </div>
   </div>
-  <ul>
-    <li>No media release of passenger identities</li>
-  </ul>
-  <div class="refs">ERP Reference: ERP 1.15.3–1.15.5</div>
-</div>
+</li>
 
-<div class="section">
-  <div class="timestamp">09:30 – TECHNICAL AND SAFETY INVESTIGATION BEGINS</div>
-  <ul>
-    <li>Maintenance Team initiates inspection with GCAA rep present</li>
-    <li>Suspicion: short circuit in passenger reading light wiring</li>
-    <li>Safety Director files preliminary report with GCAA and ADA QA</li>
-    <li>Flight Data Recorder and CVR secured</li>
-  </ul>
-  <div class="refs">ERP Reference: ERP 3.7, 3.8.6</div>
-</div>
+<li>
+  <div class="t-time">08:22 – OCC NOTIFIED</div>
+• Air Traffic Control informs the OCC Duty Coordinator that flight ADA232 has declared an emergency due to smoke in the cabin
+• The OCC formally opens an Incident Log to ensure traceability from the first notification
+• The Duty Director of Operations and Safety Director are informed immediately to ensure senior oversight
+• OCC coordination activities begin using the appropriate checklist to support structured response
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 2.3</span>
+      <span class="pill">ERP 2.6.2.5</span>
+      <span class="pill">Checklist: Appendix B.3</span>
+      <span class="pill">Form: Appendix B.6</span>
+    </div>
+  </div>
+</li>
 
-<div class="section">
-  <div class="timestamp">10:45 – PASSENGER SUPPORT & FOLLOW-UP</div>
-  <ul>
-    <li>HR and FAC team conduct wellness calls to all 17 passengers</li>
-    <li>Medical reports cleared all passengers post-observation</li>
-    <li>ADA provides formal apology and travel voucher</li>
-    <li>CRM team debriefs cabin crew for stress support</li>
-  </ul>
-  <div class="refs">ERP Reference: ERP 4.3.7, 4.13</div>
-</div>
+<li>
+  <div class="t-time">08:24 – AIRPORT EMERGENCY SERVICES MOBILISED</div>
+• Airport emergency response services are activated by ATC in anticipation of an emergency landing
+• Fire and Rescue services at AUH are placed on standby, along with ambulance and crash response teams
+• The OCC alerts the EMT Chair to prepare for possible Quick Response EMT activation
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 2.8</span>
+      <span class="pill">ERP 2.5.1</span>
+    </div>
+  </div>
+</li>
 
-<div class="section">
-  <div class="timestamp">14:00 – EMT CLOSES INCIDENT WITH DEBRIEF</div>
-  <ul>
-    <li>Full root cause analysis pending</li>
-    <li>Immediate action:
-      <ul>
-        <li>Remove same lighting units across fleet pending check</li>
-        <li>Additional CRM training ordered for all cabin crew</li>
-        <li>SMS Pro record updated</li>
-        <li>ERP Manual flagged for review (Section 1.13)</li>
+<li>
+  <div class="t-time">08:31 – SAFE LANDING AT AUH</div>
+• The Dash 8 aircraft lands safely at Zayed International Airport with priority clearance
+• A precautionary evacuation is conducted following landing to ensure passenger and crew safety
+• Two passengers report symptoms consistent with smoke inhalation, with no serious injuries identified
+• The aircraft is moved to an appropriate stand to allow inspection and further assessment
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 2.8</span>
+      <span class="pill">ERP 2.15</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">08:45 – EMT QUICK RESPONSE MOBILISED</div>
+• The Duty Director of Operations confirms activation of the Quick Response Emergency Management Team
+• EMT members convene in the Emergency Management Centre to coordinate post-landing response and oversight
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 2.5.1</span>
+      <span class="pill">ERP 3.3</span>
+      <span class="pill">ERP 3.6</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">09:00 – COMMUNICATIONS ACTIONED</div>
+• An internal staff bulletin is issued to confirm a technical emergency with no fatalities reported
+• A holding statement is prepared and released as required, maintaining control over external communications
+• Passenger identities are not disclosed in accordance with communication and privacy requirements
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 1.16.3</span>
+      <span class="pill">ERP 1.16.5</span>
+      <span class="pill">ERP 1.16.7</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">09:30 – TECHNICAL AND SAFETY INVESTIGATION BEGINS</div>
+• Engineering and maintenance activities are initiated to assess the technical cause of the smoke event
+• Safety reporting and coordination actions commence to support investigation and regulatory follow-up
+• Flight Data Recorder and Cockpit Voice Recorder are secured as applicable to preserve evidence
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 3.7</span>
+      <span class="pill">ERP 3.8.6</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">10:45 – PASSENGER SUPPORT &amp; FOLLOW-UP</div>
+• Passenger welfare follow-up activities are conducted to ensure ongoing support after the incident
+• Medical checks are completed for passengers affected by smoke exposure
+• Family Assistance arrangements are placed on standby or activated as appropriate
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 2.15</span>
+      <span class="pill">Appendix D.1</span>
+      <span class="pill">Appendix D.3</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">14:00 – EMT CLOSES INCIDENT WITH DEBRIEF</div>
+• A structured Emergency Management Team debrief is conducted to review the response and coordination
+• Actions and observations are formally recorded and logged within the SMS system
+• An ERP review is flagged as required to support continuous improvement and readiness assurance
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 1.13</span>
+      <span class="pill">ERP 0.1</span>
+    </div>
+  </div>
+</li>
+
+
       </ul>
-    </li>
-  </ul>
-</div>
+    </details>
 
-<a href="ScenariosMenu.html" class="back-button">Back to Menu</a>
+    <div class="btnrow">
+      <button class="menu-button" onclick="location.href='ScenariosMenu.html'">Back to Scenarios</button>
+      <button class="menu-button" onclick="location.href='Main Menu.html'">Back to Main Menu</button>
+    </div>
 
+    <div class="footer">
+      Reference and Reminder Only<br>
+      Not a substitute for the ERP Manual<br>
+      Always verify the current approved issue<br>
+      UNCONTROLLED if copied or printed
+      <small>
+        Source Document: ADA Emergency Response Plan Manual — Issue 03, Revision 0 — 15 August 2025
+      </small>
+    </div>
+
+  </div>
 </body>
 </html>
-

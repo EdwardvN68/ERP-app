@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Engineering Director Role</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="SCORM_API_wrapper.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -48,6 +49,33 @@
     .back-button:hover {
       background-color: #b91c1c;
     }
+
+    /* --- Checklist selection block (aligned to accountable.html) --- */
+    .checklist-button {
+      margin-top: 16px;
+      background-color: #9b111e;
+      color: #fff;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+    }
+    .checklist-button:hover {
+      background-color: #b91c1c;
+    }
+    .uncontrolled-note {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      background: #f7f7f7;
+      border-radius: 4px;
+      font-style: italic;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -56,88 +84,110 @@
   <h1>Engineering Director – Emergency Management Role</h1>
 
   <h2>Activation Criteria</h2>
-  <p>This role is activated as part of the <strong>Full Emergency Management Team (EMT)</strong> mobilization, as described in ERP Section 2.5.2. The Engineering Director provides direct technical and operational support during any aviation-related emergency involving aircraft status, maintenance, or engineering considerations.</p>
+  <p>
+    This function is activated as part of EMT mobilisation. EMT on-call roles are listed in ERP Section 2.5.2, and the EMT composition table identifies the <strong>EMT Engineering</strong> role as the <strong>P145 Post Holder</strong> (alternate: <strong>Engineering Manager(s)</strong>).
+  </p>
 
   <h2>Core Responsibilities</h2>
-  <p><strong>ERP Section 3.6.4 outlines the following duties:</strong></p>
+  <p><strong>ERP Section 3.6.5 (145 Post Holder) defines the engineering-role responsibilities as:</strong></p>
   <ul>
-    <li>Act as the primary technical authority on all engineering matters during an emergency.</li>
-    <li>Coordinate with the CAMO, Maintenance Manager, and Safety Director to retrieve, secure, and protect technical records.</li>
-    <li>Assist in the preservation of aircraft wreckage or key components in compliance with GCAA and ERP protocols.</li>
-    <li>Support the investigation team by providing aircraft maintenance status, open MEL items, and technical records upon request.</li>
-    <li>Ensure engineering resources are allocated to support recovery or investigation efforts, including site visits or forensic documentation.</li>
+    <li>Advising the EMT of all engineering issues.</li>
+    <li>Obtaining and securing all relevant technical data on affected aircraft.</li>
+    <li>Obtaining and securing all maintenance records of affected aircraft.</li>
+    <li>In consultation with the EMT, liaising with the aircraft and engineering manufacturers.</li>
+    <li>In consultation with the EMT, liaising with Abu Dhabi Aviation’s insurance company regarding possible salvage requirements and provision of assistance with equipment/expertise through our insurers.</li>
+    <li>Coordinating an aircraft recovery team or aircraft recovery and repair/disposal program.</li>
+    <li>When applicable, arrange standby engineering staff for relief aircraft.</li>
+    <li>When applicable and in consultation with the EMT provide a field representative to visit the emergency site as part of the Emergency Site Team (EST).</li>
   </ul>
 
   <h2>Checklist Reference</h2>
-  <p><strong>Appendix C.8 – Engineering Director Checklist</strong> must be activated and followed. This includes:</p>
-  <ul>
-    <li>Immediate coordination with OCC and CAMO upon activation</li>
-    <li>Retrieval and digital backup of technical logs, work packages, and AD/SB compliance records</li>
-    <li>Securing of maintenance data (FDR, CVR if applicable) and handing over to Safety Director or GCAA as needed</li>
-  </ul>
+  <p>
+    The engineering-role checklist in the ERP is <strong>Appendix C.9 – 145 Post Holder Checklist</strong>.
+  </p>
 
-  <h2>Response Phases</h2>
-  <ul>
-    <li><strong>Phase 1 (0–60 min):</strong> Confirm technical readiness of aircraft, review last maintenance action, support Safety/OCC with any tech data required.</li>
-    <li><strong>Phase 2 (1–4 hrs):</strong> Join strategy meetings with EMT, assist with technical narrative and incident background, retrieve maintenance releases or deferred defects.</li>
-    <li><strong>Phase 3 (4+ hrs):</strong> Draft and review technical sections of the GCAA preliminary report, coordinate with OEM if engineering input is required for fault isolation or failure analysis.</li>
-  </ul>
+  <button class="checklist-button" onclick="openChecklistPdf()">
+    Open Appendix C.9 – 145 Post Holder Checklist (PDF)
+  </button>
 
-  <h2>Restrictions & Compliance</h2>
+  <div class="uncontrolled-note">
+    READ ONLY! ** Printed/Downloaded copies are considered UNCONTROLLED - Verify current issue before use **
+  </div>
+
+  <h2>ERP References</h2>
+  <p>
+    Use these ERP sections and appendices for the governing structure and checklist:
+  </p>
   <ul>
-    <li>Do not disclose technical findings outside the EMT or GCAA unless explicitly approved by the Accountable Manager.</li>
-    <li>Ensure all digital and physical records are secured and archived to SMS-Pro for audit trail integrity.</li>
-    <li>Preserve aircraft systems and parts involved in the incident until officially released by the investigative body.</li>
+    <li>Section 2.5.2 – EMT On-Call Roles</li>
+    <li>Section 3.3.3 – EMT On-Call Roles (EMT composition table: EMT Engineering = P145 Post Holder)</li>
+    <li>Section 3.6.5 – 145 Post Holder</li>
+    <li>Appendix C.9 – 145 Post Holder Checklist</li>
   </ul>
 
   <h2>Knowledge Check</h2>
 
   <div class="question">
-    <p><strong>Q1:</strong> What ERP section defines the role of the Engineering Director?</p>
+    <p><strong>Q1:</strong> Which ERP section defines the 145 Post Holder responsibilities (the EMT Engineering role)?</p>
     <button onclick="checkAnswer(this, false)">a. Section 3.6.2</button><br>
     <button onclick="checkAnswer(this, false)">b. Section 3.6.6</button><br>
-    <button onclick="checkAnswer(this, true)">c. Section 3.6.4</button>
+    <button onclick="checkAnswer(this, true)">c. Section 3.6.5</button>
     <div class="feedback"></div>
   </div>
 
   <div class="question">
-    <p><strong>Q2:</strong> When is the Engineering Director role activated?</p>
+    <p><strong>Q2:</strong> Where are EMT on-call roles listed?</p>
     <button onclick="checkAnswer(this, false)">a. For minor maintenance issues</button><br>
     <button onclick="checkAnswer(this, false)">b. Only when GCAA calls</button><br>
-    <button onclick="checkAnswer(this, true)">c. During Full EMT mobilisation as per ERP 2.5.2</button>
+    <button onclick="checkAnswer(this, true)">c. ERP Section 2.5.2</button>
     <div class="feedback"></div>
   </div>
 
   <div class="question">
-    <p><strong>Q3:</strong> What is the correct checklist for the Engineering Director?</p>
+    <p><strong>Q3:</strong> What is the correct checklist for the EMT Engineering role?</p>
     <button onclick="checkAnswer(this, false)">a. Appendix C.10</button><br>
     <button onclick="checkAnswer(this, false)">b. Appendix C.12</button><br>
-    <button onclick="checkAnswer(this, true)">c. Appendix C.8</button>
+    <button onclick="checkAnswer(this, true)">c. Appendix C.9</button>
     <div class="feedback"></div>
   </div>
 
   <div class="question">
-    <p><strong>Q4:</strong> What should be done with technical records during a response?</p>
-    <button onclick="checkAnswer(this, false)">a. Email them to legal</button><br>
-    <button onclick="checkAnswer(this, true)">b. Digitally back them up and secure them per ERP and GCAA protocols</button><br>
-    <button onclick="checkAnswer(this, false)">c. Hand them to media for transparency</button>
+    <p><strong>Q4:</strong> Which action is explicitly listed in ERP Section 3.6.5?</p>
+    <button onclick="checkAnswer(this, false)">a. Issue technical findings to the media</button><br>
+    <button onclick="checkAnswer(this, true)">b. Obtain and secure maintenance records of the affected aircraft</button><br>
+    <button onclick="checkAnswer(this, false)">c. Approve regulatory deviations</button>
     <div class="feedback"></div>
   </div>
 
   <div class="question">
-    <p><strong>Q5:</strong> Who must approve the external release of engineering data?</p>
-    <button onclick="checkAnswer(this, false)">a. Maintenance Manager</button><br>
-    <button onclick="checkAnswer(this, true)">b. Accountable Manager</button><br>
-    <button onclick="checkAnswer(this, false)">c. OCC Supervisor</button>
+    <p><strong>Q5:</strong> According to ERP Section 3.6.5, what may be provided to the Emergency Site Team (EST) when applicable and in consultation with the EMT?</p>
+    <button onclick="checkAnswer(this, false)">a. A media spokesperson</button><br>
+    <button onclick="checkAnswer(this, true)">b. A field representative</button><br>
+    <button onclick="checkAnswer(this, false)">c. A regulatory auditor</button>
     <div class="feedback"></div>
   </div>
   
-  <p><strong>Final Note:</strong> As Engineering Director, your role ensures that technical accuracy and regulatory compliance are maintained throughout the emergency response. Your diligence preserves critical evidence, supports safety investigations, and protects ADA’s airworthiness integrity.</p>
+  <p><strong>Final Note:</strong> For engineering support during an emergency, follow the responsibilities listed in ERP Section 3.6.5 and use Appendix C.9 as the checklist reference.</p>
 
   <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole.html'">← Back to Role Menu</button>
 </div>
 
 <script>
+  /* IMPORTANT:
+     Replace the string below with the EXACT relative path + filename of your Appendix C.9 PDF in your app.
+     Example format: "Forms/your-file-name.pdf"
+     Do not change anything else unless you want to.
+  */
+  const CHECKLIST_C9_PDF_PATH = "Forms/C.9. 145 Post Holder Checklist.pdf";
+
+  function openChecklistPdf() {
+    if (!CHECKLIST_C9_PDF_PATH || CHECKLIST_C9_PDF_PATH === "PUT-EXACT-PDF-PATH-HERE") {
+      alert("Checklist PDF path not set. Update CHECKLIST_C9_PDF_PATH to the exact Appendix C.9 PDF filename/path in your app.");
+      return;
+    }
+    window.open(CHECKLIST_C9_PDF_PATH, "_blank", "noopener");
+  }
+
   const totalQuestions = document.querySelectorAll('.question').length;
   const answered = new Array(totalQuestions).fill(false);
   const correct = new Array(totalQuestions).fill(false);
@@ -158,12 +208,22 @@
     checkAllCorrect();
   }
 
+  function markComplete() {
+    if (typeof doLMSSetValue === 'function') {
+      doLMSSetValue("cmi.core.lesson_status", "completed");
+      doLMSCommit("");
+    } else {
+      console.warn("SCORM API not available – training completion not tracked.");
+    }
+  }
+
   function checkAllCorrect() {
     const allAnswered = answered.every(Boolean);
     const allCorrect = correct.every(Boolean);
 
     if (allAnswered && allCorrect) {
       document.getElementById("backButton").style.display = "inline-block";
+      markComplete();
     }
   }
 </script>

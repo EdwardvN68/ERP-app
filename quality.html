@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quality Director Role</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="SCORM_API_wrapper.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -48,7 +49,32 @@
     .back-button:hover {
       background-color: #b91c1c;
     }
-  </style>
+  
+    /* --- Checklist selection block (matches accountable.html style) --- */
+    .checklist-button {
+      margin-top: 16px;
+      background-color: #9b111e;
+      color: #fff;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+    }
+    .checklist-button:hover { background-color: #b91c1c; }
+    .uncontrolled-note {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      background: #f7f7f7;
+      border-radius: 4px;
+      font-style: italic;
+      font-size: 14px;
+    }
+</style>
 </head>
 <body>
 
@@ -56,27 +82,42 @@
   <h1>Quality Director – Emergency Management Role</h1>
 
   <h2>Activation Criteria</h2>
-  <p>This role is activated as part of the <strong>Full Emergency Management Team (EMT)</strong> in accordance with ERP Section 2.5.2. The Quality Director ensures regulatory compliance and audit readiness throughout the emergency response cycle.</p>
+<p>This role is activated as part of the <strong>Full Emergency Management Team (EMT)</strong> in accordance with ERP Section 2.5.2. The Quality Director ensures regulatory compliance and audit readiness throughout the emergency response cycle.</p>
 
-  <h2>Core Responsibilities</h2>
-  <p><strong>ERP Section 3.6.5 outlines the following duties:</strong></p>
+  <p>Refer to ERP Section 3.6.6 (Quality Director) and Appendix C.10.</p>
+
+  <div style="margin-top: 18px; margin-bottom: 6px;">
+    <button class="checklist-button" onclick="openChecklistPdf('C10')">Open Checklist – Appendix C.10 (Quality Director Checklist)</button>
+    <div class="uncontrolled-note">READ ONLY! ** Printed/Downloaded copies are considered UNCONTROLLED - Verify current issue before use**</div>
+  </div>
+
+
+<h2>Core Responsibilities</h2>
+
+  <p><strong>ERP Section 3.6.6 outlines the following duties:</strong></p>
   <ul>
-    <li>Act as the primary authority on compliance and quality assurance during the incident response.</li>
-    <li>Ensure ERP checklists, forms, and timelines are followed in accordance with GCAA and internal audit standards.</li>
-    <li>Initiate internal QA reporting structures to track deviations, delays, or process failures in real time.</li>
-    <li>Support the Accountable Manager and Safety Director in documenting actions taken for post-event audit.</li>
-    <li>Facilitate post-response internal reviews and track effectiveness of corrective actions.</li>
+    <li>Advising the EMT on all quality and compliance issues.</li>
+    <li>Ensuring that all Company documentation and records are properly controlled and available (e.g. manuals, certifications and other company/employee records).</li>
+    <li>Liaising the authorities, e.g. GCAA, other authorities (as required).</li>
+    <li>Participating, as required, in respect to post accident investigations.</li>
+    <li>Ensuring compliance with any applicable regulatory requirements.</li>
   </ul>
 
-  <h2>Checklist Reference</h2>
-  <p><strong>Appendix C.9 – Quality Director Checklist</strong> must be followed, including:</p>
+<h2>Checklist Reference</h2>
+
+  <p><strong>Appendix C.10 – Quality Director Checklist</strong> must be followed, including:</p>
   <ul>
-    <li>Confirm EMT procedural adherence</li>
-    <li>Document all timeline deviations or policy gaps</li>
-    <li>Initiate QA review of ERP implementation against SMS procedures</li>
+    <li>Acknowledge callout and proceed to EMC, do not call for information.</li>
+    <li>Provide immediate advice on quality and compliance implications and issues as necessary; determine any specialist that may be required.</li>
+    <li>Ensure that all regulatory documentations and records are controlled and available.</li>
+    <li>Assist the EMT as required in respect to investigation and follow-up activities.</li>
+    <li>In the event of emergency, quality staff are to be instructed by the EMT and should ensure that all quality documentation and records are controlled and secured.</li>
+    <li>Ensure compliance with any regulatory requirements.</li>
+    <li>Ensure all matters are controlled and procedures are being followed and where necessary communicate to the EMC Chairman on any deviation and recommend corrective actions.</li>
+    <li>Ensure all reports are recorded and filed under the control of the EMC chairman. Ensure drafts are clearly marked “Draft”.</li>
   </ul>
 
-  <h2>Response Phases</h2>
+<h2>Response Phases</h2>
   <ul>
     <li><strong>Phase 1 (0–60 min):</strong> Monitor EMT activation, verify checklist compliance, support OCC and Safety Director in process control.</li>
     <li><strong>Phase 2 (1–4 hrs):</strong> Begin parallel audit of ERP implementation, track document control integrity, ensure traceability of logs.</li>
@@ -95,7 +136,7 @@
   <div class="question">
     <p><strong>Q1:</strong> What ERP section defines the Quality Director's role?</p>
     <button onclick="checkAnswer(this, false)">a. Section 3.6.3</button><br>
-    <button onclick="checkAnswer(this, true)">b. Section 3.6.5</button><br>
+    <button onclick="checkAnswer(this, true)">b. Section 3.6.6</button><br>
     <button onclick="checkAnswer(this, false)">c. Section 3.6.7</button>
     <div class="feedback"></div>
   </div>
@@ -103,7 +144,7 @@
   <div class="question">
     <p><strong>Q2:</strong> What is the correct checklist for the Quality Director?</p>
     <button onclick="checkAnswer(this, false)">a. Appendix C.7</button><br>
-    <button onclick="checkAnswer(this, true)">b. Appendix C.9</button><br>
+    <button onclick="checkAnswer(this, true)">b. Appendix C.10</button><br>
     <button onclick="checkAnswer(this, false)">c. Appendix C.11</button>
     <div class="feedback"></div>
   </div>
@@ -138,7 +179,21 @@
 </div>
 
 <script>
-  const totalQuestions = document.querySelectorAll('.question').length;
+  const CHECKLIST_C10_PDF_PATH = "Forms/C.10. Quality Director Checklist.pdf";
+
+  function openChecklistPdf(which) {
+    let filePath = "";
+    if (which === "C10") filePath = CHECKLIST_C10_PDF_PATH;
+
+    if (!filePath) {
+      alert("Checklist PDF path is not set for: " + which);
+      return;
+    }
+
+    window.open(filePath, "_blank", "noopener");
+  }
+
+const totalQuestions = document.querySelectorAll('.question').length;
   const answered = new Array(totalQuestions).fill(false);
   const correct = new Array(totalQuestions).fill(false);
 
@@ -158,12 +213,22 @@
     checkAllCorrect();
   }
 
+  function markComplete() {
+    if (typeof doLMSSetValue === 'function') {
+      doLMSSetValue("cmi.core.lesson_status", "completed");
+      doLMSCommit("");
+    } else {
+      console.warn("SCORM API not available – training completion not tracked.");
+    }
+  }
+
   function checkAllCorrect() {
     const allAnswered = answered.every(Boolean);
     const allCorrect = correct.every(Boolean);
 
     if (allAnswered && allCorrect) {
       document.getElementById("backButton").style.display = "inline-block";
+      markComplete();
     }
   }
 </script>

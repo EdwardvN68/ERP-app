@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Head of IT Role</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="SCORM_API_wrapper.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -47,6 +48,34 @@
     .back-button:hover {
       background-color: #b91c1c;
     }
+
+
+    /* --- Checklist selection block (matches master Accountable Manager) --- */
+    .checklist-button {
+      margin-top: 16px;
+      background-color: #9b111e;
+      color: #fff;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+    }
+    .checklist-button:hover {
+      background-color: #b91c1c;
+    }
+    .uncontrolled-note {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      background: #f7f7f7;
+      border-radius: 4px;
+      font-style: italic;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -56,7 +85,7 @@
 
   <h2>Activation</h2>
   <p>The Head of IT is activated during any Medium or High-level emergency requiring data protection, secure communications, or IT infrastructure support. This includes support for the EMT, remote access provisioning, data safeguarding, and forensic readiness.</p>
-  <p>Refer to ERP Section 3.6.12 – Head of IT.</p>
+  <p>Refer to ERP Section 3.6.14 – Head of IT.</p>
 
   <h2>Core Responsibilities</h2>
   <ul>
@@ -71,8 +100,13 @@
 
   <h2>ERP References</h2>
   <ul>
-    <li>Section 3.6.12 – Head of IT</li>
+    <li>Section 3.6.14 – Head of IT</li>
   </ul>
+
+  <h2>Checklist</h2>
+  <p><strong>Appendix C.14 – Head of IT Checklist</strong></p>
+  <button class="checklist-button" type="button" onclick="openChecklist()">Open Checklist</button>
+  <p class="uncontrolled-note"><em>READ ONLY! ** Printed/Downloaded copies are considered UNCONTROLLED - Verify current issue before use**</em></p>
 
   <h2>Phase-Based Duties</h2>
   <ul>
@@ -157,12 +191,26 @@
     checkAllCorrect();
   }
 
+  function openChecklist() {
+    window.open('Forms/C.14. Head of IT Checklist.pdf', '_blank', 'noopener');
+  }
+
+  function markComplete() {
+    if (typeof doLMSSetValue === 'function') {
+      doLMSSetValue("cmi.core.lesson_status", "completed");
+      doLMSCommit("");
+    } else {
+      console.warn("SCORM API not available – training completion not tracked.");
+    }
+  }
+
   function checkAllCorrect() {
     const allAnswered = answered.every(Boolean);
     const allCorrect = correct.every(Boolean);
 
     if (allAnswered && allCorrect) {
       document.getElementById("backButton").style.display = "inline-block";
+      markComplete();
     }
   }
 </script>

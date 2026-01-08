@@ -3,185 +3,300 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scenario: Hijack – Dash 8 Q400</title>
+  <title>SIMULATION SCENARIO: HIJACK (Training)</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px auto;
-      padding: 20px;
-      max-width: 1000px;
-      line-height: 1.6;
-      background-color: #fff;
+      text-align: center;
+      background-color: white;
+      color: #222;
+      margin: 0;
+      padding: 0;
     }
-    h1, h2 {
-      color: #9b111e;
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 18px 28px 18px;
     }
-    .section {
-      margin-bottom: 30px;
-    }
-    .timestamp {
+
+    .logo { margin-top: 40px; }
+    .logo img { width: 200px; height: auto; }
+
+    h1 { font-size: 28px; margin-top: 24px; margin-bottom: 6px; }
+    .subhead { font-size: 14px; color: #444; margin-bottom: 18px; }
+
+    .banner {
+      max-width: 980px;
+      margin: 0 auto 16px auto;
+      padding: 14px 16px;
+      border: 2px solid #b10000;
+      border-radius: 8px;
+      background: #fff5f5;
+      color: #7a0000;
       font-weight: bold;
-      margin-top: 10px;
+      text-align: left;
     }
-    ul {
-      margin-top: 0;
+
+    .banner small {
+      display: block;
+      margin-top: 6px;
+      font-weight: normal;
     }
-    .refs {
-      font-size: 0.95em;
-      color: #555;
+
+    .card {
+      text-align: left;
+      margin-top: 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
-    .quote {
+
+    .card h2 { margin: 0 0 10px 0; font-size: 18px; }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 16px;
+      font-size: 14px;
+    }
+
+    .meta-item {
+      padding: 10px 12px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    details {
+      text-align: left;
+      margin-top: 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    summary { cursor: pointer; font-weight: bold; color: #b10000; }
+
+    .timeline { list-style: none; padding: 0; font-size: 14px; }
+
+    .timeline li {
+      padding: 10px 12px;
+      border-left: 4px solid #b10000;
+      border: 1px solid #eee;
+      border-radius: 6px;
       margin: 10px 0;
-      padding: 10px;
-      background-color: #f4f4f4;
-      border-left: 5px solid #9b111e;
-      font-style: italic;
+      white-space: pre-wrap;
     }
-    .back-button {
-      display: inline-block;
-      margin-top: 40px;
-      padding: 10px 20px;
-      background-color: #9b111e;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
+
+    .t-time { font-weight: bold; margin-bottom: 6px; }
+
+    .refs { margin-top: 8px; font-size: 13px; color: #555; }
+
+    .pillrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #e2e2e2;
+      background: #fafafa;
+      font-size: 12px;
+    }
+
+    .btnrow {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .menu-button {
+      padding: 14px 28px;
+      font-size: 16px;
+      border: 2px solid #b10000;
+      background: white;
+      color: #b10000;
+      border-radius: 6px;
+      cursor: pointer;
+      min-width: 240px;
+    }
+
+    .footer {
+      margin-top: 26px;
       font-weight: bold;
+      color: #b10000;
+      font-size: 14px;
+    }
+
+    .footer small {
+      display: block;
+      font-weight: normal;
+      color: #666;
+      margin-top: 6px;
     }
   </style>
 </head>
+
 <body>
+<div class="wrap">
 
-<h1>SIMULATION SCENARIO: HIJACK</h1>
-<div class="section">
-  <p><strong>Title:</strong> Hijack In-Flight – ADA Dash 8 Q400 Charter to Saudi Arabia</p>
-  <p><strong>Date:</strong> Thursday, 26 June 2025</p>
-  <p><strong>Flight:</strong> ADA412 – Zayed International Airport (AUH) to Al Khobar, Saudi Arabia</p>
-  <p><strong>Aircraft Type:</strong> Dash 8 Q400</p>
-  <p><strong>Registration:</strong> A6-ADK</p>
-  <p><strong>Crew:</strong> 2 pilots, 1 cabin crew</p>
-  <p><strong>Passengers:</strong> 26 oilfield staff (ADNOC)</p>
-  <p><strong>Status:</strong> Cruising FL240, 38 minutes after departure</p>
-</div>
-
-<div class="section">
-  <div class="timestamp">08:44 – TRANSPONDER ALERT: HIJACK CODE 7500</div>
-  <ul>
-    <li>ATC notifies OCC after receiving squawk 7500 from ADA412</li>
-    <li>ACARS message received: <em>"ADA412. Cockpit security breached. We are under duress. Maintain silence."</em></li>
-    <li>OCC Duty Coordinator initiates Incident Log (Form B.6)</li>
-  </ul>
-  <div class="refs">ERP References: ERP 2.9.1 – Hijack or Standby Hijack, ERP 2.3.1 – Report Details, Appendix B.6 – Incident Log</div>
-</div>
-
-<div class="section">
-  <div class="timestamp">08:47 – FIRST ACTIONS BY OCC</div>
-  <ul>
-    <li>OCC Duty Coordinator informs DOO</li>
-    <li>Escalates to Accountable Manager</li>
-    <li>Triggers immediate Quick Response EMT</li>
-  </ul>
-  <div class="refs">ERP References: ERP 2.5.1 (HIGH classification), ERP 2.9.3 – OCC Response to Hijack</div>
-</div>
-
-<div class="section">
-  <div class="timestamp">08:50 – EMT QUICK RESPONSE TEAM MOBILISED</div>
-  <ul>
-    <li>EMC activated with:
-      <ul>
-        <li>DOO (EMT Chair)</li>
-        <li>Safety Director</li>
-        <li>EMC Manager</li>
-        <li>OCC Manager</li>
-        <li>Communications & Liaison Officer</li>
-        <li>Legal Advisor</li>
-      </ul>
-    </li>
-  </ul>
-  <div class="refs">ERP References: ERP 3.3.1, 3.5.1 | Checklists: Appendix C.1–C.6</div>
-</div>
-
-<div class="section">
-  <div class="timestamp">08:55 – COORDINATION WITH AUTHORITIES</div>
-  <ul>
-    <li>Liaison initiated with:
-      <ul>
-        <li>GCAA (Security Division)</li>
-        <li>NCEMA</li>
-        <li>KSA Civil Aviation Security</li>
-        <li>Abu Dhabi Police Aviation Division</li>
-        <li>ADNOC Emergency Desk (due to passenger profile)</li>
-      </ul>
-    </li>
-  </ul>
-  <div class="refs">ERP References: ERP 1.4.4, 1.15.6.2, ERP 2.9.3(c)</div>
-</div>
-
-<div class="section">
-  <div class="timestamp">09:00 – TRACKING AND STATUS</div>
-  <ul>
-    <li>ADA412 (A6-ADK) remains on original route</li>
-    <li>ATC maintains radar lock; ACARS heartbeat active</li>
-    <li>Flight path adjusted to isolated holding sector over desert</li>
-    <li>PIC confirms: no communication unless advised by GCAA</li>
-  </ul>
-  <div class="refs">ERP References: ERP 2.9.1, 3.6.16</div>
-</div>
-
-<div class="section">
-  <div class="timestamp">09:10 – MEDIA STRATEGY IN PLACE</div>
-  <ul>
-    <li>Communications Officer drafts Holding Statement:</li>
-  </ul>
-  <div class="quote">
-    “ADA confirms it is managing an onboard security situation involving flight ADA412 (Dash 8 Q400 A6-ADK). The safety of all onboard is our priority. We are coordinating closely with national and international authorities.”
+  <div class="logo">
+    <img src="assets/logo.png" alt="ADA Logo" />
   </div>
-  <ul>
-    <li>Staff reminded of non-disclosure under ERP 1.14</li>
-    <li>Go-Crisis notified for possible escalation</li>
-  </ul>
-  <div class="refs">ERP References: ERP 1.15.1–1.15.4</div>
+
+  <h1>SIMULATION SCENARIO: HIJACK</h1>
+  <div class="subhead">Training / awareness scenario (for learning context)</div>
+
+  <div class="banner">
+    TRAINING SIMULATION – NOT FOR OPERATIONAL USE
+    <small>This page supports training and familiarisation only.</small>
+  </div>
+
+  <div class="card">
+    <h2>Scenario Summary</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><strong>Flight</strong>ADA412 – AUH to Al Khobar</div>
+      <div class="meta-item"><strong>Aircraft</strong>Dash 8 Q400 – A6-ADK</div>
+      <div class="meta-item"><strong>Status</strong>In flight (FL240)</div>
+      <div class="meta-item"><strong>Persons Onboard</strong>3 crew, 26 passengers</div>
+    </div>
+  </div>
+
+  <details open>
+    <summary>Show / Hide Simulation Timeline</summary>
+
+    <ul class="timeline">
+
+      <li>
+  <div class="t-time">08:44 – TRANSPONDER ALERT (7500)</div>
+• Air Traffic Control notifies the Operations Control Centre that the aircraft has selected transponder code 7500, indicating a potential unlawful interference situation
+• An ACARS message is received confirming a cockpit security concern, reinforcing the seriousness of the alert
+• The OCC Duty Coordinator immediately opens an Incident Log to formally capture the event and ensure traceability
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 2.3</span>
+      <span class="pill">ERP 2.6.2</span>
+      <span class="pill">Form: Appendix B.6</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">08:47 – OCC ESCALATION</div>
+• The Duty Director of Operations is informed to ensure senior operational awareness of the developing security situation
+• The Accountable Manager is notified to provide executive oversight and support organisational escalation
+• The Quick Response Emergency Management Team is initiated to enable coordinated monitoring and response under the ERP
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 2.5.1</span>
+      <span class="pill">ERP 3.3</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">08:50 – EMT MOBILISED</div>
+• The Emergency Management Centre is activated to provide a secure and controlled coordination environment
+• Core Emergency Management Team roles are mobilised to ensure operational, safety, security, communications, and liaison functions are covered
+• All communications are managed in a controlled manner to prevent misinformation and protect the integrity of the response
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 3.3</span>
+      <span class="pill">ERP 3.5.1</span>
+      <span class="pill">ERP 3.6</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">08:55 – AUTHORITY COORDINATION</div>
+• Formal coordination is established with relevant national and aviation authorities to ensure aligned response oversight
+• Regulatory and emergency management entities are kept informed as the situation develops
+• Air Traffic Control continues active tracking of the aircraft and provides updates to support situational awareness
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 2.3</span>
+      <span class="pill">ERP 3.6</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">09:10 – MEDIA &amp; INFORMATION CONTROL</div>
+• A holding statement is drafted in anticipation of potential external enquiry, without releasing any unverified information
+• Controls are reinforced to ensure that no unauthorised internal or external communication takes place
+• Go-Crisis is notified and placed on standby should family or psychological support become necessary
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 1.14</span>
+      <span class="pill">ERP 1.15</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">09:22 – SITUATION DE-ESCALATED</div>
+• The Pilot-in-Command reports that the security threat has been resolved
+• The aircraft transponder code is returned to normal, indicating a reduction in threat status
+• The flight continues toward its planned destination under monitored conditions
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 3.5.1</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">09:55 – SAFE LANDING</div>
+• The aircraft lands safely at its destination without further incident
+• Local authorities secure the aircraft upon arrival as a precautionary measure
+• All crew and passengers are confirmed safe, with no injuries reported
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 3.7</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">POST-EVENT – REVIEW &amp; CLOSE-OUT</div>
+• All incident documentation and records are uploaded to the SMS system to ensure traceability and audit readiness
+• An internal review is conducted to assess response effectiveness and coordination
+• Any corrective or improvement actions identified are logged for follow-up and governance oversight
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 1.13</span>
+      <span class="pill">ERP 0.1</span>
+    </div>
+  </div>
+</li>
+
+
+    </ul>
+  </details>
+
+  <div class="btnrow">
+    <button class="menu-button" onclick="location.href='ScenariosMenu.html'">Back to Scenarios</button>
+    <button class="menu-button" onclick="location.href='Main Menu.html'">Back to Main Menu</button>
+  </div>
+
+  <div class="footer">
+    Reference and Reminder Only<br>
+    UNCONTROLLED if copied or printed
+    <small>Source: ADA Emergency Response Plan Manual — Issue 03, Revision 0 — 15 August 2025</small>
+  </div>
+
 </div>
-
-<div class="section">
-  <div class="timestamp">09:22 – SITUATION CONTAINED</div>
-  <ul>
-    <li>ACARS Transmission from PIC: “Threat de-escalated. No injuries. Aircraft stable. Request ATC clearance for destination.”</li>
-    <li>Transponder changed back to 2000</li>
-    <li>OCC advises continuation to Al Khobar under security escort</li>
-  </ul>
-</div>
-
-<div class="section">
-  <div class="timestamp">09:55 – SAFE LANDING IN AL KHOBAR</div>
-  <ul>
-    <li>Aircraft lands safely at Executive Terminal</li>
-    <li>Saudi Aviation Police secure aircraft</li>
-    <li>Suspect identified: off-duty contractor attempting cockpit access under false credentials</li>
-    <li>No weapons, no injuries</li>
-  </ul>
-</div>
-
-<div class="section">
-  <div class="timestamp">10:20 – RECOVERY PHASE INITIATED</div>
-  <ul>
-    <li>EMT Chair (DOO) initiates response stand-down</li>
-    <li>Safety Director begins investigative log preparation</li>
-    <li>Legal prepares report for GCAA</li>
-  </ul>
-  <div class="refs">ERP References: ERP Stage Four – Recovery, ERP 3.7, 3.5.1</div>
-</div>
-
-<div class="section">
-  <div class="timestamp">13:00 – FINAL DEBRIEF AND AUDIT TRIGGERS</div>
-  <ul>
-    <li>Incident documents uploaded to SMS-Pro</li>
-    <li>OCC process reviewed against ERP 2.9.3</li>
-    <li>Key action: audit passenger vetting process and revise crew security protocols</li>
-  </ul>
-  <div class="refs">ERP Reference: ERP 1.13</div>
-</div>
-
-<a href="ScenariosMenu.html" class="back-button">Back to Menu</a>
-
 </body>
 </html>

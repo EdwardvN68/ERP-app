@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Safety Director Role</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="SCORM_API_wrapper.js"></script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -21,7 +23,7 @@
     h1, h2 {
       color: #9b111e;
     }
-    ul, ol {
+    ul {
       margin-left: 20px;
     }
     .question {
@@ -47,98 +49,174 @@
     .back-button:hover {
       background-color: #b91c1c;
     }
+
+    /* Checklist block – MASTER */
+    .checklist-button {
+      margin-top: 16px;
+      background-color: #9b111e;
+      color: #fff;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+    }
+    .checklist-button:hover {
+      background-color: #b91c1c;
+    }
+    .uncontrolled-note {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      background: #f7f7f7;
+      border-radius: 4px;
+      font-style: italic;
+      font-size: 14px;
+    }
   </style>
 </head>
+
 <body>
 
 <div class="container">
-  <h1>Safety Director – Emergency Response Role</h1>
+  <h1>Safety Director (Emergency Management Team Member)</h1>
 
-  <h2>Activation</h2>
-  <p>Activated during <strong>MEDIUM</strong> or <strong>HIGH</strong> level emergencies when the Emergency Management Team (EMT) is mobilized.</p>
+  <h2>Role Context (Training Overview)</h2>
+  <p>
+    As Safety Director, you provide specialist safety and regulatory oversight to the Emergency Management Team (EMT).
+    Your role ensures that emergency response actions remain aligned with aviation safety principles, regulatory expectations,
+    and organisational accountability.
+  </p>
 
-  <h2>Core Responsibilities</h2>
+  <h2>Activation (ERP-Aligned Awareness)</h2>
+  <p>
+    The Safety Director is engaged during <strong>medium- and high-level emergencies</strong> when the EMT is activated.
+    Where the Accountable Manager is unavailable, the ERP defines that the Safety Director assumes the role of
+    <strong>EMT Chairman</strong>, ensuring continuity of leadership.
+  </p>
+
+  <p>
+    <strong>Training note:</strong> Activation thresholds and leadership succession are defined in the ERP and are not discretionary.
+  </p>
+
+  <p>Refer to ERP Section 3.6.2 and Appendix C.6.</p>
+
+  <h2>Core Responsibilities (ERP 3.6.2 – Explained for Training)</h2>
+  <p>
+    Your responsibilities focus on <strong>safety assurance, regulatory liaison, and specialist advice</strong>.
+    You support EMT decision-making by ensuring safety risks, legal obligations, and regulatory expectations are clearly understood.
+  </p>
+
   <ul>
-    <li>Advising the EMT on all emergency management and safety issues.</li>
-    <li>Liaising with law enforcement, regulatory authorities, and security agencies.</li>
-    <li>In consultation with EMT, arranging specialist assistance (e.g., psychology, explosives, interpreters).</li>
-    <li>Confirming through Police sources that any negotiation process with offenders is properly established.</li>
-    <li>Keeping the EMT informed of all authorities’ intentions regarding the emergency.</li>
-    <li>Organizing relief coverage.</li>
-    <li>Notifying the authorities.</li>
-    <li>Acting as the authority to activate Crisis Management Service Provider (Go Crisis).</li>
+    <li>Advise the EMT on all safety-related and emergency management matters.</li>
+    <li>Liaise with regulatory authorities, law enforcement, and security agencies as required.</li>
+    <li>Coordinate specialist assistance when necessary (e.g. safety investigation support, subject-matter experts).</li>
+    <li>Ensure that engagement with authorities is properly established and coordinated.</li>
+    <li>Keep the EMT informed of regulatory and authority expectations during the response.</li>
+    <li>Act as the authorising authority for activation of the Crisis Management Service Provider (Go Crisis), when required.</li>
   </ul>
 
   <h2>ERP References</h2>
   <ul>
     <li>Section 3.6.2 – Safety Director</li>
     <li>Appendix C.6 – Safety Director Checklist</li>
-    <li>Form B.5 – Aircraft Accident/Threat Notification</li>
-    <li>Form SMS-013 – Post-Incident Debrief</li>
   </ul>
 
-  <h2>Phase-Based Duties</h2>
+  <!-- CHECKLIST BLOCK -->
+  <button class="checklist-button" onclick="openChecklistPdf()">
+    Open Appendix C.6 – Safety Director Checklist (PDF)
+  </button>
+
+  <button class="checklist-button" onclick="openChecklistC1Pdf()">
+    Open Appendix C.1 – EMT Planning Process Worked Example (PDF)
+  </button>
+
+  <button class="checklist-button" onclick="openChecklistC2Pdf()">
+    Open Appendix C.2 – EMT Agenda Example (PDF)
+  </button>
+
+  <button class="checklist-button" onclick="openChecklistC4Pdf()">
+    Open Appendix C.4 – EMT Checklist (PDF)
+  </button>
+
+  <div class="uncontrolled-note">
+    READ ONLY! ** Printed/Downloaded copies are considered UNCONTROLLED – Verify current issue before use **
+  </div>
+
+  <h2>Role Behaviour Across an Emergency (Training Interpretation)</h2>
+  <p>
+    <strong>Training note:</strong> This section supports understanding of role behaviour and does not replace ERP checklists.
+  </p>
+
   <ul>
-    <li><strong>Phase 1 (0–60 min):</strong> Confirm emergency, notify GCAA, initiate Form B.5, assign EMC liaison</li>
-    <li><strong>Phase 2 (1–4 hrs):</strong> Attend EMT briefings, conduct risk assessments, preserve safety data</li>
-    <li><strong>Phase 3 (4+ hrs):</strong> Support investigations, submit debrief reports, assist external audits</li>
+    <li><strong>Early phase:</strong> Confirm safety-critical information, establish regulatory liaison, and support EMT situational awareness.</li>
+    <li><strong>Sustained response:</strong> Advise on safety risks, regulatory obligations, and investigation considerations.</li>
+    <li><strong>Stabilisation / recovery:</strong> Support post-event analysis, debriefs, and regulatory follow-up activities.</li>
   </ul>
 
   <h2>Cautions</h2>
   <ul>
-    <li>Never delay regulatory notification</li>
-    <li>Coordinate closely with OCC and DOO</li>
-    <li>Document all safety actions clearly</li>
+    <li>Do not delay regulatory notification where required.</li>
+    <li>Ensure safety-related decisions are based on confirmed information.</li>
+    <li>Maintain clear records of safety advice and authority interactions.</li>
+    <li>Coordinate closely with OCC and operational leadership.</li>
   </ul>
 
   <h2>Knowledge Check (Interactive)</h2>
 
   <div class="question">
     <p><strong>Q1:</strong> When is the Safety Director activated?</p>
-    <button onclick="checkAnswer(this, false)">a.Only during High level emergencies</button><br>
-    <button onclick="checkAnswer(this, true)">b.During Medium or High-level emergencies</button><br>
-    <button onclick="checkAnswer(this, false)">c.Only when the CEO requests it</button>
+    <button onclick="checkAnswer(this, false)">a.Only during high-level emergencies</button><br>
+    <button onclick="checkAnswer(this, true)">b.During medium- or high-level emergencies</button><br>
+    <button onclick="checkAnswer(this, false)">c.Only when requested by the CEO</button>
     <div class="feedback"></div>
   </div>
 
   <div class="question">
-    <p><strong>Q2:</strong> Which form is used for accident/threat notification?</p>
-    <button onclick="checkAnswer(this, true)">a.Form B.5</button><br>
-    <button onclick="checkAnswer(this, false)">b.Form C.6</button><br>
-    <button onclick="checkAnswer(this, false)">c.Form SMS-013</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question">
-    <p><strong>Q3:</strong> What is the first action in Phase 1?</p>
-    <button onclick="checkAnswer(this, false)">a. Submit final debrief</button><br>
-    <button onclick="checkAnswer(this, false)">b. Activate HR team</button><br>
-    <button onclick="checkAnswer(this, true)">c. Confirm emergency classification</button><br>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question">
-    <p><strong>Q4:</strong> Which checklist guides your response actions?</p>
+    <p><strong>Q2:</strong> Which checklist applies to the Safety Director?</p>
     <button onclick="checkAnswer(this, true)">a.Appendix C.6 – Safety Director Checklist</button><br>
-    <button onclick="checkAnswer(this, false)">b.Appendix B.5 – Initial Call to Operations</button><br>
+    <button onclick="checkAnswer(this, false)">b.Appendix B.5 – Aircraft Accident Notification</button><br>
     <button onclick="checkAnswer(this, false)">c.Appendix A.3 – ERP Activation</button>
     <div class="feedback"></div>
   </div>
 
   <div class="question">
-    <p><strong>Q5:</strong> Which form is submitted after post-incident debrief?</p>
-    <button onclick="checkAnswer(this, false)">a.Form B.6</button><br>
-    <button onclick="checkAnswer(this, true)">b.Form SMS-013</button><br>
-    <button onclick="checkAnswer(this, false)">c.Form A.4</button>
+    <p><strong>Q3:</strong> What is a key function of the Safety Director during an emergency?</p>
+    <button onclick="checkAnswer(this, false)">a.Managing tactical rescue operations</button><br>
+    <button onclick="checkAnswer(this, true)">b.Providing safety and regulatory advice to the EMT</button><br>
+    <button onclick="checkAnswer(this, false)">c.Operating the OCC</button>
     <div class="feedback"></div>
   </div>
-  
-  <p><strong>Final Note:</strong> As Safety Director, your leadership is critical to the integrity and success of Abu Dhabi Aviation’s emergency response. By ensuring compliance, supporting the EMT, and liaising with regulators, you uphold both safety and accountability during high-pressure situations.</p>
 
-  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole.html'">← Back to Role Menu</button>
+  <p><strong>Final Note:</strong> As Safety Director, your contribution ensures that emergency response actions remain lawful,
+  defensible, and aligned with aviation safety principles. Your role strengthens both operational decision-making and organisational accountability.</p>
+
+  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole.html'">
+    ← Back to Role Menu
+  </button>
 </div>
 
 <script>
+  const CHECKLIST_C6_PDF_PATH = "Forms/C.6. Safety Director Checklist.pdf";
+  const CHECKLIST_C1_PDF_PATH = "Forms/C.1. EMT Planning Process Worked Example.pdf";
+  const CHECKLIST_C2_PDF_PATH = "Forms/C.2. EMT Agenda Example.pdf";
+  const CHECKLIST_C4_PDF_PATH = "Forms/C.4. EMT Checklist.pdf";
+
+  function openChecklistPdf() {
+    window.open(CHECKLIST_C6_PDF_PATH, "_blank", "noopener");
+  }
+  function openChecklistC1Pdf() {
+    window.open(CHECKLIST_C1_PDF_PATH, "_blank", "noopener");
+  }
+  function openChecklistC2Pdf() {
+    window.open(CHECKLIST_C2_PDF_PATH, "_blank", "noopener");
+  }
+  function openChecklistC4Pdf() {
+    window.open(CHECKLIST_C4_PDF_PATH, "_blank", "noopener");
+  }
+
   const totalQuestions = document.querySelectorAll('.question').length;
   const answered = new Array(totalQuestions).fill(false);
   const correct = new Array(totalQuestions).fill(false);
@@ -159,20 +237,20 @@
     checkAllCorrect();
   }
 
-  function checkAllCorrect() {
-    const allAnswered = answered.every(Boolean);
-    const allCorrect = correct.every(Boolean);
+  function markComplete() {
+    if (typeof doLMSSetValue === 'function') {
+      doLMSSetValue("cmi.core.lesson_status", "completed");
+      doLMSCommit("");
+    }
+  }
 
-    if (allAnswered && allCorrect) {
+  function checkAllCorrect() {
+    if (answered.every(Boolean) && correct.every(Boolean)) {
       document.getElementById("backButton").style.display = "inline-block";
+      markComplete();
     }
   }
 </script>
 
 </body>
 </html>
-
-
-
-
-

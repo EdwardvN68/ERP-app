@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Other Members – Emergency Management Centre Role</title>
+  <title>Other Members of the EMC</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="SCORM_API_wrapper.js"></script>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
+    body { font-family: Arial, sans-serif; margin: 20px; }
     .container {
       max-width: 900px;
       margin: auto;
@@ -18,22 +17,35 @@
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1, h2 {
-      color: #9b111e;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    .question {
-      margin-top: 20px;
-      padding: 10px;
-      background: #f7f7f7;
-      border: 1px solid #ddd;
-    }
-    .feedback {
+    h1, h2 { color: #9b111e; }
+    ul { margin-left: 20px; }
+
+    /* Reference buttons (same visual language as master checklist buttons) */
+    .reference-button {
+      margin-top: 12px;
+      background-color: #9b111e;
+      color: #fff;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
       font-weight: bold;
-      margin-top: 5px;
+      text-align: center;
     }
+    .reference-button:hover { background-color: #b91c1c; }
+
+    .uncontrolled-note {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      background: #f7f7f7;
+      border-radius: 4px;
+      font-style: italic;
+      font-size: 14px;
+    }
+
     .back-button {
       margin-top: 30px;
       background-color: #9b111e;
@@ -43,133 +55,92 @@
       border-radius: 5px;
       font-size: 16px;
       cursor: pointer;
+      display: inline-block;
+      width: 100%;
+      font-weight: bold;
     }
-    .back-button:hover {
-      background-color: #b91c1c;
-    }
+    .back-button:hover { background-color: #b91c1c; }
   </style>
 </head>
-<body>
 
+<body>
 <div class="container">
-  <h1>Other Members – Emergency Management Centre Role</h1>
+
+  <h1>Other Members of the EMC – Emergency Response Role</h1>
 
   <h2>Activation</h2>
-  <p>Activated selectively during <strong>full EMT mobilizations</strong> where additional departmental or subject matter expertise is required. These members are drawn from relevant departments and are called to support the EMT as needed.</p>
-  <p>Refer to ERP Sections 2.5.1, 2.5.2, 3.3.3, 3.6.14 and Appendix C.16.</p>
+  <p>
+    This page provides role awareness for <strong>Other Members of the EMC</strong>.
+    Activation and mobilisation are governed by the ERP and EMT direction.
+  </p>
 
   <h2>Core Responsibilities</h2>
-  <ul>
-    <li>Support the EMT by providing expertise relevant to their departmental functions.</li>
-    <li>Attend EMT meetings if requested and carry out assigned emergency-related duties.</li>
-    <li>Coordinate between their home department and the EMT for status updates and support.</li>
-    <li>Ensure continuity and response readiness in their department during emergencies.</li>
-    <li>Follow EMT directions and report actions, observations, and constraints promptly.</li>
-  </ul>
+  <p>
+    Other EMC members support the EMT/EMC function as directed by the Emergency Management Chairman and senior EMT leadership.
+    Responsibilities will depend on the emergency, the EMC structure in use, and the tasking assigned during briefings.
+  </p>
 
   <h2>ERP References</h2>
   <ul>
-    <li>Section 2.5.1 – EMT Activation Thresholds</li>
-    <li>Section 2.5.2 – EMT On-Call Roles</li>
-    <li>Section 3.3.3 – EMT On-Call Roles</li>
-    <li>Section 3.6.14 – Other Members of the Emergency Management Centre</li>
-    <li>Appendix C.16 – EMT General Checklist</li>
+    <li>Section 3.6.16 – Other Members of the EMC</li>
+    <li>Appendix C.1 – EMT Planning Process Worked Example</li>
+    <li>Appendix C.2 – EMT Agenda Example</li>
+    <li>Appendix C.4 – EMT Checklist</li>
   </ul>
 
-  <h2>Phase-Based Duties</h2>
-  <ul>
-    <li><strong>Phase 1 (0–60 min):</strong> Remain on standby; prepare for EMT call-in; ensure departmental continuity readiness.</li>
-    <li><strong>Phase 2 (1–4 hrs):</strong> Join EMT if requested; assist with operational status reports and inter-departmental actions.</li>
-    <li><strong>Phase 3 (4+ hrs):</strong> Continue support operations; assist with transition to recovery and post-incident reporting.</li>
-  </ul>
+  <h2>Reference Documents (PDF)</h2>
 
-  <h2>Cautions</h2>
-  <ul>
-    <li>Do not self-deploy to the EMC without official instruction.</li>
-    <li>Refrain from giving public or media statements unless authorized.</li>
-    <li>Ensure departmental logs are properly documented and secured.</li>
-    <li>Focus strictly on assigned tasks within your area of authority.</li>
-    <li>Maintain flexibility and be ready to rotate or stand down as directed.</li>
-  </ul>
+  <button class="reference-button" onclick="openPdf(C1_PDF)">
+    Open Appendix C.1 – EMT Planning Process Worked Example (PDF)
+  </button>
 
-  <h2>Knowledge Check (Interactive)</h2>
+  <button class="reference-button" onclick="openPdf(C2_PDF)">
+    Open Appendix C.2 – EMT Agenda Example (PDF)
+  </button>
 
-  <div class="question">
-    <p><strong>Q1:</strong> When are Other Members of the EMC activated?</p>
-    <button onclick="checkAnswer(this, false)">a. Automatically during any emergency</button><br>
-    <button onclick="checkAnswer(this, true)">b. During full EMT mobilization, based on emergency type</button><br>
-    <button onclick="checkAnswer(this, false)">c. When there are no other EMT members available</button>
-    <div class="feedback"></div>
+  <button class="reference-button" onclick="openPdf(C4_PDF)">
+    Open Appendix C.4 – EMT Checklist (PDF)
+  </button>
+
+  <div class="uncontrolled-note">
+    READ ONLY! ** Printed/Downloaded copies are considered UNCONTROLLED – Verify current issue before use **
   </div>
 
-  <div class="question">
-    <p><strong>Q2:</strong> Which ERP section defines this role?</p>
-    <button onclick="checkAnswer(this, true)">a. Section 3.6.14</button><br>
-    <button onclick="checkAnswer(this, false)">b. Section 3.6.4</button><br>
-    <button onclick="checkAnswer(this, false)">c. Appendix D.3</button>
-    <div class="feedback"></div>
-  </div>
+  <button class="back-button"
+          onclick="window.location.href='selectyourrole-adderproles.html'">
+    ← Back to Role Menu
+  </button>
 
-  <div class="question">
-    <p><strong>Q3:</strong> Are these members part of the EMT Quick Response Team?</p>
-    <button onclick="checkAnswer(this, false)">a. Yes, they are always on-call</button><br>
-    <button onclick="checkAnswer(this, true)">b. No, they are activated as required</button><br>
-    <button onclick="checkAnswer(this, false)">c. Only if the CFO is unavailable</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question">
-    <p><strong>Q4:</strong> Which checklist provides general EMT guidance?</p>
-    <button onclick="checkAnswer(this, true)">a. Appendix C.16 – EMT Checklist</button><br>
-    <button onclick="checkAnswer(this, false)">b. Appendix C.13 – Head of IT Checklist</button><br>
-    <button onclick="checkAnswer(this, false)">c. Appendix D.1 – Family Assistance Coordinator</button>
-    <div class="feedback"></div>
-  </div>
-
-  <div class="question">
-    <p><strong>Q5:</strong> What is a primary caution for this role?</p>
-    <button onclick="checkAnswer(this, true)">a. Do not report to the EMC unless officially requested</button><br>
-    <button onclick="checkAnswer(this, false)">b. Always report directly to media if needed</button><br>
-    <button onclick="checkAnswer(this, false)">c. Take over the EMC if the AM is absent</button>
-    <div class="feedback"></div>
-  </div>
-
-  <p><strong>Final Note:</strong> As a designated support member of the Emergency Management Centre, your actions directly contribute to a coordinated, scalable, and professional emergency response. Your subject matter expertise ensures operational resilience and strengthens the organisation’s ability to respond and recover effectively.</p>
-
-  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole-adderproles.html'">← Back to Role Menu</button>
 </div>
 
 <script>
-  const totalQuestions = document.querySelectorAll('.question').length;
-  const answered = new Array(totalQuestions).fill(false);
-  const correct = new Array(totalQuestions).fill(false);
+  /* Exact filenames as per your /Forms directory */
+  const C1_PDF = "Forms/C.1. EMT Planning Process Worked Example.pdf";
+  const C2_PDF = "Forms/C.2. EMT Agenda Example.pdf";
+  const C4_PDF = "Forms/C.4. EMT Checklist.pdf";
 
-  function checkAnswer(button, isCorrect) {
-    const questionElement = button.parentElement;
-    const questionIndex = Array.from(document.querySelectorAll('.question')).indexOf(questionElement);
-    const feedback = questionElement.querySelector('.feedback');
-
-    if (!answered[questionIndex]) {
-      answered[questionIndex] = true;
-    }
-
-    correct[questionIndex] = isCorrect;
-    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
-    feedback.style.color = isCorrect ? "green" : "red";
-
-    checkAllCorrect();
+  function openPdf(path) {
+    window.open(path, "_blank", "noopener");
   }
 
-  function checkAllCorrect() {
-    const allAnswered = answered.every(Boolean);
-    const allCorrect = correct.every(Boolean);
-
-    if (allAnswered && allCorrect) {
-      document.getElementById("backButton").style.display = "inline-block";
+  // SCORM completion for this page (no MCQs for this role)
+  function markComplete() {
+    try {
+      if (typeof doInitialize === "function") {
+        doInitialize();
+        doSetValue("cmi.core.lesson_status", "completed");
+        doCommit();
+        doTerminate();
+      }
+    } catch (e) {
+      // Silent fail (offline / non-SCORM)
     }
   }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    markComplete();
+  });
 </script>
 
 </body>
 </html>
-

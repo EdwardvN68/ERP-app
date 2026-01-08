@@ -3,176 +3,299 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scenario: Bomb Threat – Dash 8 Q400</title>
+  <title>SIMULATION SCENARIO: BOMB THREAT (Training)</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px auto;
-      padding: 20px;
-      max-width: 1000px;
-      line-height: 1.6;
-      background-color: #fff;
+      text-align: center;
+      background-color: white;
+      color: #222;
+      margin: 0;
+      padding: 0;
     }
-    h1, h2 {
-      color: #9b111e;
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 18px 28px 18px;
     }
-    .section {
-      margin-bottom: 30px;
+
+    .logo { margin-top: 40px; }
+    .logo img { width: 200px; height: auto; }
+
+    h1 {
+      font-size: 28px;
+      margin-top: 24px;
+      margin-bottom: 6px;
     }
-    .timestamp {
+
+    .subhead {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 18px;
+    }
+
+    .banner {
+      max-width: 980px;
+      margin: 0 auto 16px auto;
+      padding: 14px 16px;
+      border: 2px solid #b10000;
+      border-radius: 8px;
+      background: #fff5f5;
+      color: #7a0000;
       font-weight: bold;
-      margin-top: 10px;
+      text-align: left;
     }
-    ul {
-      margin-top: 0;
+
+    .banner small {
+      display: block;
+      margin-top: 6px;
+      font-weight: normal;
     }
+
+    .card {
+      text-align: left;
+      margin-top: 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    .card h2 { margin: 0 0 10px 0; font-size: 18px; }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 16px;
+      font-size: 14px;
+    }
+
+    .meta-item {
+      padding: 10px 12px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    details {
+      text-align: left;
+      margin-top: 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #b10000;
+    }
+
+    .timeline {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    .timeline li {
+      padding: 10px 12px;
+      border-left: 4px solid #b10000;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      margin: 10px 0;
+      white-space: pre-wrap;
+    }
+
+    .t-time { font-weight: bold; margin-bottom: 6px; }
+
     .refs {
-      font-size: 0.95em;
+      margin-top: 8px;
+      font-size: 13px;
       color: #555;
     }
-    .quote {
-      margin: 10px 0;
-      padding: 10px;
-      background-color: #f4f4f4;
-      border-left: 5px solid #9b111e;
-      font-style: italic;
+
+    .pillrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
     }
-    .back-button {
-      display: inline-block;
-      margin-top: 40px;
-      padding: 10px 20px;
-      background-color: #9b111e;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid #e2e2e2;
+      background: #fafafa;
+      font-size: 12px;
+    }
+
+    .btnrow {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .menu-button {
+      padding: 14px 28px;
+      font-size: 16px;
+      border: 2px solid #b10000;
+      background: white;
+      color: #b10000;
+      border-radius: 6px;
+      cursor: pointer;
+      min-width: 240px;
+    }
+
+    .footer {
+      margin-top: 26px;
       font-weight: bold;
+      color: #b10000;
+      font-size: 14px;
+    }
+
+    .footer small {
+      display: block;
+      font-weight: normal;
+      color: #666;
+      margin-top: 6px;
     }
   </style>
 </head>
+
 <body>
+<div class="wrap">
 
-<h1>SIMULATION SCENARIO: BOMB THREAT</h1>
-<div class="section">
-  <p><strong>Title:</strong> Bomb Threat Received – Scheduled Flight to Al Ain</p>
-  <p><strong>Date:</strong> Sunday, 29 June 2025</p>
-  <p><strong>Flight:</strong> ADA208 – Zayed International Airport to Al Ain International Airport (AAN)</p>
-  <p><strong>Aircraft Type:</strong> Dash 8 Q400</p>
-  <p><strong>Registration:</strong> A6-ADM</p>
-  <p><strong>Crew:</strong> 2 pilots, 1 cabin crew</p>
-  <p><strong>Passengers:</strong> 18</p>
-  <p><strong>Status:</strong> Aircraft on ground at AUH during boarding</p>
-</div>
-
-<div class="section">
-  <div class="timestamp">06:25 – THREAT RECEIVED VIA PHONE</div>
-  <ul>
-    <li>Reception Operator receives anonymous call: <br>
-    <em>“There’s something on your plane to Al Ain. It’ll go off before it gets there.”</em></li>
-    <li>Caller hangs up without identifying aircraft or location</li>
-    <li>Reception follows ERP protocol and immediately informs OCC</li>
-  </ul>
-  <div class="refs">ERP References: ERP 2.10.1, ERP 2.3, Appendix B.7</div>
-</div>
-
-<div class="section">
-  <div class="timestamp">06:27 – OCC NOTIFIED AND LOG OPENED</div>
-  <ul>
-    <li>OCC Duty Coordinator completes Form B.7 – Bomb Warning Report</li>
-    <li>Initiates Form B.6 – Incident Log</li>
-    <li>Notifies Duty Director of Operations (DOO)</li>
-    <li>Confirms aircraft ADA208 is only one boarding at AUH for Al Ain</li>
-  </ul>
-  <div class="refs">ERP References: ERP 2.10.2, Appendix B.6, B.7</div>
-</div>
-
-<div class="section">
-  <div class="timestamp">06:30 – THREAT ASSESSMENT TEAM (TAT) CONVENED</div>
-  <ul>
-    <li>Members:
-      <ul>
-        <li>Safety Director</li>
-        <li>Security Manager</li>
-        <li>Ground Operations Manager</li>
-      </ul>
-    </li>
-    <li>Actions Taken:
-      <ul>
-        <li>Evaluate credibility per ERP Bomb Threat Procedure</li>
-        <li>No specific demands made</li>
-        <li>No matching intelligence from national threat channels</li>
-      </ul>
-    </li>
-  </ul>
-  <div class="refs">ERP References: ERP 2.10.2, 3.6.2, 3.6.14</div>
-</div>
-
-<div class="section">
-  <div class="timestamp">06:40 – EMT ACTIVATED (PRECAUTIONARY)</div>
-  <ul>
-    <li>EMT Chair: Duty DOO</li>
-    <li>EMC Roles Mobilised:
-      <ul>
-        <li>Safety Director</li>
-        <li>Ground Ops Manager</li>
-        <li>OCC Manager</li>
-        <li>Communications Officer</li>
-        <li>Legal Advisor</li>
-      </ul>
-    </li>
-  </ul>
-  <div class="refs">ERP References: ERP 3.3.1, 3.6.16; Checklists: Appendix C.4, C.9, C.14</div>
-</div>
-
-<div class="section">
-  <div class="timestamp">06:42 – AIRCRAFT ISOLATED</div>
-  <ul>
-    <li>ADA208 moved to isolated parking position</li>
-    <li>All passengers and crew safely disembarked</li>
-    <li>Luggage removed and placed in secured area</li>
-    <li>Aircraft sealed pending search</li>
-    <li>Airport authorities and Civil Defense on site</li>
-  </ul>
-  <div class="refs">ERP References: ERP 2.10.4, 2.13.5</div>
-</div>
-
-<div class="section">
-  <div class="timestamp">06:50 – BOMB SQUAD ARRIVES</div>
-  <ul>
-    <li>Abu Dhabi Police EOD unit begins full aircraft and baggage inspection</li>
-    <li>No device found after 40-minute sweep</li>
-    <li>Final clearance issued by police and Civil Aviation Authority</li>
-  </ul>
-</div>
-
-<div class="section">
-  <div class="timestamp">07:45 – SITUATION CLEARED</div>
-  <ul>
-    <li>Aircraft returned to service</li>
-    <li>New crew assigned per fatigue policy</li>
-    <li>Passengers re-screened and re-boarded</li>
-    <li>Flight departs with 1 hr 20 min delay</li>
-  </ul>
-  <div class="refs">ERP References: ERP 1.15.3, 3.8.6</div>
-</div>
-
-<div class="section">
-  <div class="timestamp">08:15 – COMMUNICATIONS & FOLLOW-UP</div>
-  <ul>
-    <li>Holding statement issued:</li>
-  </ul>
-  <div class="quote">
-    “ADA confirms that a scheduled flight to Al Ain was delayed following a phone-in threat that was later deemed non-credible by security authorities. All passengers and crew were safe at all times. The aircraft departed after full security clearance.”
+  <div class="logo">
+    <img src="assets/logo.png" alt="ADA Logo" />
   </div>
-  <ul>
-    <li>No passenger names disclosed</li>
-    <li>Incident report submitted to GCAA</li>
-    <li>Event uploaded to SMS-Pro</li>
-  </ul>
-  <div class="refs">ERP References: ERP 1.15.5, 1.15.4, 1.13</div>
+
+  <h1>SIMULATION SCENARIO: BOMB THREAT</h1>
+  <div class="subhead">Training / awareness scenario (for learning context)</div>
+
+  <div class="banner">
+    TRAINING SIMULATION – NOT FOR OPERATIONAL USE
+    <small>This page supports training and familiarisation only.</small>
+  </div>
+
+  <div class="card">
+    <h2>Scenario Summary</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><strong>Flight</strong> ADA208 – AUH to Al Ain</div>
+      <div class="meta-item"><strong>Aircraft</strong> Dash 8 Q400 – A6-ADM</div>
+      <div class="meta-item"><strong>Status</strong> On ground during boarding</div>
+      <div class="meta-item"><strong>Persons Onboard</strong> 3 crew, 18 passengers</div>
+    </div>
+  </div>
+
+  <details open>
+    <summary>Show / Hide Simulation Timeline</summary>
+
+    <ul class="timeline">
+
+      <li>
+  <div class="t-time">06:25 – THREAT RECEIVED VIA PHONE</div>
+• An anonymous telephone call is received by the Reception Operator reporting a bomb threat associated with an ADA flight
+• The content of the call is recorded verbatim to preserve accuracy and support subsequent assessment
+• The Operations Control Centre (OCC) is notified immediately to ensure escalation through the established emergency communication pathway
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 2.3</span>
+      <span class="pill">ERP 2.6.2</span>
+      <span class="pill">Form: Appendix B.7 & B.8</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">06:27 – OCC LOG OPENED</div>
+• An Incident Log is opened by the OCC to formally record the threat and establish traceability from the first notification
+• The Duty Director of Operations (DOO) is informed to ensure senior operational awareness
+• The affected aircraft is confirmed as the only flight boarding for the stated destination, helping define the immediate scope of the event
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 2.6.2</span>
+      <span class="pill">Form: Appendix B.6</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">06:40 – EMT ACTIVATED (PRECAUTIONARY)</div>
+• The Emergency Management Team (EMT) is activated on a precautionary basis due to the security-related nature of the threat
+• Relevant EMT roles are mobilised and convened within the Emergency Management Centre
+• The activation ensures coordinated oversight of safety, security, communications, and stakeholder engagement
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 2.5.1</span>
+      <span class="pill">ERP 3.3</span>
+      <span class="pill">ERP 3.6</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">06:42 – AIRCRAFT ISOLATED</div>
+• The aircraft is repositioned to an isolated parking area to reduce exposure and manage risk
+• Passengers and crew are safely disembarked and accounted for under controlled conditions
+• Relevant authorities are present on site to conduct security assessment and clearance activities
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 3.4.5</span>
+      <span class="pill">Checklist: Appendix C</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">07:45 – SITUATION CLEARED</div>
+• A full inspection is completed by the competent authorities with no device or threat item identified
+• The aircraft is formally cleared following completion of security checks
+• The flight is authorised to resume operations, subject to operational delay and recovery planning
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 1.15</span>
+      <span class="pill">ERP 3.8.6</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">POST-EVENT – REVIEW & REPORTING</div>
+• The incident is formally reported through the appropriate regulatory reporting channels
+• All records and supporting documentation are uploaded to the SMS system to ensure traceability and audit readiness
+• Review actions and observations are logged to support organisational learning and continuous improvement
+  <div class="refs">
+    <div class="pillrow">
+      <span class="pill">ERP 1.13</span>
+      <span class="pill">ERP 0.1</span>
+    </div>
+  </div>
+</li>
+
+
+    </ul>
+  </details>
+
+  <div class="btnrow">
+    <button class="menu-button" onclick="location.href='ScenariosMenu.html'">Back to Scenarios</button>
+    <button class="menu-button" onclick="location.href='Main Menu.html'">Back to Main Menu</button>
+  </div>
+
+  <div class="footer">
+    Reference and Reminder Only<br>
+    UNCONTROLLED if copied or printed
+    <small>Source: ADA Emergency Response Plan Manual — Issue 03, Revision 0 — 15 August 2025</small>
+  </div>
+
 </div>
-
-<a href="ScenariosMenu.html" class="back-button">Back to Menu</a>
-
 </body>
 </html>
+
 

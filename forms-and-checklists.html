@@ -38,7 +38,7 @@
       background-color: white;
       transition: all 0.3s ease;
       width: 80%;
-      max-width: 400px;
+      max-width: 520px;
     }
 
     .checklist-links a:hover {
@@ -46,8 +46,12 @@
       color: #800000;
     }
 
-    .back-button {
-      margin-top: 50px;
+    .uncontrolled-note {
+      margin: 18px auto 0 auto;
+      max-width: 900px;
+      color: #b30000;
+      font-size: 12px;
+      font-style: italic;
     }
 
     .back-button button {
@@ -59,87 +63,163 @@
       border-radius: 10px;
       cursor: pointer;
       transition: all 0.3s ease;
-      width: 200px;
+      width: 240px;
+      margin-top: 40px;
     }
 
     .back-button button:hover {
       background-color: #fceaea;
+    }
+
+    #pdf-viewer {
+      display: none;
+      margin-top: 20px;
+      text-align: left;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .small-button {
+      padding: 8px 18px;
+      font-size: 0.95em;
+      border: 2px solid #b30000;
+      background-color: white;
+      color: #b30000;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 12px;
+    }
+
+    .small-button:hover {
+      background-color: #fceaea;
+    }
+
+    #pdf-frame {
+      width: 100%;
+      height: 720px;
+      border: 1px solid #ccc;
     }
   </style>
 </head>
 
 <body>
 
-  <h4>Appendix B – ERP Forms</h4>
+  <!-- APPENDIX B -->
+  <h4>Appendix B – Emergency Response Forms, Checklists, and Reports</h4>
   <div class="checklist-links">
-    <a class="menu-button" href="Forms/B2 - Operations Control Checklist.pdf" target="_blank">B2 – Operations Control Checklist</a>
-    <a class="menu-button" href="Forms/B3 - Operations Duty Coordinator Checklist.pdf" target="_blank">B3 – Operations Duty Coordinator Checklist</a>
-    <a class="menu-button" href="Forms/B4 - Aircraft Accident Notification.pdf" target="_blank">B4 – Aircraft Accident Notification</a>
-    <a class="menu-button" href="Forms/B5 - Initial Call to Operations.pdf" target="_blank">B5 – Initial Call to Operations</a>
-    <a class="menu-button" href="Forms/B6 - Incident Log Form.pdf" target="_blank">B6 – Incident Log Form</a>
-    <a class="menu-button" href="Forms/B7 - Bomb Warning Report.pdf" target="_blank">B7 – Bomb Warning Report</a>
-    <a class="menu-button" href="Forms/B8 - Crew Record Form.pdf" target="_blank">B8 – Crew Record Form</a>
-    <a class="menu-button" href="Forms/B9 - Passenger Record Card.pdf" target="_blank">B9 – Passenger Record Card</a>
-    <a class="menu-button" href="Forms/B10 - Passenger Information Form.pdf" target="_blank">B10 – Passenger Information Form</a>
-    <a class="menu-button" href="Forms/B11 - Documents to be Secured.pdf" target="_blank">B11 – Documents to be Secured</a>
+    <a href="#" onclick="openPDF('Forms/B.2. Operations Control Checklist (Operation Supervisor).pdf')">B.2. Operations Control Checklist (Operation Supervisor)</a>
+    <a href="#" onclick="openPDF('Forms/B.3. OCC Flight Watch on Duty Checklist.pdf')">B.3. OCC Flight Watch on Duty Checklist</a>
+    <a href="#" onclick="openPDF('Forms/B.4. Comprehensive Contingency Response Log for HEMS Operation.pdf')">B.4. Comprehensive Contingency Response Log for HEMS Operation</a>
+    <a href="#" onclick="openPDF('Forms/B.5. Aircraft Accident Notification.pdf')">B.5. Aircraft Accident Notification</a>
+    <a href="#" onclick="openPDF('Forms/B.6. Initial Call to Operations (Bomb Threat and Hijack).pdf')">B.6. Initial Call to Operations (Bomb Threat/Hijack)</a>
+    <a href="#" onclick="openPDF('Forms/B.7. Incident Log Form.pdf')">B.7. Incident Log Form</a>
+    <a href="#" onclick="openPDF('Forms/B.8. Bomb Warning Report.pdf')">B.8. Bomb Warning Report</a>
+    <a href="#" onclick="openPDF('Forms/B.9. Crew and Passenger Record Form.pdf')">B.9. Crew and Passenger Record Form</a>
+    <a href="#" onclick="openPDF('Forms/B.10. Accident Checklist for Flight Safety Person or Person Responsible on Site.pdf')">B.10. Accident Checklist for Flight Safety Person or Person Responsible on Site</a>
+    <a href="#" onclick="openPDF('Forms/B.11. Preliminary Accident Record.pdf')">B.11. Preliminary Accident Record</a>
+    <a href="#" onclick="openPDF('Forms/B.12. Loss Of Communication – Uncertainty Phase.pdf')">B.12. Loss Of Communication – Uncertainty Phase</a>
+    <a href="#" onclick="openPDF('Forms/B.13. Loss Of Communication – Alert Phase.pdf')">B.13. Loss Of Communication – Alert Phase</a>
+    <a href="#" onclick="openPDF('Forms/B.14. Loss Of Communication – Distress Phase.pdf')">B.14. Loss Of Communication – Distress Phase</a>
+    <a href="#" onclick="openPDF('Forms/B.15. Search For Aircraft.pdf')">B.15. Search For Aircraft</a>
+    <a href="#" onclick="openPDF('Forms/B.16. Back up Rescue Plan Where a Landing is Possible.pdf')">B.16. Back up Rescue Plan Where a Landing is Possible</a>
+    <a href="#" onclick="openPDF('Forms/B.17. Back up Rescue Plan Where a Landing is Not Possible.pdf')">B.17. Back up Rescue Plan Where a Landing is Not Possible</a>
+    <a href="#" onclick="openPDF('Forms/B.18. Back up Rescue Plan in Maritime Area.pdf')">B.18. Back up Rescue Plan in Maritime Area</a>
+    <a href="#" onclick="openPDF('Forms/B.19. Aircraft Accident at the Airport.pdf')">B.19. Aircraft Accident at the Airport</a>
+    <a href="#" onclick="openPDF('Forms/B.20. Environmental Incident at the Airport.pdf')">B.20. Environmental Incident at the Airport</a>
+    <a href="#" onclick="openPDF('Forms/B.21. Aircraft Accident On - Near an Installation.pdf')">B.21. Aircraft Accident On / Near an Installation</a>
+    <a href="#" onclick="openPDF('Forms/B.22. Aircraft Diversion.pdf')">B.22. Aircraft Diversion</a>
+    <a href="#" onclick="openPDF('Forms/B.23. Passenger Record Card.pdf')">B.23. Passenger Record Card</a>
+    <a href="#" onclick="openPDF('Forms/B.24. Passenger Information Form.pdf')">B.24. Passenger Information Form</a>
+    <a href="#" onclick="openPDF('Forms/B.25. Documents to be Secured.pdf')">B.25. Documents to be Secured</a>
   </div>
 
   <div class="back-button">
     <button onclick="window.location.href='Main Menu.html'">Back to Main Menu</button>
   </div>
 
-  <h4>Appendix C – Checklists</h4>
+  <!-- APPENDIX C -->
+  <h4>Appendix C – EMT Response Roles, Checklists, and Forms</h4>
   <div class="checklist-links">
-    <a class="menu-button" href="Forms/" target="_blank">C.2. EMT Agenda Example</a>
-    <a class="menu-button" href="Forms/C.3. Administrator Checklist.pdf" target="_blank">C.3. Administrator Checklist</a>
-    <a class="menu-button" href="Forms/C.4. EMT Checklist.pdf" target="_blank">C.4. EMT Checklist</a>
-    <a class="menu-button" href="Forms/C.5. Accountable Manager Checklist.pdf" target="_blank">C.5. Accountable Manager Checklist</a>
-    <a class="menu-button" href="Forms/" target="_blank">C.6. Safety Director Checklist</a>
-    <a class="menu-button" href="Forms/C.7. Operations Director Checklist.pdf" target="_blank">C.7. Operations Director Checklist</a>
-    <a class="menu-button" href="Forms/C.8. Engineering Director Checklist.pdf" target="_blank">C.8. Engineering Director Checklist</a>
-    <a class="menu-button" href="Forms/C.9. Quality Manager Checklist.pdf" target="_blank">C.9. Quality Manager Checklist</a>
-    <a class="menu-button" href="Forms/C.10. Commercial Director Checklist.pdf" target="_blank">C.10. Commercial Director Checklist</a>
-    <a class="menu-button" href="Forms/C.11. Ground Operations Manager Checklist.pdf" target="_blank">C.11. Ground Operations Manager Checklist</a>
-    <a class="menu-button" href="Forms/C.12. CFO Checklist.pdf" target="_blank">C.12. CFO Checklist</a>
-    <a class="menu-button" href="Forms/C.13. Head of IT Checklist.pdf" target="_blank">C.13. Head of IT Checklist</a>
-    <a class="menu-button" href="Forms/C.14. Security Manager Checklist.pdf" target="_blank">C.14. Security Manager Checklist</a>
-    <a class="menu-button" href="Forms/C.15. Human Resources Manager Checklist.pdf" target="_blank">C.15. Human Resources Manager Checklist</a>
-    <a class="menu-button" href="Forms/C.16. Emergency Management Team.pdf" target="_blank">C.16. Emergency Management Team</a>
-    <a class="menu-button" href="Forms/C.17. Emergency Management Team - Alternate.pdf" target="_blank">C.17. Emergency Management Team – Alternate</a>
-    <a class="menu-button" href="Forms/C.18. Oil Companies list form.pdf" target="_blank">C.18. Oil Companies List Form</a>
-    <a class="menu-button" href="Forms/C.19. Emergency Services list form.pdf" target="_blank">C.19. Emergency Services List Form</a>
-    <a class="menu-button" href="Forms/C.20. Hotels and Accommodation list form.pdf" target="_blank">C.20. Hotels and Accommodation List Form</a>
-    <a class="menu-button" href="Forms/C.21. Transport list form.pdf" target="_blank">C.21. Transport List Form</a>
-    <a class="menu-button" href="Forms/" target="_blank">C.22. Hospitals List Form</a>
-    <a class="menu-button" href="Forms/C.23. Contents of Emergency Site Team Kit.pdf" target="_blank">C.23. Contents of Emergency Site Team Kit</a>
-    <a class="menu-button" href="Forms/C.24. FST Checklist.pdf" target="_blank">C.24. FST Checklist</a>
-    <a class="menu-button" href="Forms/C.25. Field Site Team.pdf" target="_blank">C.25. Field Site Team</a>
+    <a href="#" onclick="openPDF('Forms/C.1. EMT Planning Process Worked Example.pdf')">C.1. EMT Planning Process Worked Example</a>
+    <a href="#" onclick="openPDF('Forms/C.2. EMT Agenda Example.pdf')">C.2. EMT Agenda Example</a>
+    <a href="#" onclick="openPDF('Forms/C.3. Administrator Checklist.pdf')">C.3. Administrator Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.4. EMT Checklist.pdf')">C.4. EMT Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.5. Accountable Manager Checklist.pdf')">C.5. Accountable Manager Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.6. Safety Director Checklist.pdf')">C.6. Safety Director Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.7. Operations Director Checklist.pdf')">C.7. Operations Director Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.8. Manager of Regulatory Affairs and Compliance (MRA).pdf')">C.8. Manager of Regulatory Affairs and Compliance (MRA)</a>
+    <a href="#" onclick="openPDF('Forms/C.9. 145 Post Holder Checklist.pdf')">C.9. 145 Post Holder Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.10. Quality Director Checklist.pdf')">C.10. Quality Director Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.11. Commercial Director Checklist.pdf')">C.11. Commercial Director Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.12. Ground Operations Manager Checklist.pdf')">C.12. Ground Operations Manager Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.13. CFO Checklist.pdf')">C.13. CFO Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.14. Head of IT Checklist.pdf')">C.14. Head of IT Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.15. Security Manager Checklist.pdf')">C.15. Security Manager Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.16. Human Resources Manager Checklist.pdf')">C.16. Human Resources Manager Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.17. Emergency Response Exercise Form.pdf')">C.17. Emergency Response Exercise Form</a>
+    <a href="#" onclick="openPDF('Forms/C.19. Emergency Management Team.pdf')">C.19. Emergency Management Team</a>
+    <a href="#" onclick="openPDF('Forms/C.20. Emergency Management Team - Alternate.pdf')">C.20. Emergency Management Team - Alternate</a>
+    <a href="#" onclick="openPDF('Forms/C.21. Oil Companies List Form.pdf')">C.21. Oil Companies List Form</a>
+    <a href="#" onclick="openPDF('Forms/C.22. Emergency Services List Form.pdf')">C.22. Emergency Services List Form</a>
+    <a href="#" onclick="openPDF('Forms/C.23. Hotels and Accommodation List Form.pdf')">C.23. Hotels and Accommodation List Form</a>
+    <a href="#" onclick="openPDF('Forms/C.24. Transport List Form.pdf')">C.24. Transport List Form</a>
+    <a href="#" onclick="openPDF('Forms/C.25. Hospitals List Form.pdf')">C.25. Hospitals List Form</a>
+    <a href="#" onclick="openPDF('Forms/C.26. Contents of Emergency Site Team Kit.pdf')">C.26. Contents of Emergency Site Team Kit</a>
+    <a href="#" onclick="openPDF('Forms/C.27. FST Checklist.pdf')">C.27. FST Checklist</a>
+    <a href="#" onclick="openPDF('Forms/C.28. Field Site Team.pdf')">C.28. Field Site Team</a>
+  </div>
+
+  <!-- APPENDIX D -->
+  <h4>Appendix D – Family Assistance Team Roles, Checklists, and Forms</h4>
+  <div class="checklist-links">
+    <a href="#" onclick="openPDF('Forms/D.1. Family Assistance Coordinator Checklist (FAC).pdf')">D.1. Family Assistance Coordinator Checklist (FAC)</a>
+    <a href="#" onclick="openPDF('Forms/D.2. Hospital Family Assistance Coordinator Checklist (HFAC).pdf')">D.2. Hospital Family Assistance Coordinator Checklist (HFAC)</a>
+    <a href="#" onclick="openPDF('Forms/D.3. Family Assistance Support Team Member Checklist (FASTM).pdf')">D.3. Family Assistance Support Team Member Checklist (FASTM)</a>
+    <a href="#" onclick="openPDF('Forms/D.4. Family Assistance Centre.pdf')">D.4. Family Assistance Centre</a>
+  </div>
+
+  <!-- APPENDIX E -->
+  <h4>Appendix E – Outstation Operations Emergency Notification Procedure</h4>
+  <div class="checklist-links">
+    <a href="#" onclick="openPDF('Forms/APPENDIX E - Outstation Operations Emergency Notification Procedure.pdf')">APPENDIX E - Outstation Operations Emergency Notification Procedure</a>
+  </div>
+
+  <!-- APPENDIX F -->
+  <h4>Appendix F – Client and Outstation Contacts</h4>
+  <div class="checklist-links">
+    <a href="#" onclick="openPDF('Forms/APPENDIX F - Client and Outstation Contacts.pdf')">APPENDIX F - Client and Outstation Contacts</a>
+  </div>
+
+  <div class="uncontrolled-note">
+    READ ONLY! ** Printed/Downloaded copies are considered UNCONTROLLED - Verify current issue before use **
+  </div>
+
+  <div id="pdf-viewer">
+    <button class="small-button" onclick="closePDF()">Back to List</button>
+    <iframe id="pdf-frame" title="PDF Viewer"></iframe>
   </div>
 
   <div class="back-button">
     <button onclick="window.location.href='Main Menu.html'">Back to Main Menu</button>
   </div>
 
-  <h4>Appendix D – Family Assistance</h4>
-  <div class="checklist-links">
-    <a class="menu-button" href="Forms/D.1. Family Assistance Coordinator Checklist.pdf" target="_blank">D.1. Family Assistance Coordinator Checklist</a>
-    <a class="menu-button" href="Forms/D.2. Hospital Family Assistance Coordinator Checklist.pdf" target="_blank">D.2. Hospital Family Assistance Coordinator Checklist</a>
-    <a class="menu-button" href="Forms/D.3. Family Assistance Support Team Member Checklist.pdf" target="_blank">D.3. Family Assistance Support Team Member Checklist</a>
-    <a class="menu-button" href="Forms/D.4. Family Assistance Centre.pdf" target="_blank">D.4. Family Assistance Centre</a>
-  </div>
+  <script>
+    function openPDF(path) {
+      document.querySelectorAll('.checklist-links').forEach(el => el.style.display = 'none');
+      document.getElementById('pdf-viewer').style.display = 'block';
+      document.getElementById('pdf-frame').src = path;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-  <h4>Appendix E – Initial Actions</h4>
-  <div class="checklist-links">
-    <a class="menu-button" href="Forms/E.4. Initial Actions Checklist  Accident Serious Incident.pdf" target="_blank">E.4. Initial Actions Checklist – Accident/Serious Incident</a>
-    <a class="menu-button" href="Forms/E.7.2. Preliminary Information Card.pdf" target="_blank">E.7.2. Preliminary Information Card</a>
-  </div>
-
-  <div class="back-button">
-    <button onclick="window.location.href='Main Menu.html'">Back to Main Menu</button>
-  </div>
+    function closePDF() {
+      document.querySelectorAll('.checklist-links').forEach(el => el.style.display = 'flex');
+      document.getElementById('pdf-viewer').style.display = 'none';
+      document.getElementById('pdf-frame').src = '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 
 </body>
 </html>
-
-
-

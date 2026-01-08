@@ -3,250 +3,305 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scenario: Offshore Crash – Bell 412</title>
+  <title>SIMULATION SCENARIO: AIRCRAFT ACCIDENT (Training)</title>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px auto;
-      padding: 20px;
-      max-width: 1000px;
-      line-height: 1.6;
-      background-color: #fff;
+    body { font-family: Arial, sans-serif; text-align: center; background-color: white; color: #222; margin: 0; padding: 0; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 18px 28px 18px; }
+    .logo { margin-top: 40px; }
+    .logo img { width: 200px; height: auto; }
+    h1 { font-size: 28px; margin-top: 24px; margin-bottom: 6px; letter-spacing: 0.2px; }
+    .subhead { font-size: 14px; color: #444; margin: 0 0 18px 0; }
+
+    .banner {
+      max-width: 980px; margin: 0 auto 16px auto; padding: 14px 16px;
+      border: 2px solid #b10000; border-radius: 8px; background: #fff5f5; color: #7a0000;
+      font-weight: bold; line-height: 1.35; text-align: left;
     }
-    h1, h2 {
-      color: #9b111e;
+    .banner small { display: block; margin-top: 6px; font-weight: normal; color: #7a0000; }
+
+    .card {
+      text-align: left; margin-top: 14px; border: 1px solid #ddd; border-radius: 10px;
+      padding: 14px 16px; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
-    .section {
-      margin-bottom: 30px;
+    .card h2 { margin: 0 0 10px 0; font-size: 18px; color: #222; }
+    .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; margin-top: 10px; font-size: 14px; color: #333; }
+    .meta-item { padding: 10px 12px; border: 1px solid #eee; border-radius: 8px; background: #fafafa; }
+    .meta-item strong { display: block; margin-bottom: 4px; color: #222; font-size: 13px; }
+
+    details {
+      text-align: left; margin-top: 14px; border: 1px solid #ddd; border-radius: 10px;
+      padding: 14px 16px; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
-    .timestamp {
-      font-weight: bold;
-      margin-top: 10px;
+    summary { cursor: pointer; font-weight: bold; color: #b10000; outline: none; user-select: none; }
+    .timeline { margin: 12px 0 0 0; padding: 0; list-style: none; font-size: 14px; }
+    .timeline li {
+      padding: 10px 12px; border-left: 4px solid #b10000; border-top: 1px solid #eee;
+      border-right: 1px solid #eee; border-bottom: 1px solid #eee; border-radius: 6px;
+      margin: 10px 0; text-align: left; background: #fff; line-height: 1.35;
+      white-space: pre-wrap;
     }
-    ul {
-      margin-top: 0;
+    .t-time { font-weight: bold; margin-bottom: 6px; }
+    .refs { margin-top: 8px; font-size: 13px; color: #555; }
+    .pillrow { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; border: 1px solid #e2e2e2; background: #fafafa; font-size: 12px; color: #333; }
+
+    .btnrow { display: flex; justify-content: center; gap: 20px; margin-top: 24px; flex-wrap: wrap; }
+    .menu-button {
+      padding: 14px 28px; font-size: 16px; border: 2px solid #b10000; background-color: white;
+      color: #b10000; border-radius: 6px; cursor: pointer; box-shadow: 2px 2px 4px #aaa;
+      transition: 0.2s ease; min-width: 240px;
     }
-    .refs {
-      font-size: 0.95em;
-      color: #555;
-    }
-    .quote {
-      margin: 10px 0;
-      padding: 10px;
-      background-color: #f4f4f4;
-      border-left: 5px solid #9b111e;
-      font-style: italic;
-    }
-    .back-button {
-      display: inline-block;
-      margin-top: 40px;
-      padding: 10px 20px;
-      background-color: #9b111e;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
+    .menu-button:hover { background-color: #b10000; color: white; }
+
+    .footer { margin-top: 26px; font-weight: bold; color: #b10000; font-size: 14px; line-height: 1.45; }
+    .footer small { display: block; margin-top: 6px; font-weight: normal; color: #666; }
+
+    @media (max-width: 740px) {
+      .meta-grid { grid-template-columns: 1fr; }
+      .menu-button { width: 100%; max-width: 420px; min-width: 0; }
     }
   </style>
 </head>
+
 <body>
+  <div class="wrap">
 
-<h1>SIMULATION SCENARIO: AIRCRAFT ACCIDENT</h1>
-<div class="section">
-  <p><strong>Scenario Title:</strong> Offshore Crash – Bell 412 Helicopter</p>
-  <p><strong>Date/Time:</strong> Tuesday, 24 June 2025</p>
-  <p><strong>Flight:</strong> ADA412 — Zayed International Airport to Umm Lulu Platform</p>
-  <p><strong>Onboard:</strong> 2 crew, 6 passengers</p>
-</div>
+    <div class="logo">
+      <img src="assets/logo.png" alt="ADA Logo" />
+    </div>
 
-<div class="section">
-  <div class="timestamp">03:45 – LOSS OF CONTACT (Confirmed by OCC Duty Coordinator)</div>
-  <ul>
-    <li>Attempted contact via VHF, HF, ACARS → No response</li>
-    <li>Opened Incident Log Form B.6</li>
-    <li>Notified Duty Director of Operations (DOO)</li>
-    <li>Recorded: “Loss of comms Bell 412 A6-ADA, en route to Umm Lulu, last position 35 NM NW of Sir Bani Yas”</li>
-  </ul>
-  <div class="refs">ERP References: ERP 2.6.5, 2.6.6 | Checklist: Appendix B.3 | Form: Appendix B.6</div>
-</div>
+    <h1>SIMULATION SCENARIO: AIRCRAFT ACCIDENT</h1>
+    <div class="subhead">Training / awareness scenario (for learning context)</div>
 
-<div class="section">
-  <div class="timestamp">03:48 – ELT SIGNAL DETECTED</div>
-  <ul>
-    <li>ELT picked up via satellite and relayed to OCC by ATC</li>
-    <li>Crash position triangulated to approx. 52°15′E / 24°45′N</li>
-    <li>DOO initiates Quick Response EMT</li>
-    <li>Contacted Accountable Manager for Full EMT Mobilization</li>
-  </ul>
-  <div class="refs">ERP References: 2.5.1 (High-level), 2.6.6</div>
-</div>
+    <div class="banner">
+      TRAINING SIMULATION – NOT FOR OPERATIONAL USE
+      <small>
+        This page presents an exercise timeline and ERP references to support learning and awareness.
+        It does not provide operational instructions or decision-making guidance.
+      </small>
+    </div>
 
-<div class="section">
-  <div class="timestamp">04:00 – EMT MOBILISED AND CONVENED IN EMC</div>
-  <ul>
-    <li>Initial Roles Present:</li>
-    <ul>
-      <li>Duty DOO (Chair)</li>
-      <li>Safety Director</li>
-      <li>HR Manager</li>
-      <li>EMC Manager</li>
-      <li>Communications Officer</li>
-      <li>OCC Manager</li>
-    </ul>
-  </ul>
-  <div class="refs">ERP References: 3.3, 3.6 | Checklists Activated: C.1, C.3, C.4, C.5, C.6</div>
-</div>
+    <div class="card">
+      <h2>Scenario Summary</h2>
+      <div class="meta-grid">
+        <div class="meta-item"><strong>Scenario Title</strong>Offshore Crash – Bell 412 Helicopter</div>
+        <div class="meta-item"><strong>Date/Time</strong>Tuesday, 24 June 2025</div>
+        <div class="meta-item"><strong>Flight</strong>ADA412 — Zayed International Airport to Umm Lulu Platform</div>
+        <div class="meta-item"><strong>Onboard</strong>2 crew, 6 passengers</div>
+      </div>
+    </div>
 
-<div class="section">
-  <div class="timestamp">04:05 – FIELD SITE TEAM (FST) DEPLOYED</div>
-  <ul>
-    <li>Helicopter dispatched from AUH with:</li>
-    <ul>
-      <li>Search & Rescue Specialist</li>
-      <li>FST Representative</li>
-      <li>Emergency Supplies</li>
-    </ul>
-    <li>ADNOC Offshore notified and confirmed vessel dispatch</li>
-  </ul>
-  <div class="refs">ERP References: 3.4.5, Appendix C.25 | Checklist: C.24</div>
-</div>
+    <details open>
+      <summary>Show / Hide Simulation Timeline</summary>
 
-<div class="section">
-  <div class="timestamp">04:15 – FAMILY ASSISTANCE ACTIVATED</div>
-  <ul>
-    <li>FAC opened in ADA HQ Meeting Room 2</li>
-    <li>Next-of-kin contacted via HR Manager</li>
-    <li>Go-Crisis activated per agreement (Appendix A.1)</li>
-    <li>Initial Support Provided:</li>
-    <ul>
-      <li>Psychological support</li>
-      <li>Quiet rooms</li>
-      <li>Refreshments</li>
-    </ul>
-  </ul>
-  <div class="refs">ERP Reference: Chapter 4, D.1–D.3</div>
-</div>
+      <ul class="timeline">
 
-<div class="section">
-  <div class="timestamp">04:30 – MEDIA COMMUNICATION CONTROLLED</div>
-  <div class="quote">
-    "Abu Dhabi Aviation regrets to confirm that a Bell 412 helicopter operating flight ADA412 was involved in an incident while en route to Umm Lulu Offshore Platform. A search and rescue operation is underway. Further updates will be provided as verified details become available."
+        <li>
+  <div class="t-time">03:45 – LOSS OF CONTACT (Confirmed by OCC Duty Coordinator)</div>
+• The Operations Control Centre (OCC) attempts to establish contact with the aircraft using VHF, HF, and ACARS, but no response is received
+• The incident is formally recorded by opening the Incident Log using Form B.7 to ensure traceability from the first confirmed trigger
+• The Duty Director of Operations (DOO) is notified to ensure immediate leadership awareness and enable escalation if required
+• Aircraft identity, route, and last known position are recorded in the OCC log to build the initial situational picture for coordination and follow-up
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 2.6.2</span>
+      <span class="pill">Checklist: Appendix B.3</span>
+      <span class="pill">Form: Appendix B.7</span>
+    </div>
   </div>
-  <ul>
-    <li>No other personnel authorized to release info (ERP 1.15.3)</li>
-    <li>Communications Officer monitoring media, activating response protocol</li>
-  </ul>
-  <div class="refs">ERP Reference: 1.15.1–1.15.4</div>
-</div>
+</li>
 
-<div class="section">
-  <div class="timestamp">05:10 – SITE CONFIRMED BY FST</div>
-  <ul>
-    <li>Wreckage located on partially submerged rocky outcrop</li>
-    <li>Emergency Services from ADNOC confirmed on-site</li>
-    <li>Survivors being extracted</li>
-    <li>Status:
-      <ul>
-        <li>2 deceased (crew)</li>
-        <li>3 passengers critical</li>
-        <li>3 stable</li>
+<li>
+  <div class="t-time">03:48 – ELT SIGNAL DETECTED</div>
+• An Emergency Locator Transmitter (ELT) signal is detected via satellite and relayed to OCC by ATC, indicating a probable accident scenario
+• Available data is used to triangulate an approximate position to establish an initial focus area for response coordination
+• The DOO initiates the Quick Response Emergency Management Team to begin structured internal coordination and rapid situational assessment
+• The Accountable Manager is contacted to ensure senior leadership awareness and to support escalation to full EMT mobilisation if required
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 2.5.1</span>
+      <span class="pill">ERP 2.6.2</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">04:00 – EMT MOBILISED AND CONVENED IN EMC</div>
+• The Emergency Management Team (EMT) is convened in the Emergency Management Centre (EMC) to coordinate the organisational response
+• Core functional representatives assemble to ensure operational control, safety oversight, people-support, communications, and coordination are covered
+• The initial meeting establishes shared situational awareness and confirms early priorities while formal emergency roles begin operating under the ERP structure
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 3.3</span>
+      <span class="pill">ERP 3.6</span>
+      <span class="pill">Checklists Activated: C.1</span>
+      <span class="pill">C.3</span>
+      <span class="pill">C.4</span>
+      <span class="pill">C.5</span>
+      <span class="pill">C.6</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">04:05 – FIELD SITE TEAM (FST) DEPLOYED</div>
+• A response helicopter is dispatched from AUH to establish on-scene awareness and support coordination with offshore responders
+• The deployed team includes a Search &amp; Rescue specialist, an FST representative, and emergency supplies to support early response activity
+• ADNOC Offshore is notified and confirms vessel dispatch to assist with offshore access, coordination, and emergency support
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 3.4.5</span>
+      <span class="pill">Checklist: Appendix C.27</span>
+      <span class="pill">Appendix C.28</span>
+      <span class="pill">Appendix C.26</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">04:15 – FAMILY ASSISTANCE ACTIVATED</div>
+• The Family Assistance Centre (FAC) is established at ADA HQ to provide a controlled, private environment for next-of-kin support
+• Next-of-kin contact begins via the HR Manager to ensure notifications are coordinated and managed through a single controlled channel
+• Go-Crisis is activated as a specialist crisis-support provider in line with the existing agreement referenced in the ERP appendices
+• Immediate welfare support arrangements are put in place (quiet rooms, refreshments, and psychological support) to stabilise the family-support environment
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP Chapter 5</span>
+      <span class="pill">Appendix D.1–D.3</span>
+      <span class="pill">Appendix A.1</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">04:30 – MEDIA COMMUNICATION CONTROLLED</div>
+• A controlled holding statement is used to acknowledge the incident while avoiding speculation and protecting the accuracy of public information
+• External communications control is reinforced so that only authorised personnel release information in line with ERP communication requirements
+• The Communications Officer monitors media coverage and prepares structured responses to reduce misinformation risk and protect organisational integrity
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 1.15</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">05:10 – SITE CONFIRMED BY FST</div>
+• The Field Site Team confirms the accident site location and provides an initial description of the scene to the EMC
+• ADNOC emergency services confirm presence on-site and begin coordinated rescue and extraction activity
+• Casualty status is reported in categories to support medical response coordination and internal situational reporting
+• The FST begins structured situation reporting back to the EMC to support ongoing coordination and leadership decision support
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 3.5.1</span>
+      <span class="pill">ERP 3.4.5</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">05:25 – COORDINATION WITH NATIONAL AGENCIES</div>
+• Notifications to national agencies are initiated through the Safety Director to meet regulatory and emergency coordination expectations
+• Key stakeholders are contacted (including aviation and national emergency entities) to ensure aligned response coordination and reporting
+• Aircraft Accident Notification documentation is completed using Form B.5 to support formal reporting and traceable records
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 2.3</span>
+      <span class="pill">Form: Appendix B.5</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">06:00 – EMC STRATEGY SESSION</div>
+• The EMC conducts a structured strategy session led by the DOO, informed by updates from the OCC Manager and the Field Site Team
+• The session aligns the team on the current situation picture, key priorities, and the transition from immediate response to managed recovery planning
+• Recovery coordination, evidence preservation awareness, insurance notification, and legal coordination needs are reviewed at a familiarisation level
+• Go-Crisis and legal support are aligned to prepare for controlled passenger and stakeholder communications as the situation develops
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 3.5.1</span>
+      <span class="pill">ERP 3.8.3</span>
+      <span class="pill">ERP 3.8.6</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">07:30 – ADA EXECUTIVE BRIEFING (Chair: CEO)</div>
+• An executive-level briefing is convened to ensure leadership oversight, strategic alignment, and clear internal governance during the response
+• Key leaders review the emerging situation picture and confirm internal coordination across operational, safety, and support functions
+• Preliminary regulatory reporting is discussed at an awareness level to ensure readiness for required submissions and external engagement
+• Response records and supporting documentation are reinforced as controlled evidence and backed up in the SMS system to support audit and investigation needs
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 0.1</span>
+      <span class="pill">ERP 1.4.5</span>
+      <span class="pill">ERP 3.7</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">10:00 – POST-RESPONSE: INITIAL REPORTING &amp; CLEANUP</div>
+• Occupant status is confirmed based on rescue and medical information as the situation stabilises
+• Survivors are evacuated to hospital care, and fatalities are formally accounted for through controlled reporting channels
+• OCC functions progressively return toward normal operations as emergency coordination reduces and the recovery phase begins
+• The EMT transitions from immediate response into recovery and investigation support activities, ensuring records remain traceable and controlled
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 3.8.2</span>
+      <span class="pill">ERP 3.8.3</span>
+    </div>
+  </div>
+</li>
+
+<li>
+  <div class="t-time">Day +2 – FOLLOW-UP ACTIONS</div>
+• A structured debrief is conducted with EMT members to capture observations, lessons, and improvement opportunities from the response
+• All incident documentation is uploaded to the SMS system to ensure completeness, retention, and easy retrieval for audit or investigation
+• The response timeline is reviewed as a learning tool to strengthen organisational readiness and familiarisation with ERP coordination flow
+• An ERP review is scheduled and recommendations are logged to support continuous improvement and governance follow-up
+  <div class="refs">
+    References:
+    <div class="pillrow">
+      <span class="pill">ERP 0.1</span>
+      <span class="pill">ERP 0.3.1</span>
+      <span class="pill">ERP 1.13</span>
+    </div>
+  </div>
+</li>
+
       </ul>
-    </li>
-    <li>FST begins situation report to EMC</li>
-  </ul>
-  <div class="refs">ERP Reference: 3.5.1, 3.4.5</div>
-</div>
+    </details>
 
-<div class="section">
-  <div class="timestamp">05:25 – COORDINATION WITH NATIONAL AGENCIES</div>
-  <ul>
-    <li>Safety Director contacts:
-      <ul>
-        <li>GCAA</li>
-        <li>NCEMA</li>
-        <li>ADNOC HQ</li>
-        <li>Civil Defence</li>
-      </ul>
-    </li>
-    <li>Aircraft Accident Notification (Form B.5) completed</li>
-  </ul>
-  <div class="refs">ERP Reference: 2.3, Appendix B.5</div>
-</div>
+    <div class="btnrow">
+      <button class="menu-button" onclick="location.href='ScenariosMenu.html'">Back to Scenarios</button>
+      <button class="menu-button" onclick="location.href='Main Menu.html'">Back to Main Menu</button>
+    </div>
 
-<div class="section">
-  <div class="timestamp">06:00 – EMC STRATEGY SESSION</div>
-  <ul>
-    <li>Led by DOO, updated by OCC Manager and FST</li>
-    <li>Critical Actions:
-      <ul>
-        <li>Deployment of recovery crew</li>
-        <li>Initiate preservation of evidence</li>
-        <li>Notify insurers</li>
-        <li>Instruct legal and Go-Crisis to prepare passenger statement</li>
-      </ul>
-    </li>
-  </ul>
-  <div class="refs">ERP Reference: 3.5.1, 3.8.3, 3.8.6</div>
-</div>
+    <div class="footer">
+      Reference and Reminder Only<br>
+      Not a substitute for the ERP Manual<br>
+      Always verify the current approved issue<br>
+      UNCONTROLLED if copied or printed
+      <small>
+        Source Document: ADA Emergency Response Plan Manual — Issue 03, Revision 0 — 15 August 2025
+      </small>
+    </div>
 
-<div class="section">
-  <div class="timestamp">07:30 – ADA EXECUTIVE BRIEFING (Chair: CEO)</div>
-  <ul>
-    <li>Attendees:
-      <ul>
-        <li>AM</li>
-        <li>Safety Director</li>
-        <li>Operations Director</li>
-        <li>Legal Advisor</li>
-      </ul>
-    </li>
-    <li>Focus:
-      <ul>
-        <li>Internal debrief</li>
-        <li>Draft of GCAA preliminary report</li>
-        <li>Actions for audit review (ERP 0.1 / SMS-013)</li>
-      </ul>
-    </li>
-    <li>All records backed up to SMS-Pro</li>
-  </ul>
-  <div class="refs">ERP Reference: 0.1, 1.4.5(7), 3.7</div>
-</div>
-
-<div class="section">
-  <div class="timestamp">10:00 – POST-RESPONSE: INITIAL REPORTING & CLEANUP</div>
-  <ul>
-    <li>Full occupant status confirmed:
-      <ul>
-        <li>6 survivors evacuated to hospital</li>
-        <li>2 fatalities recovered</li>
-      </ul>
-    </li>
-    <li>OCC resumes normal operations</li>
-    <li>EMT transitions to Recovery Phase (ERP Stage Four):
-      <ul>
-        <li>Site secured</li>
-        <li>Data sent to GCAA</li>
-        <li>Incident under joint investigation</li>
-      </ul>
-    </li>
-  </ul>
-</div>
-
-<div class="section">
-  <div class="timestamp">Day +2 – FOLLOW-UP ACTIONS</div>
-  <ul>
-    <li>Debrief with all EMT members</li>
-    <li>Upload all documentation to SMS-Pro</li>
-    <li>Begin analysis of response timeline</li>
-    <li>ERP Review scheduled</li>
-    <li>Recommendations logged for audit</li>
-  </ul>
-  <div class="refs">ERP Reference: 0.1, 0.3.1, 1.13</div>
-</div>
-
-<a href="ScenariosMenu.html" class="back-button">Back to Menu</a>
-
+  </div>
 </body>
 </html>
-
-

@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Accountable Manager Role</title>
+  <title>OCC Supervisor Role</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="SCORM_API_wrapper.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -47,127 +48,184 @@
     .back-button:hover {
       background-color: #b91c1c;
     }
+
+    /* --- Checklist selection block (match accountable.html) --- */
+    .checklist-button {
+      margin-top: 16px;
+      background-color: #9b111e;
+      color: #fff;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+    }
+    .checklist-button:hover {
+      background-color: #b91c1c;
+    }
+    .uncontrolled-note {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      background: #f7f7f7;
+      border-radius: 4px;
+      font-style: italic;
+      font-size: 14px;
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
-  <h1>OCC Manager – Emergency Response Role</h1>
+    <h1>OCC Supervisor – Emergency Response Role</h1>
 
-  <h2>Activation</h2>
-  <p>Activated during any emergency response event requiring EMT coordination involving air crew, aircraft dispatch, or OCC support operations. Activation may be initiated by the Accountable Manager, Director of Operations, or Duty Director of Operations (DOO), as part of the EMT mobilization protocol.</p>
-  <p>Refer to ERP Section 3.6.9.</p>
+    <h2>Activation</h2>
+    <p>
+      This training page supports Emergency Management Team (EMT) readiness. The governing ERP role description for the
+      <strong>OCC Supervisor</strong> is in <strong>Section 3.6.11</strong>.
+    </p>
+    <p><strong>Refer to ERP Section 3.6.11 – OCC Supervisor.</strong></p>
 
-  <h2>Core Responsibilities</h2>
-  <ul>
-    <li>Advising the EMT on all air crew issues.</li>
-    <li>Liaising regarding services that may be required as well as monitor contract performance with emergency response provider (if applicable).</li>
-    <li>When required, arranging an aircraft to deploy to the emergency/incident site.</li>
-    <li>When required, arranging for air crew to operate any aircraft to the emergency/incident site.</li>
-    <li>As required, appoint a deputy to administer the day-to-day functions of Operations Control and cover and restoring schedule integrity.</li>
-    <li>Providing an accurate list of air crew and position on the aircraft to the EMT.</li>
-    <li>Confirming actual details of cargo and escorts on board.</li>
-  </ul>
+    <!-- Checklist / Forms (Appendix B) -->
+    <div style="margin-top: 18px; margin-bottom: 6px;">
+      <button class="checklist-button" onclick="openChecklistPdf('B2')">Open Checklist – Appendix B.2 (Operations Control Checklist)</button>
+      <button class="checklist-button" style="margin-top:10px;" onclick="openChecklistPdf('B7')">Open Form – Appendix B.7 (Incident Log Form)</button>
+      <div class="uncontrolled-note">READ ONLY! ** Printed/Downloaded copies are considered UNCONTROLLED - Verify current issue before use **</div>
+    </div>
 
-  <h2>ERP References</h2>
-  <ul>
-    <li>Section 3.6.9 – OCC Manager</li>
-    <li>Checklist: No checklist exists for this role in Appendix C.</li>
-    <li>Note: Coordination with OCC Duty Coordinator (Checklist: Appendix B.3) may be expected but is not declared in 3.6.9.</li>
-  </ul>
+    <h2>Core Responsibilities (ERP)</h2>
+    <p>The ERP defines the OCC Supervisor responsibilities as follows:</p>
+    <ul>
+      <li>Advising the EMT on all air crew issues.</li>
+      <li>Liaising regarding services that may be required as well as monitor contract performance with emergency response provider (if applicable).</li>
+      <li>When required, arranging an aircraft to deploy to the emergency/incident site.</li>
+      <li>When required, arranging for air crew to operate any aircraft to the emergency/incident site.</li>
+      <li>As required, appoint a deputy to administer the day-to-day functions of Operations Control and cover and restoring schedule integrity.</li>
+      <li>Providing an accurate list of air crew and position on the aircraft to the EMT.</li>
+      <li>Confirming actual details of cargo and escorts on board.</li>
+      <li>Assisting the DOO in collecting the details mentioned in section 3.6.3.</li>
+    </ul>
 
-  <h2>Phase-Based Duties</h2>
-  <ul>
-    <li><strong>Phase 1 (0–60 min):</strong> Confirm crewing issues, air crew availability, and aircraft readiness. Coordinate air movement logistics.</li>
-    <li><strong>Phase 2 (1–4 hrs):</strong> Provide updated aircraft and air crew lists, confirm cargo details, and coordinate Operations Control handover if needed.</li>
-    <li><strong>Phase 3 (4+ hrs):</strong> Re-establish schedule integrity and shift administration to deputy as required. Monitor air crew needs through EMT.</li>
-  </ul>
+    <h2>ERP References</h2>
+    <ul>
+      <li>Section 3.6.11 – OCC Supervisor</li>
+      <li>Appendix B.2 – Operations Control Checklist (Operation Supervisor)</li>
+      <li>Appendix B.7 – Incident Log Form</li>
+    </ul>
 
-  <h2>Cautions</h2>
-  <ul>
-    <li>Ensure only verified air crew and aircraft details are released to the EMT.</li>
-    <li>Coordinate with OCC Duty Coordinator to avoid duplication of communication or role overlap.</li>
-    <li>Provide continuous updates to EMT if air movements are delayed or revised.</li>
-    <li>Maintain operational oversight until schedule control is fully delegated.</li>
-  </ul>
+    <h2>Phase-Based Duties</h2>
+    <ul>
+      <li><strong>Phase 1 (0–60 min):</strong> Support the EMT with immediate air crew / aircraft information needs, and begin collecting required details for DOO support (per ERP references).</li>
+      <li><strong>Phase 2 (1–4 hrs):</strong> Maintain accurate and updated crew/cargo/escort information and continue liaison support as required by the EMT.</li>
+      <li><strong>Phase 3 (4+ hrs):</strong> Maintain schedule integrity support through deputies where required and continue to provide accurate operational information to the EMT.</li>
+    </ul>
 
-  <h2>Knowledge Check (Interactive)</h2>
+    <h2>Cautions</h2>
+    <ul>
+      <li>Provide only verified air crew, aircraft, cargo, and escort details to the EMT.</li>
+      <li>Where a deputy is appointed, ensure continuity and clear handover of Operations Control functions.</li>
+      <li>Support the DOO with collection of required details as referenced by the ERP (section 3.6.3).</li>
+    </ul>
 
-  <div class="question">
-    <p><strong>Q1:</strong> Who is the OCC Manager expected to advise during an emergency?</p>
-    <button onclick="checkAnswer(this, true)">a. EMT</button><br>
-    <button onclick="checkAnswer(this, false)">b. Legal Advisor</button><br>
-    <button onclick="checkAnswer(this, false)">c. Press Officer</button>
-    <div class="feedback"></div>
+    <h2>Knowledge Check (Interactive)</h2>
+
+    <div class="question">
+      <p><strong>Q1:</strong> What is one of the OCC Supervisor’s core responsibilities regarding the EMT?</p>
+      <button onclick="checkAnswer(this, true)">a. Advise the EMT on all air crew issues</button><br>
+      <button onclick="checkAnswer(this, false)">b. Approve public press releases</button><br>
+      <button onclick="checkAnswer(this, false)">c. Lead the accident investigation</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p><strong>Q2:</strong> What may the OCC Supervisor need to arrange when required?</p>
+      <button onclick="checkAnswer(this, false)">a. A family assistance centre</button><br>
+      <button onclick="checkAnswer(this, true)">b. An aircraft to deploy to the emergency/incident site</button><br>
+      <button onclick="checkAnswer(this, false)">c. Media interviews</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p><strong>Q3:</strong> What must the OCC Supervisor confirm about cargo?</p>
+      <button onclick="checkAnswer(this, false)">a. Estimated resale value</button><br>
+      <button onclick="checkAnswer(this, true)">b. Actual details of cargo and escorts on board</button><br>
+      <button onclick="checkAnswer(this, false)">c. Passenger ticket numbers</button>
+      <div class="feedback"></div>
+    </div>
+
+    <div class="question">
+      <p><strong>Q4:</strong> The OCC Supervisor assists the DOO in collecting details referenced in which ERP section?</p>
+      <button onclick="checkAnswer(this, false)">a. Section 3.6.11</button><br>
+      <button onclick="checkAnswer(this, true)">b. Section 3.6.3</button><br>
+      <button onclick="checkAnswer(this, false)">c. Appendix B.7</button>
+      <div class="feedback"></div>
+    </div>
+
+    <p><strong>Final Note:</strong> Accuracy and disciplined coordination are critical. Provide verified information, support DOO detail collection, and maintain continuity of Operations Control functions as required.</p>
+
+    <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole-adderproles.html'">← Back to Role Menu</button>
   </div>
 
-  <div class="question">
-    <p><strong>Q2:</strong> What must be confirmed about onboard cargo?</p>
-    <button onclick="checkAnswer(this, false)">a. Last port of loading</button><br>
-    <button onclick="checkAnswer(this, false)">b. Estimated resale value</button><br>
-    <button onclick="checkAnswer(this, true)">c. Actual cargo and escort details</button>
-    <div class="feedback"></div>
-  </div>
+  <script>
+    // Forms folder paths (relative to this HTML file)
+    const CHECKLIST_B2_PDF_PATH = "Forms/B.2. Operations Control Checklist (Operation Supervisor).pdf";
+    const CHECKLIST_B7_PDF_PATH = "Forms/B.7. Incident Log Form.pdf";
 
-  <div class="question">
-    <p><strong>Q3:</strong> Who may initiate activation of the OCC Manager role?</p>
-    <button onclick="checkAnswer(this, false)">a. Family Support Team</button><br>
-    <button onclick="checkAnswer(this, true)">b. AM, DOO, or Duty Director of Ops</button><br>
-    <button onclick="checkAnswer(this, false)">c. GCAA Emergency Liaison</button>
-    <div class="feedback"></div>
-  </div>
+    function openChecklistPdf(which) {
+      let filePath = "";
+      if (which === "B2") filePath = CHECKLIST_B2_PDF_PATH;
+      if (which === "B7") filePath = CHECKLIST_B7_PDF_PATH;
 
-  <div class="question">
-    <p><strong>Q4:</strong> What is a required action in Phase 1?</p>
-    <button onclick="checkAnswer(this, true)">a. Confirm crew and aircraft availability</button><br>
-    <button onclick="checkAnswer(this, false)">b. Start evacuation procedures</button><br>
-    <button onclick="checkAnswer(this, false)">c. Draft press statement</button>
-    <div class="feedback"></div>
-  </div>
+      if (!filePath) {
+        alert("Checklist/Form PDF path is not set for: " + which);
+        return;
+      }
 
-  <div class="question">
-    <p><strong>Q5:</strong> Which checklist is specifically assigned to the OCC Manager in Appendix C?</p>
-    <button onclick="checkAnswer(this, false)">a. Appendix C.3</button><br>
-    <button onclick="checkAnswer(this, false)">b. Appendix C.8</button><br>
-    <button onclick="checkAnswer(this, true)">c. No checklist exists in Appendix C</button>
-    <div class="feedback"></div>
-  </div>
-
-  <p><strong>Final Note:</strong> The OCC Manager is a key operational role in managing air crew, aircraft movement, and schedule continuity during emergencies. Coordination, accuracy, and timely updates are vital for response effectiveness.</p>
-
-  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole-adderproles.html'">← Back to Role Menu</button>
-</div>
-
-<script>
-  const totalQuestions = document.querySelectorAll('.question').length;
-  const answered = new Array(totalQuestions).fill(false);
-  const correct = new Array(totalQuestions).fill(false);
-
-  function checkAnswer(button, isCorrect) {
-    const questionElement = button.parentElement;
-    const questionIndex = Array.from(document.querySelectorAll('.question')).indexOf(questionElement);
-    const feedback = questionElement.querySelector('.feedback');
-
-    if (!answered[questionIndex]) {
-      answered[questionIndex] = true;
+      // Encode spaces and special characters safely
+      window.open(encodeURI(filePath), "_blank", "noopener");
     }
 
-    correct[questionIndex] = isCorrect;
-    feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
-    feedback.style.color = isCorrect ? "green" : "red";
+    const totalQuestions = document.querySelectorAll('.question').length;
+    const answered = new Array(totalQuestions).fill(false);
+    const correct = new Array(totalQuestions).fill(false);
 
-    checkAllCorrect();
-  }
+    function checkAnswer(button, isCorrect) {
+      const questionElement = button.parentElement;
+      const questionIndex = Array.from(document.querySelectorAll('.question')).indexOf(questionElement);
+      const feedback = questionElement.querySelector('.feedback');
 
-  function checkAllCorrect() {
-    const allAnswered = answered.every(Boolean);
-    const allCorrect = correct.every(Boolean);
+      if (!answered[questionIndex]) {
+        answered[questionIndex] = true;
+      }
 
-    if (allAnswered && allCorrect) {
-      document.getElementById("backButton").style.display = "inline-block";
+      correct[questionIndex] = isCorrect;
+      feedback.textContent = isCorrect ? "✅ Correct!" : "❌ Incorrect.";
+      feedback.style.color = isCorrect ? "green" : "red";
+
+      checkAllCorrect();
     }
-  }
-</script>
 
+    function markComplete() {
+      if (typeof doLMSSetValue === 'function') {
+        doLMSSetValue("cmi.core.lesson_status", "completed");
+        doLMSCommit("");
+      } else {
+        console.warn("SCORM API not available – training completion not tracked.");
+      }
+    }
+
+    function checkAllCorrect() {
+      const allAnswered = answered.every(Boolean);
+      const allCorrect = correct.every(Boolean);
+
+      if (allAnswered && allCorrect) {
+        document.getElementById("backButton").style.display = "inline-block";
+        markComplete();
+      }
+    }
+  </script>
 </body>
 </html>
-

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Operations Director Role</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="SCORM_API_wrapper.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -47,25 +48,68 @@
     .back-button:hover {
       background-color: #b91c1c;
     }
+
+    /* --- Checklist selection block (MASTER) --- */
+    .checklist-button {
+      margin-top: 16px;
+      background-color: #9b111e;
+      color: #fff;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+    }
+    .checklist-button:hover {
+      background-color: #b91c1c;
+    }
+    .uncontrolled-note {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      background: #f7f7f7;
+      border-radius: 4px;
+      font-style: italic;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <h1>Operations Director – Emergency Response Role</h1>
+  <h1>Operations Director (Emergency Management Team Member)</h1>
 
-  <h2>Activation</h2>
-  <p>Activated during <strong>Medium and High-level emergencies</strong> and forms part of the Emergency Management Team (EMT). Main function: oversee flight operations coordination and manage operational disruptions.</p>
+  <h2>Role Context (Training Overview)</h2>
+  <p>
+    As Operations Director, your role within the Emergency Management Team (EMT) is to provide senior oversight of
+    flight operations impacts during emergencies. You ensure the EMT has clear operational information, understands
+    the operational consequences of decisions, and can coordinate safely and effectively with OCC and other operational stakeholders.
+  </p>
+
+  <h2>Activation (ERP-Aligned Awareness)</h2>
+  <p>
+    The Operations Director is engaged during <strong>Medium and High-level emergencies</strong> and forms part of the EMT.
+    Your focus is to oversee flight operations coordination and manage operational disruption at a strategic level.
+  </p>
+  <p>
+    <strong>Training note:</strong> This page supports role understanding and training. It does not replace ERP checklists or operational procedures used during an actual event.
+  </p>
   <p>Refer to ERP Section 3.6.3 and Appendix C.7 – Operations Director Checklist.</p>
 
-  <h2>Core Responsibilities</h2>
+  <h2>Core Responsibilities (Explained for Training)</h2>
+  <p>
+    Your responsibilities focus on ensuring that operational information, records, and flight operations impacts are
+    available to support EMT decision-making. These responsibilities are strategic and coordination-based, not tactical “how-to” tasks.
+  </p>
   <ul>
-    <li>Advise EMT on all flight operations issues</li>
-    <li>Ensure aircraft operational data is available</li>
-    <li>Ensure flight crew records are secured by the Director of Quality</li>
-    <li>Arrange aerial charts/photos of affected airport</li>
-    <li>Coordinate relief flight crews as needed</li>
-    <li>Compile and provide flight documentation to EMT and Authorities:
+    <li>Advise the EMT on all flight operations issues and operational impacts.</li>
+    <li>Ensure aircraft and operational data is available to support situational awareness.</li>
+    <li>Ensure relevant operational records are secured and available for appropriate stakeholders when required.</li>
+    <li>Support operational continuity planning, including relief crew considerations where applicable.</li>
+    <li>Support compilation and availability of flight documentation that may be required by the EMT and relevant authorities, such as:
       <ul>
         <li>Passenger manifest</li>
         <li>Fuel planning and receipts</li>
@@ -74,9 +118,9 @@
         <li>Weather reports</li>
         <li>Flight and duty time records</li>
         <li>Copy of crew training files</li>
-        <li>Logbook</li>
+        <li>Logbook extracts (as applicable)</li>
         <li>Medical certificates</li>
-        <li>Licenses</li>
+        <li>Licences</li>
       </ul>
     </li>
   </ul>
@@ -85,23 +129,35 @@
   <ul>
     <li>Section 3.6.3 – Operations Director Emergency Responsibilities</li>
     <li>Appendix C.7 – Operations Director Checklist</li>
-    <li>Form B.6 – Incident Log</li>
-    <li>ERP 2.6 – Communication Channels</li>
+    <li>Section 2.6 – Communication Channels</li>
+    <li>Form B.7 – Incident Log Form (where used for recordkeeping)</li>
   </ul>
 
-  <h2>Phase-Based Duties</h2>
+  <!-- ✅ Checklist selection block (MASTER) -->
+  <button class="checklist-button" onclick="openChecklistPdf()">
+    Open Appendix C.7 – Operations Director Checklist (PDF)
+  </button>
+
+  <div class="uncontrolled-note">
+    READ ONLY! ** Printed/Downloaded copies are considered UNCONTROLLED - Verify current issue before use **
+  </div>
+
+  <h2>Role Behaviour Across an Emergency (Training Interpretation)</h2>
+  <p>
+    <strong>Training note:</strong> This section provides role understanding for learning purposes. It does not replace ERP checklists and does not provide step-by-step procedures.
+  </p>
   <ul>
-    <li><strong>Phase 1 (0–60 min):</strong> Coordinate with OCC, suspend flights if needed, notify ground ops, update DOO and AM, account for crew</li>
-    <li><strong>Phase 2 (1–4 hrs):</strong> Liaise with airport, approve alternate airports, supervise stranded passenger recovery</li>
-    <li><strong>Phase 3 (4+ hrs):</strong> Manage long-term recovery, submit ops impact report, support post-event debriefs</li>
+    <li><strong>Early phase:</strong> Establish operational facts, coordinate with OCC, and support initial EMT situational awareness.</li>
+    <li><strong>Sustained response:</strong> Provide operational impact updates, support safe coordination decisions, and ensure continuity planning is considered.</li>
+    <li><strong>Stabilisation / recovery:</strong> Support recovery planning, post-event coordination, and operational debrief inputs as required.</li>
   </ul>
 
   <h2>Cautions</h2>
   <ul>
-    <li>Do not approve flights without full risk analysis</li>
-    <li>Verify aircraft status with OCC and Maintenance</li>
-    <li>Ensure GCAA is informed of route/ops changes</li>
-    <li>Document all operational directives in the log</li>
+    <li>Ensure operational decisions are based on verified information and coordinated through OCC.</li>
+    <li>Maintain clear records of operational decisions and communications.</li>
+    <li>Consider operational risk and disruption impacts before supporting significant operational changes.</li>
+    <li>Ensure information provided to the EMT is accurate, timely, and traceable.</li>
   </ul>
 
   <h2>Knowledge Check (Interactive)</h2>
@@ -115,8 +171,8 @@
   </div>
 
   <div class="question">
-    <p><strong>Q2:</strong> What is the focus of the Operations Director during emergencies?</p>
-    <button onclick="checkAnswer(this, true)">Coordinating flight operations and managing disruptions</button><br>
+    <p><strong>Q2:</strong> What is the Operations Director’s focus during emergencies?</p>
+    <button onclick="checkAnswer(this, true)">Coordinating flight operations oversight and managing disruption impacts</button><br>
     <button onclick="checkAnswer(this, false)">Preparing HR briefings</button><br>
     <button onclick="checkAnswer(this, false)">Approving insurance reports</button>
     <div class="feedback"></div>
@@ -131,25 +187,37 @@
   </div>
 
   <div class="question">
-    <p><strong>Q4:</strong> What must be done before continuing flight operations during a crisis?</p>
-    <button onclick="checkAnswer(this, true)">Perform risk analysis and coordinate with OCC</button><br>
-    <button onclick="checkAnswer(this, false)">Obtain pilot approval only</button><br>
-    <button onclick="checkAnswer(this, false)">Inform the PR department</button>
+    <p><strong>Q4:</strong> What should guide operational decisions during a crisis?</p>
+    <button onclick="checkAnswer(this, true)">Verified operational information and coordination through OCC</button><br>
+    <button onclick="checkAnswer(this, false)">Pilot preference only</button><br>
+    <button onclick="checkAnswer(this, false)">PR department approval</button>
     <div class="feedback"></div>
   </div>
 
   <div class="question">
-    <p><strong>Q5:</strong> What log must be kept updated throughout the event?</p>
-    <button onclick="checkAnswer(this, true)">Incident Log (Form B.6)</button><br>
-    <button onclick="checkAnswer(this, false)">HR Tracking Sheet</button><br>
-    <button onclick="checkAnswer(this, false)">Maintenance Shift Report</button>
+    <p><strong>Q5:</strong> Which statement best reflects the Operations Director’s role?</p>
+    <button onclick="checkAnswer(this, true)">Provide operational oversight and ensure operational information supports EMT decision-making</button><br>
+    <button onclick="checkAnswer(this, false)">Run the media response plan</button><br>
+    <button onclick="checkAnswer(this, false)">Conduct the technical investigation</button>
     <div class="feedback"></div>
   </div>
 
-  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole.html'">← Back to Role Menu</button>
+  <p><strong>Final Note:</strong> As Operations Director, your value comes from accurate operational insight, disciplined coordination,
+  and clear communication—supporting safe and defensible EMT decisions under pressure.</p>
+
+  <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole.html'">
+    ← Back to Role Menu
+  </button>
 </div>
 
 <script>
+  /* Checklist location confirmed by your app structure (/Forms folder) */
+  const CHECKLIST_C7_PDF_PATH = "Forms/C.7. Operations Director Checklist.pdf";
+
+  function openChecklistPdf() {
+    window.open(CHECKLIST_C7_PDF_PATH, "_blank", "noopener");
+  }
+
   const totalQuestions = document.querySelectorAll('.question').length;
   const answered = new Array(totalQuestions).fill(false);
   const correct = new Array(totalQuestions).fill(false);
@@ -170,18 +238,25 @@
     checkAllCorrect();
   }
 
+  function markComplete() {
+    if (typeof doLMSSetValue === 'function') {
+      doLMSSetValue("cmi.core.lesson_status", "completed");
+      doLMSCommit("");
+    } else {
+      console.warn("SCORM API not available – training completion not tracked.");
+    }
+  }
+
   function checkAllCorrect() {
     const allAnswered = answered.every(Boolean);
     const allCorrect = correct.every(Boolean);
 
     if (allAnswered && allCorrect) {
       document.getElementById("backButton").style.display = "inline-block";
+      markComplete();
     }
   }
 </script>
 
 </body>
 </html>
-
-
-

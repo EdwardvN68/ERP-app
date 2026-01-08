@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Accountable Manager Role</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="SCORM_API_wrapper.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -47,28 +48,70 @@
     .back-button:hover {
       background-color: #b91c1c;
     }
+
+    /* --- Checklist selection block (matches your screenshot style) --- */
+    .checklist-button {
+      margin-top: 16px;
+      background-color: #9b111e;
+      color: #fff;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+    }
+    .checklist-button:hover {
+      background-color: #b91c1c;
+    }
+    .uncontrolled-note {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      background: #f7f7f7;
+      border-radius: 4px;
+      font-style: italic;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <h1>Accountable Manager – Emergency Response Role</h1>
+  <h1>Accountable Manager (Emergency Management Chairman)</h1>
 
   <h2>Activation</h2>
-  <p>Activated during <strong>High-level emergencies</strong> or when the Emergency Management Team (EMT) is fully mobilized. The AM acts as Chairman of the EMT and holds overall authority for directing the emergency response.</p>
+  <p>
+    In the ERP structure, the Accountable Manager (AM) provides the highest level of leadership within the Emergency Management Team (EMT).
+    During <strong>high-level emergencies</strong> that require <strong>full EMT mobilisation</strong>, the AM acts as <strong>Chairman of the EMT</strong>,
+    providing strategic direction and overall authority for the organisational response.
+  </p>
+  <p>
+    <strong>Training note:</strong> Activation thresholds and mobilisation levels are defined in the ERP. This training page explains how the AM role functions
+    within that framework; it does not replace the ERP checklists used during an actual event.
+  </p>
   <p>Refer to ERP Sections 2.5.1, 2.5.2, 3.3.2, 3.6.1 and Appendix C.5.</p>
 
   <h2>Core Responsibilities</h2>
+  <p>
+    As AM (EMT Chairman), your responsibilities are primarily <strong>strategic leadership and assurance</strong>—you set direction, authorise key actions,
+    and ensure the EMT functions effectively. Your role is not to perform tactical tasks; it is to ensure the organisation responds decisively and correctly.
+  </p>
   <ul>
-    <li>Overall authority for directing the emergency response and leading the EMT.</li>
-    <li>Ensure continuity of company operations not impacted by the emergency.</li>
-    <li>Initiate and chair conference calls with airport and authority representatives.</li>
-    <li>Determine need to activate the Emergency Management Centre (EMC).</li>
-    <li>Authorize activation of the Crisis Management Service Provider (GoCrisis).</li>
-    <li>Monitor developments and provide regular updates to top management.</li>
+    <li>Provide overall direction for emergency response and lead the EMT as Chairman.</li>
+    <li>Ensure continuity of company activities that are not affected by the incident, where safe to do so.</li>
+    <li>Convene and chair high-level conference calls, including with relevant airports and authorities when required.</li>
+    <li>Determine whether activation of the Emergency Management Centre (EMC) is necessary.</li>
+    <li>Act as the authorising authority for activation of the Crisis Management Service Provider (Go Crisis).</li>
+    <li>Monitor developments and provide regular updates to top management as often as required.</li>
   </ul>
 
   <h2>ERP References</h2>
+  <p>
+    The ERP remains the authoritative source during an emergency. Use the references below for the governing requirements and checklists:
+  </p>
   <ul>
     <li>Section 2.5.1 – EMT Activation Thresholds</li>
     <li>Section 2.5.2 – EMT On-Call Roles</li>
@@ -77,16 +120,33 @@
     <li>Appendix C.5 – Accountable Manager Checklist</li>
   </ul>
 
-  <h2>Phase-Based Duties</h2>
+  <!-- ✅ Checklist selection block (like your screenshot) -->
+  <button class="checklist-button"
+          onclick="openChecklistPdf()">
+    Open Appendix C.5 – Accountable Manager Checklist (PDF)
+  </button>
+
+  <div class="uncontrolled-note">
+    READ ONLY! ** Printed/Downloaded copies are considered UNCONTROLLED - Verify current issue before use **
+  </div>
+
+  <h2>Role Behaviour Across an Emergency (Training Interpretation)</h2>
+  <p>
+    <strong>Training note:</strong> This section provides role understanding and expectations for learning purposes. It does not replace ERP checklists and does
+    not provide step-by-step procedures.
+  </p>
   <ul>
-    <li><strong>Phase 1 (0–60 min):</strong> Verify incident, determine response level, authorize EMT activation, launch GoCrisis, brief senior management.</li>
-    <li><strong>Phase 2 (1–4 hrs):</strong> Chair EMT meetings, oversee info collection, coordinate with internal and external parties, ensure situational awareness.</li>
-    <li><strong>Phase 3 (4+ hrs):</strong> Direct transition to recovery, lead debriefings, approve final reports and archiving.</li>
+    <li><strong>Early phase:</strong> Establish leadership presence, confirm reliable information, ensure the correct EMT structure is in place, and set strategic priorities.</li>
+    <li><strong>Sustained response:</strong> Chair EMT discussions, ensure coordination across internal functions and external stakeholders, and maintain organisational focus and discipline.</li>
+    <li><strong>Stabilisation / recovery:</strong> Direct transition toward recovery and normalisation, ensure lessons are captured, and confirm appropriate closure and documentation.</li>
   </ul>
 
   <h2>Cautions</h2>
+  <p>
+    The Accountable Manager’s effectiveness depends on judgement, clarity, and control under pressure. Keep the following in mind:
+  </p>
   <ul>
-    <li>Do not delay EMT activation in high-severity emergencies.</li>
+    <li>Do not delay EMT mobilisation when severity criteria are met.</li>
     <li>Base decisions only on confirmed information — avoid assumptions.</li>
     <li>All records must be securely retained.</li>
     <li>Ensure EMT members are not overworked — manage fatigue risk.</li>
@@ -120,27 +180,43 @@
   </div>
 
   <div class="question">
-    <p><strong>Q4:</strong> What is one of the first actions in Phase 1?</p>
+    <p><strong>Q4:</strong> What is one of the first priorities for the AM during an early high-level emergency response?</p>
     <button onclick="checkAnswer(this, false)">a.Initiate press release</button><br>
-    <button onclick="checkAnswer(this, true)">b.Verify emergency and authorize full EMT activation</button><br>
+    <button onclick="checkAnswer(this, true)">b.Establish leadership, confirm reliable information, and ensure full EMT mobilisation as required</button><br>
     <button onclick="checkAnswer(this, false)">c.Secure crew records</button>
     <div class="feedback"></div>
   </div>
 
   <div class="question">
-    <p><strong>Q5:</strong> What must the AM monitor continuously?</p>
+    <p><strong>Q5:</strong> What must the AM ensure throughout the response?</p>
     <button onclick="checkAnswer(this, false)">a.HR leave schedules</button><br>
     <button onclick="checkAnswer(this, false)">b.Maintenance release logs</button><br>
-    <button onclick="checkAnswer(this, true)">c.EMC operations and updates to top management</button><br>
+    <button onclick="checkAnswer(this, true)">c.Strategic oversight, coordination, and updates to top management</button><br>
     <div class="feedback"></div>
   </div>
 
-  <p><strong>Final Note:</strong> Your role as Accountable Manager is critical to the success of Abu Dhabi Aviation’s emergency preparedness and response. Strong leadership, clear decisions, and effective delegation ensure protection of life, operations, and reputation.</p>
+  <p><strong>Final Note:</strong> Your role as Accountable Manager is central to EMT success. In practice, your value comes from calm leadership, clear direction,
+  timely authorisation, and disciplined oversight—ensuring the organisation protects life, operations, and reputation while remaining aligned to the ERP.</p>
 
   <button class="back-button" id="backButton" style="display:none;" onclick="window.location.href='selectyourrole.html'">← Back to Role Menu</button>
 </div>
 
 <script>
+  /* IMPORTANT:
+     Replace the string below with the EXACT relative path + filename of your Appendix C.5 PDF in your app.
+     Example format: "Forms/your-file-name.pdf"
+     Do not change anything else unless you want to.
+  */
+  const CHECKLIST_C5_PDF_PATH = "Forms/C.5. Accountable Manager Checklist.pdf";
+
+  function openChecklistPdf() {
+    if (!CHECKLIST_C5_PDF_PATH || CHECKLIST_C5_PDF_PATH === "PUT-EXACT-PDF-PATH-HERE") {
+      alert("Checklist PDF path not set. Update CHECKLIST_C5_PDF_PATH to the exact Appendix C.5 PDF filename/path in your app.");
+      return;
+    }
+    window.open(CHECKLIST_C5_PDF_PATH, "_blank", "noopener");
+  }
+
   const totalQuestions = document.querySelectorAll('.question').length;
   const answered = new Array(totalQuestions).fill(false);
   const correct = new Array(totalQuestions).fill(false);
@@ -161,17 +237,25 @@
     checkAllCorrect();
   }
 
+  function markComplete() {
+    if (typeof doLMSSetValue === 'function') {
+      doLMSSetValue("cmi.core.lesson_status", "completed");
+      doLMSCommit("");
+    } else {
+      console.warn("SCORM API not available – training completion not tracked.");
+    }
+  }
+
   function checkAllCorrect() {
     const allAnswered = answered.every(Boolean);
     const allCorrect = correct.every(Boolean);
 
     if (allAnswered && allCorrect) {
       document.getElementById("backButton").style.display = "inline-block";
+      markComplete();
     }
   }
 </script>
 
 </body>
 </html>
-
-
